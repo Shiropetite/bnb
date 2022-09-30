@@ -1,0 +1,180 @@
+@import "./base.scss";
+@import "./font.scss";
+@import "./variables.scss";
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.col {
+  width: 100%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.mr-32 {
+  margin-right: 32px;
+}
+
+.mr-18 {
+  margin-right: 18px;
+}
+
+.mr-16 {
+  margin-right: 16px;
+}
+
+.mr-12 {
+  margin-right: 12px;
+}
+
+.mr-8 {
+  margin-right: 8px;
+}
+
+.mr-4 {
+  margin-right: 4px;
+}
+
+.gap-16 {
+  gap: 16px 0;
+}
+
+.gap-12 {
+  gap: 12px 0;
+}
+
+.gap-8 {
+  gap: 0 8px;
+}
+
+.gap-4 {
+  gap: 4px;
+}
+
+.mt-32 {
+  margin-top: 32px;
+}
+
+.mt-24 {
+  margin-top: 24px;
+}
+
+.mt-16 {
+  margin-top: 16px;
+}
+
+.mb-32 {
+  margin-bottom: 32px;
+}
+
+.mb-24 {
+  margin-bottom: 24px;
+}
+
+.mb-16 {
+  margin-bottom: 16px;
+}
+
+.mb-14 {
+  margin-bottom: 14px;
+}
+
+.mb-12 {
+  margin-bottom: 12px;
+}
+
+.mb-8 {
+  margin-bottom: 8px;
+}
+
+.mb-4 {
+  margin-bottom: 4px;
+}
+
+.rounded {
+  border-radius: 8px;
+}
+
+$sizes: ('xxs': 0, 'xs':($breakpoint-xxs + 1), 'sm': ($breakpoint-xs + 1), 'md': ($breakpoint-sm + 1), 'lg': ($breakpoint-md + 1), 'xl': ($breakpoint-lg + 1)) !default;
+
+$breakpoint-xxs-max: (map-get($sizes, "xs") - 0.02) !default;
+
+$breakpoint-xs-min: map-get($sizes, "xs") !default;
+$breakpoint-xs-max: (map-get($sizes, "sm") - 0.02) !default;
+
+$breakpoint-sm-min: map-get($sizes, "sm") !default;
+$breakpoint-sm-max: (map-get($sizes, "md") - 0.02) !default;
+
+$breakpoint-md-min: map-get($sizes, "md") !default;
+$breakpoint-md-max: (map-get($sizes, "lg") - 0.02) !default;
+
+$breakpoint-lg-min: map-get($sizes, "lg") !default;
+$breakpoint-lg-max: (map-get($sizes, "xl") - 0.02) !default;
+
+$breakpoint-xl-min: map-get($sizes, "xl") !default;
+
+@media (max-width: $breakpoint-xxs-max) {
+  .xxs-hide, .gt-xxs, .xs, .gt-xs, .sm, .gt-sm, .md, .gt-md, .lg, .gt-lg, .xl {
+    display: none !important
+  }
+  
+}
+
+@media (min-width: $breakpoint-xs-min) and (max-width: $breakpoint-xs-max) {
+  .xs-hide, .lt-xs .gt-xs, .sm, .gt-sm, .md, .gt-md, .lg, .gt-lg, .xl {
+    display: none !important
+  }
+}
+ 
+@media (min-width: $breakpoint-sm-min) and (max-width: $breakpoint-sm-max) {
+  .sm-hide, .xs, .lt-sm, .gt-sm, .md, .gt-md, .lg, .gt-lg, .xl {
+    display: none !important
+  }
+}
+      
+@media (min-width: $breakpoint-md-min) and (max-width: $breakpoint-md-max) {
+  .md-hide, .xs, .lt-sm, .sm, .lt-md, .gt-md, .lg, .gt-lg, .xl {
+    display: none !important
+  }
+}
+  
+@media (min-width: $breakpoint-lg-min) and (max-width: $breakpoint-lg-max) {
+  .lg-hide, .xs, .lt-sm, .sm, .lt-md, .md, .lt-lg, .gt-lg, .xl {
+    display: none !important
+  }
+}
+ 
+@media (min-width: $breakpoint-xl-min) {
+  .xl-hide, .xs, .lt-sm, .sm, .lt-md, .md, .lt-lg, .lg, .lt-xl {
+    display: none !important
+  }
+}

@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+@import './variables.scss';
+
+.bold {
+  font-weight: 700;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 26px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 22px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 16px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.subtitle {
+  font-size: 14px;
+}
+
+.caption {
+  font-size: 12px;
+}
+
+
+.text-white {
+  color: white;
+}
+
+.text-black {
+  color: black;
+}
+
+.text-almost-white {
+  color: $almost-white;
+}
+
+.text-light-grey {
+  color: $light-grey;
+}
+
+.text-grey {
+  color: $grey;
+}
+
+.text-dark-grey {
+  color: $dark-grey;
+}
+
+.text-dark {
+  color: $dark;
+}

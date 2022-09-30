@@ -1,14 +1,23 @@
-import { createApp } from 'vue'
-import { createPinia } from 'pinia'
+import { createApp } from "vue";
+import { createPinia } from "pinia";
 
-import App from './App.vue'
-import router from './router'
+import App from "./App.vue";
+import router from "./router";
 
-import './assets/main.scss'
+import "./css/index.scss";
 
-const app = createApp(App)
+// Components
+import BnbButton from "./components/BnbButton.vue";
+import BnbCalendar from "./components/BnbCalendar.vue";
+import BnbReview from "./components/BnbReview.vue";
 
-app.use(createPinia())
-app.use(router)
+const app = createApp(App);
 
-app.mount('#app')
+app.use(createPinia());
+app.use(router);
+
+app.component("BnbButton", BnbButton);
+app.component("BnbCalendar", BnbCalendar);
+app.component("BnbReview", BnbReview);
+
+app.mount("#app");

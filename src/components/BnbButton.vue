@@ -14,7 +14,6 @@ const props = defineProps<{
   size?: Size;
   bgColor?: BgColor;
   rounded?: boolean;
-  dense?: boolean;
   shadow?: boolean;
   round?: boolean;
 }>();
@@ -32,39 +31,33 @@ const onHover = (event: any): void => {
 </script>
 
 <template>
-  <div>
-    <button
-      :id="`bnb-button-${bgColor}`"
-      class="bnb-button"
-      :class="{
-        round: round === true,
-        rounded: rounded === true,
-        dense: dense === true,
-        shadow: shadow === true,
-        'bg-black': bgColor === 'dark',
-        'bg-primary': bgColor === 'primary',
-        'bg-gradient': bgColor === 'gradient',
-        'border-dark': border === 'dark',
-        'border-light': border === 'light',
-        'button-sm': size === 'sm',
-        'button-lg': size === 'lg',
-      }"
-      v-on:mousemove="onHover"
-    >
-      <img v-if="icon" :src="icon" />
-      <img
-        v-if="iconLeft"
-        :class="{ 'icon-left': !iconRight }"
-        :src="iconLeft"
-      />
-      <span v-if="label">{{ label }}</span>
-      <img
-        v-if="iconRight"
-        :class="{ 'icon-right': !iconLeft || !label }"
-        :src="iconRight"
-      />
-    </button>
-  </div>
+  <button
+    :id="`bnb-button-${bgColor}`"
+    class="bnb-button"
+    :class="{
+      round: round === true,
+      rounded: rounded === true,
+      shadow: shadow === true,
+      'round-shadow': shadow && round,
+      'bg-black': bgColor === 'dark',
+      'bg-primary': bgColor === 'primary',
+      'bg-gradient': bgColor === 'gradient',
+      'border-dark': border === 'dark',
+      'border-light': border === 'light',
+      'button-sm': size === 'sm',
+      'button-lg': size === 'lg',
+    }"
+    v-on:mousemove="onHover"
+  >
+    <img v-if="icon" :src="icon" />
+    <img v-if="iconLeft" :class="{ 'icon-left': !iconRight }" :src="iconLeft" />
+    <span v-if="label">{{ label }}</span>
+    <img
+      v-if="iconRight"
+      :class="{ 'icon-right': !iconLeft || !label }"
+      :src="iconRight"
+    />
+  </button>
 </template>
 
 <style lang="scss" scoped>
@@ -75,6 +68,7 @@ const onHover = (event: any): void => {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #fff;
 
   &:hover {
     background-color: #f7f7f7;
@@ -115,8 +109,13 @@ const onHover = (event: any): void => {
 }
 
 .round {
-  padding: 14px;
+  padding: 10px;
   border-radius: 32px !important;
+
+  &-shadow {
+    box-shadow: 0px 0px 0px 1px transparent, 0px 0px 0px 4px transparent,
+      0px 2px 4px rgb(0 0 0 / 18%) !important;
+  }
 }
 
 .bg-black {
@@ -148,7 +147,7 @@ const onHover = (event: any): void => {
   background-image: radial-gradient(
     circle,
     #ffa666 0%,
-    #ff633f 80%,
+    #ff552f 80%,
     #e13838 100%
   );
   border: solid 1px #ffa666;
