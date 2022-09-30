@@ -33,7 +33,7 @@ const print = (text: string) => {
         </div>
       </div>
 
-      <div @click="print('Open photos')" style="position: relative">
+      <div @click="print('Open photos popup')" style="position: relative">
         <img
           class="cover-image"
           src="https://a0.muscache.com/im/pictures/4d268e76-949f-4de7-a10b-b4b48ea3355d.jpg?im_w=1200"
@@ -139,7 +139,9 @@ const print = (text: string) => {
           <span class="mr-4"
             >Certaines informations ont été traduites automatiquement.</span
           >
-          <span class="bold">Afficher la version originale</span>
+          <span class="bold" @click="print('Show the english description')">
+            Afficher la version originale
+          </span>
         </div>
       </div>
 
@@ -163,7 +165,7 @@ const print = (text: string) => {
         mobilité réduite.
       </div>
 
-      <div class="row items-center">
+      <div class="row items-center" @click="print('Open description popup')">
         <div class="subtitle bold underline mr-4">En savoir plus</div>
         <img
           src="@/assets/icons/arrow-right.svg"
@@ -178,6 +180,7 @@ const print = (text: string) => {
       <img
         class="bed-picture rounded mb-16"
         src="https://a0.muscache.com/im/pictures/fab1b622-41b2-4a69-bf73-0a8204ac06d4.jpg?im_w=720"
+        @click="print('Open photos popup')"
       />
 
       <div class="bold mb-4">Chambre</div>
@@ -216,13 +219,19 @@ const print = (text: string) => {
         style="width: 100%"
         label="Afficher les 37 équipement"
         border="dark"
+        @click="print('Open equipment popup')"
       />
 
       <div class="separator mt-24 mb-32"></div>
 
       <h2 class="mb-24">Où se situe le logement</h2>
 
-      <div class="mb-24 map row items-center justify-center rounded">Map</div>
+      <div
+        class="mb-24 map row items-center justify-center rounded"
+        @click="print('Open map popup')"
+      >
+        Map
+      </div>
 
       <div class="bold mb-16">Badachro, Écosse, Royaume-Uni</div>
       <div
@@ -244,7 +253,10 @@ const print = (text: string) => {
         ses fouines.
       </div>
 
-      <div class="row items-center">
+      <div
+        class="row items-center"
+        @click="print('Open location description popup')"
+      >
         <div class="subtitle bold underline mr-4">En savoir plus</div>
         <img
           src="@/assets/icons/arrow-right.svg"
@@ -272,12 +284,13 @@ const print = (text: string) => {
         <h2>4,72 · 43 commentaires</h2>
       </div>
 
-      <bnb-review class="mb-24" />
+      <bnb-review class="mb-24" @click="print('Open reviews popup')" />
 
       <bnb-button
         style="width: 100%"
         label="Afficher les 43 commentaires"
         border="dark"
+        @click="print('Open reviews popup')"
       />
 
       <div class="separator mt-24 mb-32"></div>
@@ -292,6 +305,7 @@ const print = (text: string) => {
         <img
           class="profile-picture"
           src="https://a0.muscache.com/im/users/33563060/profile_pic/1438769657/original.jpg?im_w=240"
+          @click="print('Open profile page')"
         />
       </div>
 
@@ -341,6 +355,7 @@ const print = (text: string) => {
         style="width: 100%"
         label="Contacter l’hôte"
         border="dark"
+        @click="print('Open popup to sign in')"
       />
 
       <div class="row items-center">
@@ -353,7 +368,10 @@ const print = (text: string) => {
 
       <div class="separator mt-24 mb-24"></div>
 
-      <div class="row items-center justify-between">
+      <div
+        class="row items-center justify-between"
+        @click="print('Open rules of procedure popup')"
+      >
         <div class="mr-12">
           <h2 class="mb-8">Règlement intérieur</h2>
           <div class="subtitle text-dark-grey">Arrivée : 16:00 - 22:00</div>
@@ -363,7 +381,10 @@ const print = (text: string) => {
 
       <div class="separator mt-24 mb-24"></div>
 
-      <div class="row items-center justify-between">
+      <div
+        class="row items-center justify-between"
+        @click="print('Open security popup')"
+      >
         <div class="mr-12">
           <h2 class="mb-8">Santé et sécurité</h2>
           <div class="subtitle text-dark-grey">
@@ -375,7 +396,10 @@ const print = (text: string) => {
 
       <div class="separator mt-24 mb-24"></div>
 
-      <div class="row items-center justify-between">
+      <div
+        class="row items-center justify-between"
+        @click="print('Open terms of cancelation popup')"
+      >
         <div class="mr-12">
           <h2 class="mb-8">Conditions d’annulation</h2>
           <div class="subtitle text-dark-grey mb-8">
@@ -392,7 +416,7 @@ const print = (text: string) => {
 
       <div class="separator mt-24 mb-24"></div>
 
-      <div class="row">
+      <div class="row" @click="print('Open popup to sign in')">
         <div class="mr-16"><img src="@/assets/icons/signal.svg" /></div>
         <div class="bold underline">Signaler cette annonce</div>
       </div>
@@ -405,50 +429,54 @@ const print = (text: string) => {
         Découvrez d'autres possibilités d'hébergement · Badachro et ses environs
       </h2>
       <div class="row subtitle text-dark-grey wrap gap-16 mb-32">
-        <div class="col-6">Scottish-Highlands</div>
-        <div class="col-6">Inverness</div>
-        <div class="col-6">Port William</div>
-        <div class="col-6">Portree</div>
-        <div class="col-6">Oban</div>
-        <div class="col-6">Glencoe</div>
-        <div class="col-6">Galway</div>
-        <div class="col-6">Dublin</div>
-        <div class="col-6">Liverpool</div>
-        <div class="col-6">Belfast</div>
-        <div class="col-6">Glasgow</div>
-        <div class="col-6">Newcastle upon Tyne</div>
+        <div class="col-6" @click="print('Open search')">
+          Scottish-Highlands
+        </div>
+        <div class="col-6" @click="print('Open search')">Inverness</div>
+        <div class="col-6" @click="print('Open search')">Port William</div>
+        <div class="col-6" @click="print('Open search')">Portree</div>
+        <div class="col-6" @click="print('Open search')">Oban</div>
+        <div class="col-6" @click="print('Open search')">Glencoe</div>
+        <div class="col-6" @click="print('Open search')">Galway</div>
+        <div class="col-6" @click="print('Open search')">Dublin</div>
+        <div class="col-6" @click="print('Open search')">Liverpool</div>
+        <div class="col-6" @click="print('Open search')">Belfast</div>
+        <div class="col-6" @click="print('Open search')">Glasgow</div>
+        <div class="col-6" @click="print('Open search')">
+          Newcastle upon Tyne
+        </div>
       </div>
 
       <div class="row wrap subtitle items-center gap-8">
-        <div>Airbnb</div>
+        <div @click="print('return to /')">Airbnb</div>
         <div>
           <img
             src="@/assets/icons/arrow-right.svg"
             style="height: 7px; width: 7px"
           />
         </div>
-        <div>Royaume-Uni</div>
+        <div @click="print('Open search')">Royaume-Uni</div>
         <div>
           <img
             src="@/assets/icons/arrow-right.svg"
             style="height: 7px; width: 7px"
           />
         </div>
-        <div>Écosse</div>
+        <div @click="print('Open search')">Écosse</div>
         <div>
           <img
             src="@/assets/icons/arrow-right.svg"
             style="height: 7px; width: 7px"
           />
         </div>
-        <div>Highland Council</div>
+        <div @click="print('Open search')">Highland Council</div>
         <div>
           <img
             src="@/assets/icons/arrow-right.svg"
             style="height: 7px; width: 7px"
           />
         </div>
-        <div>Skye</div>
+        <div @click="print('Open search')">Skye</div>
       </div>
     </div>
 
@@ -456,55 +484,71 @@ const print = (text: string) => {
 
     <div
       class="content subtitle"
-      style="background: $almost-white; padding-bottom: 80px"
+      style="background: $almost-white; padding-bottom: 104px"
     >
       <div class="column gap-12">
         <div class="bold">Assistance</div>
-        <div>Centre d’aide</div>
-        <div>AirCover</div>
-        <div>Informations de sécurité</div>
-        <div>Soutenir les personnes en situation de handicap</div>
-        <div>Options d'annulation</div>
-        <div>Nos mesures face au Covid-19</div>
-        <div>Signaler un problème de voisinage</div>
+        <div @click="print('Go to page')">Centre d’aide</div>
+        <div @click="print('Go to page')">AirCover</div>
+        <div @click="print('Go to page')">Informations de sécurité</div>
+        <div @click="print('Go to page')">
+          Soutenir les personnes en situation de handicap
+        </div>
+        <div @click="print('Go to page')">Options d'annulation</div>
+        <div @click="print('Go to page')">Nos mesures face au Covid-19</div>
+        <div @click="print('Go to page')">
+          Signaler un problème de voisinage
+        </div>
 
         <div class="mt-24 mb-24 separator"></div>
 
         <div class="bold">Communauté</div>
-        <div>Airbnb.org : réponse aux catastrophes</div>
-        <div>Soutenir les réfugiés afghans</div>
-        <div>Lutte contre la discramation</div>
+        <div @click="print('Go to page')">
+          Airbnb.org : réponse aux catastrophes
+        </div>
+        <div @click="print('Go to page')">Soutenir les réfugiés afghans</div>
+        <div @click="print('Go to page')">Lutte contre la discramation</div>
 
         <div class="mt-24 mb-24 separator"></div>
 
         <div class="bold">Accueil de voyageurs</div>
-        <div>Devenir hôte</div>
-        <div>AirCover pour les hôtes</div>
-        <div>Ressources pour les hôtes</div>
-        <div>Forum de la communauté</div>
-        <div>Accueillir de manière responsable</div>
+        <div @click="print('Go to page')">Devenir hôte</div>
+        <div @click="print('Go to page')">AirCover pour les hôtes</div>
+        <div @click="print('Go to page')">Ressources pour les hôtes</div>
+        <div @click="print('Go to page')">Forum de la communauté</div>
+        <div @click="print('Go to page')">
+          Accueillir de manière responsable
+        </div>
 
         <div class="mt-24 mb-24 separator"></div>
 
         <div class="bold">Airbnb</div>
-        <div>Newsroom</div>
-        <div>En savoir plus sur les nouveautés</div>
-        <div>Lettre de nos fondateurs</div>
-        <div>Carrières</div>
-        <div>Investisseurs</div>
-        <div>Cartes cadeaux</div>
+        <div @click="print('Go to page')">Newsroom</div>
+        <div @click="print('Go to page')">
+          En savoir plus sur les nouveautés
+        </div>
+        <div @click="print('Go to page')">Lettre de nos fondateurs</div>
+        <div @click="print('Go to page')">Carrières</div>
+        <div @click="print('Go to page')">Investisseurs</div>
+        <div @click="print('Go to page')">Cartes cadeaux</div>
       </div>
 
       <div class="mt-24 mb-24 separator"></div>
 
       <div class="row mb-16">
-        <img class="mr-8" src="@/assets/icons/language.svg" />
-        <div class="bold mr-32">Français (FR)</div>
-        <div class="bold">€ EUR</div>
+        <img
+          class="mr-8"
+          src="@/assets/icons/language.svg"
+          @click="print('Open language popup')"
+        />
+        <div class="bold mr-32" @click="print('Open language popup')">
+          Français (FR)
+        </div>
+        <div class="bold" @click="print('Open currency popup')">€ EUR</div>
       </div>
 
       <div>© 2022 Airbnb, Inc.</div>
-      <div>
+      <div @click="print('Go to page')">
         Confidentialité · Conditions générales · Plan du site · Fonctionnement
         du site · Infos sur l’entreprise
       </div>
@@ -516,10 +560,16 @@ const print = (text: string) => {
           <div class="title mr-4">172 €</div>
           <div class="subtitle">par nuit</div>
         </div>
-        <div class="subtitle underline">19-25 nov.</div>
+        <div class="subtitle underline" @click="print('Open dates popup')">
+          19-25 nov.
+        </div>
       </div>
 
-      <bnb-button label="Réserver" bg-color="gradient" />
+      <bnb-button
+        label="Réserver"
+        bg-color="gradient"
+        @click="print('Open reservation popup')"
+      />
     </div>
   </div>
 </template>
