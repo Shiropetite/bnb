@@ -556,7 +556,7 @@ const print = (text: string) => {
 
     <div class="price row items-center justify-between">
       <div>
-        <div class="row">
+        <div class="row items-end">
           <div class="title mr-4">172 €</div>
           <div class="subtitle">par nuit</div>
         </div>
