@@ -7,8 +7,9 @@ const print = (text: string) => {
 </script>
 
 <template>
+  <bnb-header class="gt-sm" />
   <div class="detail-page">
-    <div class="photo">
+    <div class="photo lt-md">
       <div class="top-link">
         <bnb-button
           icon="src/assets/icons/arrow-left.svg"
