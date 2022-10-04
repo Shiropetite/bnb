@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import BnbButton from "../components/BnbButton.vue";
-import BnbCalendar from "../components/BnbCalendar.vue";
+import MobilePhotos from "./components/MobilePhotos.vue";
+import BnbTitle from "./components/BnbTitle.vue";
 const print = (text: string) => {
   console.log(text);
 };
@@ -9,62 +9,10 @@ const print = (text: string) => {
 <template>
   <bnb-header class="gt-sm" />
   <div class="detail-page">
-    <div class="photo lt-md">
-      <div class="top-link">
-        <bnb-button
-          icon="src/assets/icons/arrow-left.svg"
-          @click="print('Go back /homes')"
-          shadow
-          round
-        />
-        <div class="row">
-          <bnb-button
-            class="mr-16"
-            icon="src/assets/icons/share.svg"
-            @click="print('Open popup to share')"
-            shadow
-            round
-          />
-          <bnb-button
-            icon="src/assets/icons/save.svg"
-            @click="print('Open popup to sign in')"
-            shadow
-            round
-          />
-        </div>
-      </div>
-
-      <div @click="print('Open photos popup')" style="position: relative">
-        <img
-          class="cover-image"
-          src="https://a0.muscache.com/im/pictures/4d268e76-949f-4de7-a10b-b4b48ea3355d.jpg?im_w=1200"
-        />
-
-        <div class="counter-image caption bold">1 / 19</div>
-      </div>
-    </div>
+    <mobile-photos class="lt-md" />
 
     <div class="content">
-      <h1 class="mb-8">
-        <img class="mr-12" src="@/assets/icons/translate.svg" />
-        <span>Observatoire de la nature sur une île isolée</span>
-      </h1>
-
-      <div class="row items-center gap-4 wrap">
-        <img src="@/assets/icons/star.svg" />
-        <div class="subtitle">4,71</div>
-        <div class="bold">·</div>
-        <div
-          class="subtitle underline"
-          @click="print('Open testimonial popup')"
-        >
-          43 commentaires
-        </div>
-        <div class="bold">·</div>
-        <div class="subtitle underline" @click="print('Open map popup')">
-          Badachro, Écosse, Royaume-Uni
-        </div>
-      </div>
+      <bnb-title />
 
       <div class="separator mt-24 mb-24"></div>
 
@@ -609,38 +557,6 @@ const print = (text: string) => {
     width: 48px;
     height: 48px;
     border-radius: 30px;
-  }
-
-  .photo {
-    .cover-image {
-      position: static;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-    }
-
-    .top-link {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 16px;
-      z-index: 1;
-    }
-
-    .counter-image {
-      color: white;
-      position: absolute;
-      bottom: 20px;
-      right: 16px;
-      background-color: rgba(0, 0, 0, 0.7);
-      border-radius: 30px;
-      padding: 4px 10px;
-    }
   }
 
   .content {
