@@ -30,6 +30,8 @@
   height: 100%;
   top: 0;
   left: 0;
+  object-fit: cover;
+  max-height: 80%;
 }
 
 .top-link {

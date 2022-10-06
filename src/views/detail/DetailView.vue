@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import MobilePhotos from "./components/MobilePhotos.vue";
 import BnbTitle from "./components/BnbTitle.vue";
+import LaptopPhotos from "./components/LaptopPhotos.vue";
 const print = (text: string) => {
   console.log(text);
 };
@@ -13,6 +14,8 @@ const print = (text: string) => {
 
     <div class="content">
       <bnb-title />
+
+      <laptop-photos class="gt-sm" />
 
       <div class="separator mt-24 mb-24"></div>
 
@@ -561,6 +564,10 @@ const print = (text: string) => {
 
   .content {
     padding: 24px;
+
+    @media (min-width: $breakpoint-md-min) {
+      padding: 24px 40px;
+    }
   }
 }
 </style>
