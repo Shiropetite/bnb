@@ -1,7 +1,9 @@
 <script lang="ts" setup>
 import MobilePhotos from "./components/MobilePhotos.vue";
-import BnbTitle from "./components/BnbTitle.vue";
 import LaptopPhotos from "./components/LaptopPhotos.vue";
+import BnbTitle from "./components/BnbTitle.vue";
+import BnbSubtitle from "./components/BnbSubtitle.vue";
+
 const print = (text: string) => {
   console.log(text);
 };
@@ -17,29 +19,9 @@ const print = (text: string) => {
 
       <laptop-photos class="gt-sm" />
 
-      <div class="separator mt-24 mb-24"></div>
+      <div class="lt-md separator mt-24"></div>
 
-      <div class="row items-center justify-between mb-8">
-        <h2>
-          <div>Îles</div>
-          <div><span class="bold">·</span> Chez Ian</div>
-        </h2>
-        <img
-          class="profile-picture"
-          src="https://a0.muscache.com/im/users/33563060/profile_pic/1438769657/original.jpg?im_w=240"
-          @click="print('Scroll down to description')"
-        />
-      </div>
-
-      <div class="row items-center gap-4 wrap">
-        <div>2 voyageurs</div>
-        <div class="bold">·</div>
-        <div>1 chambre</div>
-        <div class="bold">·</div>
-        <div>1 lit</div>
-        <div class="bold">·</div>
-        <div>1 salle de bain</div>
-      </div>
+      <bnb-subtitle />
 
       <div class="separator mt-24 mb-24"></div>
 
@@ -506,7 +488,7 @@ const print = (text: string) => {
       </div>
     </div>
 
-    <div class="price row items-center justify-between">
+    <div class="price row items-center justify-between lt-md">
       <div>
         <div class="row items-end">
           <div class="title mr-4">172 €</div>
@@ -526,7 +508,7 @@ const print = (text: string) => {
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "@/css/variables.scss";
 .detail-page {
   .price {
@@ -554,12 +536,6 @@ const print = (text: string) => {
   .bed-picture {
     width: 180px;
     height: 120px;
-  }
-
-  .profile-picture {
-    width: 48px;
-    height: 48px;
-    border-radius: 30px;
   }
 
   .content {

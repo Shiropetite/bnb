@@ -38,7 +38,7 @@
 .container {
   position: relative;
   height: 0 !important;
-  padding-top: 50% !important;
+  padding-top: 300px !important;
 }
 
 .box {
