@@ -17,6 +17,8 @@ import LaptopReviews from "./components/LaptopReviews.vue";
 import BnbInformations from "./components/BnbInformations.vue";
 import MobileRules from "./components/MobileRules.vue";
 import LaptopRules from "./components/LaptopRules.vue";
+import BnbDiscover from "./components/BnbDiscover.vue";
+import BnbFooter from "./components/BnbFooter.vue";
 
 const print = (text: string) => {
   console.log(text);
@@ -101,137 +103,21 @@ const print = (text: string) => {
       <laptop-rules class="gt-sm" />
     </div>
 
-    <div style="height: 10px" class="separator"></div>
+    <div style="height: 10px" class="separator lt-md"></div>
 
-    <div class="content">
-      <h2 class="mb-32">
-        Découvrez d'autres possibilités d'hébergement · Badachro et ses environs
-      </h2>
-      <div class="row subtitle text-dark-grey wrap gap-16 mb-32">
-        <div class="col-6" @click="print('Open search')">
-          Scottish-Highlands
-        </div>
-        <div class="col-6" @click="print('Open search')">Inverness</div>
-        <div class="col-6" @click="print('Open search')">Port William</div>
-        <div class="col-6" @click="print('Open search')">Portree</div>
-        <div class="col-6" @click="print('Open search')">Oban</div>
-        <div class="col-6" @click="print('Open search')">Glencoe</div>
-        <div class="col-6" @click="print('Open search')">Galway</div>
-        <div class="col-6" @click="print('Open search')">Dublin</div>
-        <div class="col-6" @click="print('Open search')">Liverpool</div>
-        <div class="col-6" @click="print('Open search')">Belfast</div>
-        <div class="col-6" @click="print('Open search')">Glasgow</div>
-        <div class="col-6" @click="print('Open search')">
-          Newcastle upon Tyne
-        </div>
-      </div>
+    <div class="mt-16 separator gt-sm"></div>
 
-      <div class="row wrap subtitle items-center gap-8">
-        <div @click="print('return to /')">Airbnb</div>
-        <div>
-          <img
-            src="@/assets/icons/arrow-right.svg"
-            style="height: 7px; width: 7px"
-          />
-        </div>
-        <div @click="print('Open search')">Royaume-Uni</div>
-        <div>
-          <img
-            src="@/assets/icons/arrow-right.svg"
-            style="height: 7px; width: 7px"
-          />
-        </div>
-        <div @click="print('Open search')">Écosse</div>
-        <div>
-          <img
-            src="@/assets/icons/arrow-right.svg"
-            style="height: 7px; width: 7px"
-          />
-        </div>
-        <div @click="print('Open search')">Highland Council</div>
-        <div>
-          <img
-            src="@/assets/icons/arrow-right.svg"
-            style="height: 7px; width: 7px"
-          />
-        </div>
-        <div @click="print('Open search')">Skye</div>
-      </div>
+    <bnb-discover class="content lt-md" />
+
+    <div class="mt-16 separator lt-md"></div>
+
+    <div class="content bg-almost-white gt-sm" style="padding-bottom: 48px">
+      <bnb-discover />
     </div>
 
-    <div class="mt-16 separator"></div>
+    <div class="separator gt-sm"></div>
 
-    <div
-      class="content subtitle"
-      style="background: $almost-white; padding-bottom: 104px"
-    >
-      <div class="column gap-12">
-        <div class="bold">Assistance</div>
-        <div @click="print('Go to page')">Centre d’aide</div>
-        <div @click="print('Go to page')">AirCover</div>
-        <div @click="print('Go to page')">Informations de sécurité</div>
-        <div @click="print('Go to page')">
-          Soutenir les personnes en situation de handicap
-        </div>
-        <div @click="print('Go to page')">Options d'annulation</div>
-        <div @click="print('Go to page')">Nos mesures face au Covid-19</div>
-        <div @click="print('Go to page')">
-          Signaler un problème de voisinage
-        </div>
-
-        <div class="mt-24 mb-24 separator"></div>
-
-        <div class="bold">Communauté</div>
-        <div @click="print('Go to page')">
-          Airbnb.org : réponse aux catastrophes
-        </div>
-        <div @click="print('Go to page')">Soutenir les réfugiés afghans</div>
-        <div @click="print('Go to page')">Lutte contre la discramation</div>
-
-        <div class="mt-24 mb-24 separator"></div>
-
-        <div class="bold">Accueil de voyageurs</div>
-        <div @click="print('Go to page')">Devenir hôte</div>
-        <div @click="print('Go to page')">AirCover pour les hôtes</div>
-        <div @click="print('Go to page')">Ressources pour les hôtes</div>
-        <div @click="print('Go to page')">Forum de la communauté</div>
-        <div @click="print('Go to page')">
-          Accueillir de manière responsable
-        </div>
-
-        <div class="mt-24 mb-24 separator"></div>
-
-        <div class="bold">Airbnb</div>
-        <div @click="print('Go to page')">Newsroom</div>
-        <div @click="print('Go to page')">
-          En savoir plus sur les nouveautés
-        </div>
-        <div @click="print('Go to page')">Lettre de nos fondateurs</div>
-        <div @click="print('Go to page')">Carrières</div>
-        <div @click="print('Go to page')">Investisseurs</div>
-        <div @click="print('Go to page')">Cartes cadeaux</div>
-      </div>
-
-      <div class="mt-24 mb-24 separator"></div>
-
-      <div class="row mb-16">
-        <img
-          class="mr-8"
-          src="@/assets/icons/language.svg"
-          @click="print('Open language popup')"
-        />
-        <div class="bold mr-32" @click="print('Open language popup')">
-          Français (FR)
-        </div>
-        <div class="bold" @click="print('Open currency popup')">€ EUR</div>
-      </div>
-
-      <div>© 2022 Airbnb, Inc.</div>
-      <div @click="print('Go to page')">
-        Confidentialité · Conditions générales · Plan du site · Fonctionnement
-        du site · Infos sur l’entreprise
-      </div>
-    </div>
+    <bnb-footer class="content subtitle footer bg-almost-white" />
 
     <div class="price row items-center justify-between lt-md">
       <div>
@@ -273,5 +159,14 @@ const print = (text: string) => {
       padding: 24px 40px;
     }
   }
+}
+
+.footer {
+  padding-bottom: 104px !important;
+
+  @media (min-width: $breakpoint-md-min) {
+    padding: 40px !important;
+  }
+  
 }
 </style>
