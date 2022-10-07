@@ -1,0 +1,71 @@
+<script lang="ts" setup>
+import { onMounted, ref } from "vue";
+
+const isVisible = ref(false);
+const isPrice = ref(false);
+
+onMounted(() => {
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 500) {
+      isVisible.value = true;
+      if (window.scrollY > 2400) {
+        isPrice.value = true;
+      } else {
+        isPrice.value = false;
+      }
+    } else {
+      isVisible.value = false;
+    }
+  });
+});
+</script>
+<template>
+  <div class="bnb-summary row justify-between items-center" v-if="isVisible">
+    <div class="summary row items-center">
+      <div>Photos</div>
+      <div>Équipements</div>
+      <div>Commentaires</div>
+      <div>Emplacement</div>
+    </div>
+    <div v-if="isPrice" class="price row items-center">
+      <div class="mr-16">
+        <div class="row items-center gap-8 mb-2">
+          <div class="title">172 €</div>
+          <div class="subtitle">par nuit</div>
+        </div>
+        <div class="row items-center gap-4 caption">
+          <img src="src/assets/icons/star.svg" />
+          <div class="bold">4,71 ·</div>
+          <div class="bold underline text-dark-grey">43 commentaires</div>
+        </div>
+      </div>
+      <bnb-button label="Réserver" bg-color="gradient" />
+    </div>
+  </div>
+</template>
+<style lang="scss" scoped>
+.bnb-summary {
+  border-bottom: solid 1px $light-grey;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  height: 80px;
+  padding: 0 40px;
+  z-index: 2;
+
+  .summary {
+    gap: 24px;
+  }
+}
+
+.price {
+  position: fixed;
+  background-color: white;
+  top:0;
+  right:0;
+  height: 80px;
+  padding: 0 40px
+}
+</style>

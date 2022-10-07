@@ -37,5 +37,9 @@
   background-color: $light-grey;
   width: 100%;
   height: 218px;
+
+  @media (min-width: $breakpoint-md-min) {
+    height: 480px;
+  }
 }
 </style>

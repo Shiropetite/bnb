@@ -19,6 +19,7 @@ import MobileRules from "./components/MobileRules.vue";
 import LaptopRules from "./components/LaptopRules.vue";
 import BnbDiscover from "./components/BnbDiscover.vue";
 import BnbFooter from "./components/BnbFooter.vue";
+import BnbSummary from "./components/BnbSummary.vue";
 
 const print = (text: string) => {
   console.log(text);
@@ -27,6 +28,7 @@ const print = (text: string) => {
 
 <template>
   <bnb-header class="gt-sm" />
+  <bnb-summary class="gt-sm" />
   <div class="detail-page">
     <mobile-photos class="lt-md" />
 

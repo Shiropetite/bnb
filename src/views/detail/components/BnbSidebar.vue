@@ -74,7 +74,7 @@
 .sticky {
   position: -webkit-sticky !important;
   position: sticky !important;
-  top: var(--navigation-bar-offset, 80px) !important;
+  top: var(--navigation-bar-offset, 120px) !important;
   z-index: 1 !important;
   width: 100% !important;
   display: inline-block !important;
