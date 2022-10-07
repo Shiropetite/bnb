@@ -68,6 +68,7 @@
   position: relative;
   width: 33.33%;
   margin-left: 8.33%;
+  min-width: 220px ;
 }
 
 .sticky {
