@@ -11,10 +11,14 @@
       </div>
     </div>
 
-    <div class="mb-8">
+    <div class="mb-8 text">
       Experience unique et super. le logement de Ian se situe sur une île
       privée, au milieu de la nature et bénéficie de tout le confort nécessaire
-      (cuisine complète, salle de bains etc.)...
+      (cuisine complète, salle de bains etc.). tout est propre. hôte très
+      agréable et réactif !!! Merci Ian pour votre réponse rapide à notre
+      demande de dernière minute et pour votre amabilité, vos conseils et
+      propositions. Enfin, superbe vue sur une belle rivière, au pied de la
+      maison.
     </div>
 
     <div class="row items-center">
@@ -28,7 +32,6 @@
 </template>
 <style lang="scss" scoped>
 .review {
-  width: 80%;
   border: 1px solid #dddddd;
   border-radius: 8px;
   padding: 16px;
@@ -37,6 +40,14 @@
     border-radius: 50%;
     width: 48px;
     height: 48px;
+  }
+
+  .text {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
   }
 }
 </style>

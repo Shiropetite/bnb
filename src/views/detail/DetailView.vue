@@ -80,7 +80,7 @@ const print = (text: string) => {
 
       <laptop-reviews class="gt-sm" />
 
-      <div class="separator mt-24 mb-32"></div>
+      <div class="separator mt-24 mb-32 gt-sm"></div>
 
       <bnb-location class="gt-sm" />
 
