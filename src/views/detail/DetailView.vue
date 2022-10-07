@@ -1,10 +1,16 @@
 <script lang="ts" setup>
+import BnbSidebar from "./components/BnbSidebar.vue";
+
 import MobilePhotos from "./components/MobilePhotos.vue";
 import LaptopPhotos from "./components/LaptopPhotos.vue";
 import BnbTitle from "./components/BnbTitle.vue";
 import BnbSubtitle from "./components/BnbSubtitle.vue";
 
-import BnbSidebar from "./components/BnbSidebar.vue";
+import BnbPromote from "./components/BnbPromote.vue";
+import BnbAircover from "./components/BnbAircover.vue";
+import BnbDescription from "./components/BnbDescription.vue";
+import BnbRooms from "./components/BnbRooms.vue";
+import BnbEquipment from "./components/BnbEquipment.vue";
 
 const print = (text: string) => {
   console.log(text);
@@ -26,144 +32,28 @@ const print = (text: string) => {
       </div>
 
       <div class="row">
-        <div style="width: 58.33%">
+        <div>
           <bnb-subtitle />
 
           <div class="separator mt-24 mb-24"></div>
 
-          <div class="row items-center mb-24">
-            <img class="mr-18" src="@/assets/icons/pet.svg" />
-            <div>
-              <div class="bold">Amis à quatre pattes bienvenus</div>
-              <div class="subtitle text-dark-grey">
-                Emmenez vos animaux de compagnie avec vous.
-              </div>
-            </div>
-          </div>
-
-          <div class="row items-center">
-            <img class="mr-18" src="@/assets/icons/calendar.svg" />
-            <div>
-              <div class="bold">Annulation gratuite pendant 48 heures.</div>
-            </div>
-          </div>
+          <bnb-promote />
 
           <div class="separator mt-24 mb-24"></div>
 
-          <div>
-            <img class="mb-16" src="@/assets/aircover.png" />
-            <div class="subtitle mb-16">
-              Chaque réservation comprend une protection gratuite en cas
-              d'annulation par l'hôte, d'inexactitudes dans la description du
-              logement, ainsi que d'autres problèmes comme les difficultés
-              d'accès au logement.
-            </div>
-            <div
-              class="subtitle bold underline"
-              @click="print('Open aircover popup')"
-            >
-              En savoir plus
-            </div>
-          </div>
+          <bnb-aircover />
 
           <div class="separator mt-24 mb-24"></div>
 
-          <div class="row mb-32">
-            <div class="mr-12">
-              <img
-                src="@/assets/icons/translate.svg"
-                style="height: 16px; width: 16px"
-              />
-            </div>
-            <div class="subtitle">
-              <span class="mr-4"
-                >Certaines informations ont été traduites automatiquement.</span
-              >
-              <span class="bold" @click="print('Show the english description')">
-                Afficher la version originale
-              </span>
-            </div>
-          </div>
-
-          <div
-            class="mb-16"
-            style="
-              text-overflow: ellipsis;
-              overflow: hidden;
-              display: -webkit-box;
-              -webkit-line-clamp: 6;
-              -webkit-box-orient: vertical;
-            "
-          >
-            Chalet indépendant quantitatif niché en douceur dans l'île familiale
-            historique de Dry Island. "Otter Cabin" est aménagé à un haut niveau
-            avec une chambre double, salle de douche, cuisine ouverte et salon
-            et son propre bain à remous et terrasse. Il s'agit d'une unité de
-            restauration traditionnelle. Les éléments de base de la cuisine et
-            le linge de maison sont fournis. Une connexion Wi-Fi haut débit est
-            disponible. Malheureusement, la cabine est inaccessible aux
-            personnes à mobilité réduite.
-          </div>
-
-          <div
-            class="row items-center"
-            @click="print('Open description popup')"
-          >
-            <div class="subtitle bold underline mr-4">En savoir plus</div>
-            <img
-              src="@/assets/icons/arrow-right.svg"
-              style="height: 12px; width: 12px"
-            />
-          </div>
+          <bnb-description />
 
           <div class="separator mt-32 mb-32"></div>
 
-          <h2 class="mb-24">Où vous dormirez</h2>
-
-          <img
-            class="bed-picture rounded mb-16"
-            src="https://a0.muscache.com/im/pictures/fab1b622-41b2-4a69-bf73-0a8204ac06d4.jpg?im_w=720"
-            @click="print('Open photos popup')"
-          />
-
-          <div class="bold mb-4">Chambre</div>
-          <div class="subtitle">1 lit double</div>
+          <bnb-rooms />
 
           <div class="separator mt-24 mb-32"></div>
 
-          <h2 class="mb-24">Ce que propose ce logement</h2>
-
-          <div class="row items-center mb-14">
-            <img class="mr-18" src="@/assets/icons/waterfront.svg" />
-            <div>Front de mer</div>
-          </div>
-
-          <div class="row items-center mb-14">
-            <img class="mr-18" src="@/assets/icons/kitchen.svg" />
-            <div>Cuisine</div>
-          </div>
-
-          <div class="row items-center mb-14">
-            <img class="mr-18" src="@/assets/icons/wifi.svg" />
-            <div>Wifi</div>
-          </div>
-
-          <div class="row items-center mb-14">
-            <img class="mr-18" src="@/assets/icons/dedicated-workspace.svg" />
-            <div>Espace de travail dédié</div>
-          </div>
-
-          <div class="row items-center mb-24">
-            <img class="mr-18" src="@/assets/icons/free-parking.svg" />
-            <div>Parking gratuit sur place</div>
-          </div>
-
-          <bnb-button
-            style="width: 100%"
-            label="Afficher les 37 équipement"
-            border="dark"
-            @click="print('Open equipment popup')"
-          />
+          <bnb-equipment />
 
           <div class="separator mt-24 mb-32"></div>
 
@@ -366,7 +256,7 @@ const print = (text: string) => {
           </div>
         </div>
 
-        <bnb-sidebar />
+        <bnb-sidebar class="gt-sm" />
       </div>
     </div>
 
@@ -539,11 +429,6 @@ const print = (text: string) => {
     background-color: $light-grey;
     width: 100%;
     height: 218px;
-  }
-
-  .bed-picture {
-    width: 180px;
-    height: 120px;
   }
 
   .content {
