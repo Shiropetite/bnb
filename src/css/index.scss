@@ -44,6 +44,12 @@
   width: 50%;
 }
 
+.col-md-6 {
+  @media (min-width: $breakpoint-md-min) {
+    width: 45%;
+  }
+}
+
 .mr-32 {
   margin-right: 32px;
 }
@@ -178,9 +184,14 @@
 }
 
 .profile-picture {
-  width: 48px;
-  height: 48px;
+  width: 56px;
+  height: 56px;
   border-radius: 30px;
+
+  @media (max-width: $breakpoint-sm-max) {
+    width: 48px;
+    height: 48px;
+  }
 }
 
 .separator {

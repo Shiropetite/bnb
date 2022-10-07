@@ -14,6 +14,7 @@ import BnbEquipment from "./components/BnbEquipment.vue";
 import BnbLocation from "./components/BnbLocation.vue";
 import MobileReviews from "./components/MobileReviews.vue";
 import LaptopReviews from "./components/LaptopReviews.vue";
+import BnbInformations from "./components/BnbInformations.vue";
 
 const print = (text: string) => {
   console.log(text);
@@ -88,78 +89,9 @@ const print = (text: string) => {
 
       <mobile-reviews class="lt-md" />
 
-      <div class="separator mt-24 mb-32"></div>
+      <div class="separator mt-24 mb-32 lt-md"></div>
 
-      <div class="row items-center justify-between mb-24">
-        <div>
-          <h2 class="mb-8">Proposé par Ian</h2>
-          <div class="subtitle text-dark-grey">Membre depuis mai 2015</div>
-          <div class="subtitle text-dark-grey">Professionnel</div>
-        </div>
-
-        <img
-          class="profile-picture"
-          src="https://a0.muscache.com/im/users/33563060/profile_pic/1438769657/original.jpg?im_w=240"
-          @click="print('Open profile page')"
-        />
-      </div>
-
-      <div class="row items-center mb-16">
-        <div class="mr-8 row items-center">
-          <img
-            src="@/assets/icons/star.svg"
-            style="width: 16px; height: 16px"
-          />
-        </div>
-        <div>376 commentaires</div>
-      </div>
-
-      <div class="row items-center mb-24">
-        <div class="mr-8 row items-center">
-          <img
-            src="@/assets/icons/identity-verified.svg"
-            style="width: 16px; height: 16px"
-          />
-        </div>
-        <div>Identité vérifiée</div>
-      </div>
-
-      <div class="mb-24">
-        pêcheur de Gairloch , local à Badachro. La famille vit sur Dry Island
-        depuis des centaines d'années....
-        <span class="bold underline">lire la suite</span>
-      </div>
-
-      <div class="bold mb-8">Pendant votre séjour</div>
-
-      <div class="mb-24">
-        Vous vous sentirez à l'aise à l'extrémité nord de l'île, à l'abri de
-        toute perturbation de notre part ou de la part des voyageurs séjournant
-        dans l'autre propriété. Avec un arrang…
-        <span class="bold underline">lire la suite</span>
-      </div>
-
-      <div class="mb-8">Langue : English</div>
-
-      <div class="mb-8">Taux de réponse : 64%</div>
-
-      <div class="mb-24">Délai de réponse : Dans la journée</div>
-
-      <bnb-button
-        class="mb-24"
-        style="width: 100%"
-        label="Contacter l’hôte"
-        border="dark"
-        @click="print('Open popup to sign in')"
-      />
-
-      <div class="row items-center">
-        <div class="caption mr-16">
-          Pour protéger votre paiement, ne transférez jamais d'argent et ne
-          communiquez pas en dehors du site ou de l'application Airbnb.
-        </div>
-        <div><img src="@/assets/icons/bnb-warning.svg" /></div>
-      </div>
+      <bnb-informations />
 
       <div class="separator mt-24 mb-24"></div>
 
