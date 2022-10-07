@@ -15,6 +15,8 @@ import BnbLocation from "./components/BnbLocation.vue";
 import MobileReviews from "./components/MobileReviews.vue";
 import LaptopReviews from "./components/LaptopReviews.vue";
 import BnbInformations from "./components/BnbInformations.vue";
+import MobileRules from "./components/MobileRules.vue";
+import LaptopRules from "./components/LaptopRules.vue";
 
 const print = (text: string) => {
   console.log(text);
@@ -95,58 +97,8 @@ const print = (text: string) => {
 
       <div class="separator mt-24 mb-24"></div>
 
-      <div
-        class="row items-center justify-between"
-        @click="print('Open rules of procedure popup')"
-      >
-        <div class="mr-12">
-          <h2 class="mb-8">Règlement intérieur</h2>
-          <div class="subtitle text-dark-grey">Arrivée : 16:00 - 22:00</div>
-        </div>
-        <img src="@/assets/icons/arrow-right.svg" />
-      </div>
-
-      <div class="separator mt-24 mb-24"></div>
-
-      <div
-        class="row items-center justify-between"
-        @click="print('Open security popup')"
-      >
-        <div class="mr-12">
-          <h2 class="mb-8">Santé et sécurité</h2>
-          <div class="subtitle text-dark-grey">
-            Les partiques de sécurité d’Airbnb liées au Covid-19 s’appliquent
-          </div>
-        </div>
-        <img src="@/assets/icons/arrow-right.svg" />
-      </div>
-
-      <div class="separator mt-24 mb-24"></div>
-
-      <div
-        class="row items-center justify-between"
-        @click="print('Open terms of cancelation popup')"
-      >
-        <div class="mr-12">
-          <h2 class="mb-8">Conditions d’annulation</h2>
-          <div class="subtitle text-dark-grey mb-8">
-            Annulation gratuite pendant 48 heures.
-          </div>
-          <div class="subtitle text-dark-grey">
-            Consultez les conditions d'annulation complètes de l'hôte, qui
-            s'appliquent même si vous annulez pour cause de maladie ou de
-            perturbations causées par le Covid-19.
-          </div>
-        </div>
-        <img src="@/assets/icons/arrow-right.svg" />
-      </div>
-
-      <div class="separator mt-24 mb-24"></div>
-
-      <div class="row" @click="print('Open popup to sign in')">
-        <div class="mr-16"><img src="@/assets/icons/signal.svg" /></div>
-        <div class="bold underline">Signaler cette annonce</div>
-      </div>
+      <mobile-rules class="lt-md" />
+      <laptop-rules class="gt-sm" />
     </div>
 
     <div style="height: 10px" class="separator"></div>
