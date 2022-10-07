@@ -1,6 +1,6 @@
 <template>
   <div class="mt-24 row items-center justify-between mb-8">
-    <div>
+    <div style="margin-right: 120px">
       <h2>
         <div>Îles</div>
         <div>· Chez Ian</div>
