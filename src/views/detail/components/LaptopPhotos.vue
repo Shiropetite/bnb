@@ -39,6 +39,10 @@
   position: relative;
   height: 0 !important;
   padding-top: 300px !important;
+
+  @media (min-width: $breakpoint-lg-min) {
+    padding-top: 380px !important;
+  }
 }
 
 .box {
@@ -47,13 +51,15 @@
   left: 0;
   width: 100%;
   height: 100%;
-  max-height: 300px;
+  min-height: 300px;
+  max-height: 380px;
 }
 
 .image-1 {
   width: 50%;
-  min-height: 300px;
+  height: 100%;
   border-radius: 30px 0 0 30px;
+  object-fit: cover;
 }
 
 .small-image {
