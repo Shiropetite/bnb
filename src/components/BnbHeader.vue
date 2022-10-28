@@ -1,6 +1,6 @@
 <template>
   <div class="bnb-header">
-    <div class="row justify-between" style="max-width: 1000px; width: 100%">
+    <div class="row justify-between" style="max-width: 1120px; width: 100%">
       <div class="row items-center">
         <img class="mr-24 lt-lg" src="@/assets/small-logo.svg" />
         <img class="mr-24 gt-md" src="@/assets/logo.svg" />

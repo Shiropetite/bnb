@@ -170,7 +170,7 @@ const print = (text: string) => {
 }
 
 .detail-page {
-  max-width: 1120px;
+  max-width: 1280px;
 
   .content {
     padding: 24px;

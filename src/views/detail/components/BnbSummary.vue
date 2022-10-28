@@ -62,7 +62,7 @@ onMounted(() => {
   }
 
   .box {
-    max-width: 1000px;
+    max-width: 1120px;
   }
 
   .summary {
