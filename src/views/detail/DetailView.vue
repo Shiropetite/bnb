@@ -160,25 +160,27 @@ const print = (text: string) => {
 
 <style lang="scss" scoped>
 .price {
-    background-color: white;
-    border-top: solid 1px $light-grey;
-    padding: 16px 24px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
+  background-color: white;
+  border-top: solid 1px $light-grey;
+  padding: 16px 24px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
 
 .detail-page {
   max-width: 1120px;
-
-
 
   .content {
     padding: 24px;
 
     @media (min-width: $breakpoint-md-min) {
       padding: 24px 40px;
+    }
+
+    @media (min-width: $breakpoint-lg-min) {
+      padding: 24px 80px;
     }
   }
 
@@ -187,6 +189,10 @@ const print = (text: string) => {
 
     @media (min-width: $breakpoint-md-min) {
       padding: 48px 40px;
+    }
+
+    @media (min-width: $breakpoint-lg-min) {
+      padding: 48px 80px;
     }
   }
 }
@@ -197,5 +203,10 @@ const print = (text: string) => {
   @media (min-width: $breakpoint-md-min) {
     padding: 40px !important;
   }
+
+  @media (min-width: $breakpoint-lg-min) {
+      padding: 40px 80px !important;
+    }
+
 }
 </style>

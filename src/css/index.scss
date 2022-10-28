@@ -56,12 +56,6 @@
   }
 }
 
-.col-lg-6 {
-  @media (min-width: $breakpoint-lg-min) {
-    width: 45%;
-  }
-}
-
 .col-md-6 {
   @media (min-width: $breakpoint-md-min) {
     width: 45%;

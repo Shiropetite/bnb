@@ -20,26 +20,28 @@ onMounted(() => {
 });
 </script>
 <template>
-  <div class="bnb-summary row justify-between items-center" v-if="isVisible">
-    <div class="summary row items-center">
-      <div>Photos</div>
-      <div>Équipements</div>
-      <div>Commentaires</div>
-      <div>Emplacement</div>
-    </div>
-    <div v-if="isPrice" class="price row items-center">
-      <div class="mr-16">
-        <div class="row items-center gap-8 mb-2">
-          <div class="title">172 €</div>
-          <div class="subtitle">par nuit</div>
-        </div>
-        <div class="row items-center gap-4 caption">
-          <img src="src/assets/icons/star.svg" />
-          <div class="bold">4,71 ·</div>
-          <div class="bold underline text-dark-grey">43 commentaires</div>
-        </div>
+  <div class="bnb-summary row justify-center items-center" v-if="isVisible">
+    <div class="col box row justify-between">
+      <div class="summary row items-center">
+        <div>Photos</div>
+        <div>Équipements</div>
+        <div>Commentaires</div>
+        <div>Emplacement</div>
       </div>
-      <bnb-button label="Réserver" bg-color="gradient" />
+      <div v-if="isPrice" class="price row items-center">
+        <div class="mr-16">
+          <div class="row items-center gap-8 mb-2">
+            <div class="title">172 €</div>
+            <div class="subtitle">par nuit</div>
+          </div>
+          <div class="row items-center gap-4 caption">
+            <img src="src/assets/icons/star.svg" />
+            <div class="bold">4,71 ·</div>
+            <div class="bold underline text-dark-grey">43 commentaires</div>
+          </div>
+        </div>
+        <bnb-button label="Réserver" bg-color="gradient" />
+      </div>
     </div>
   </div>
 </template>
@@ -55,17 +57,23 @@ onMounted(() => {
   padding: 0 40px;
   z-index: 2;
 
+  @media (min-width: $breakpoint-lg-min) {
+    padding: 0 80px;
+  }
+
+  .box {
+    max-width: 1000px;
+  }
+
   .summary {
     gap: 24px;
   }
 }
 
 .price {
-  position: fixed;
   background-color: white;
-  top:0;
-  right:0;
+  top: 0;
+  right: 0;
   height: 80px;
-  padding: 0 40px
 }
 </style>
