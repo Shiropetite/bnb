@@ -38,10 +38,14 @@
 .container {
   position: relative;
   height: 0 !important;
-  padding-top: 300px !important;
+  padding-top: 320px !important;
 
   @media (min-width: $breakpoint-lg-min) {
     padding-top: 380px !important;
+  }
+
+  @media (min-width: $breakpoint-xl-min) {
+    padding-top: 480px !important;
   }
 }
 
@@ -51,8 +55,12 @@
   left: 0;
   width: 100%;
   height: 100%;
-  min-height: 300px;
+  min-height: 320px;
   max-height: 380px;
+
+  @media (min-width: $breakpoint-xl-min) {
+    max-height: 480px !important;
+  }
 }
 
 .image-1 {
@@ -65,7 +73,7 @@
 .small-image {
   width: 25%;
   padding-left: 8px;
-  min-height: 300px;
+  min-height: 320px;
   height: 100%;
 }
 
