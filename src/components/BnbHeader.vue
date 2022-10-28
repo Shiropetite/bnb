@@ -2,8 +2,10 @@
   <div class="bnb-header">
     <div class="row justify-between" style="max-width: 1120px; width: 100%">
       <div class="row items-center">
-        <img class="mr-24" src="@/assets/small-logo.svg" />
-        <div class="search subtitle bold">
+        <img class="mr-24 lt-lg" src="@/assets/small-logo.svg" />
+        <img class="mr-24 gt-md" src="@/assets/logo.svg" />
+
+        <div class="search subtitle bold lt-lg">
           <div>Commencer votre recherche</div>
           <bnb-button
             icon="src/assets/icons/search.svg"
@@ -11,6 +13,15 @@
             round
           />
         </div>
+      </div>
+
+      <div class="search subtitle bold gt-md">
+        <div>Commencer votre recherche</div>
+        <bnb-button
+          icon="src/assets/icons/search.svg"
+          bg-color="primary"
+          round
+        />
       </div>
 
       <div class="row items-center">

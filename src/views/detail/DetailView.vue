@@ -76,7 +76,18 @@ const print = (text: string) => {
             <div class="subtitle text-dark-grey mb-24">
               19 nov. 2022 - 25 nov. 2022
             </div>
-            <bnb-calendar month="Novembre" :year="2022" />
+            <div class="row items-center justify-between">
+              <bnb-calendar
+                class="col col-xl-6"
+                month="Novembre"
+                :year="2022"
+              />
+              <bnb-calendar
+                class="col col-xl-6 gt-lg"
+                month="Décembre"
+                :year="2022"
+              />
+            </div>
           </div>
 
           <bnb-sidebar class="gt-sm" />
@@ -108,47 +119,47 @@ const print = (text: string) => {
 
       <div style="height: 10px" class="separator lt-md"></div>
 
-      <div class="mt-16 separator gt-sm"></div>
-
       <bnb-discover class="content lt-md" />
 
       <div class="mt-16 separator lt-md"></div>
+    </div>
+  </div>
 
-      <div class="content bg-almost-white gt-sm" style="padding-bottom: 48px">
+  <div class="mt-16 separator gt-sm"></div>
+
+  <div class="bg-almost-white row justify-center">
+    <div class="detail-page">
+      <div class="content-discover gt-sm">
         <bnb-discover />
       </div>
 
       <div class="separator gt-sm"></div>
 
-      <bnb-footer class="content subtitle footer bg-almost-white" />
+      <bnb-footer class="content subtitle footer" />
+    </div>
+  </div>
 
-      <div class="price row items-center justify-between lt-md">
-        <div>
-          <div class="row items-end">
-            <div class="title mr-4">172 €</div>
-            <div class="subtitle">par nuit</div>
-          </div>
-          <div class="subtitle underline" @click="print('Open dates popup')">
-            19-25 nov.
-          </div>
-        </div>
-
-        <bnb-button
-          label="Réserver"
-          bg-color="gradient"
-          @click="print('Open reservation popup')"
-        />
+  <div class="price row items-center justify-between lt-md">
+    <div>
+      <div class="row items-end">
+        <div class="title mr-4">172 €</div>
+        <div class="subtitle">par nuit</div>
+      </div>
+      <div class="subtitle underline" @click="print('Open dates popup')">
+        19-25 nov.
       </div>
     </div>
+
+    <bnb-button
+      label="Réserver"
+      bg-color="gradient"
+      @click="print('Open reservation popup')"
+    />
   </div>
 </template>
 
 <style lang="scss" scoped>
-@import "@/css/variables.scss";
-.detail-page {
-  max-width: 1120px;
-
-  .price {
+.price {
     background-color: white;
     border-top: solid 1px $light-grey;
     padding: 16px 24px;
@@ -158,11 +169,24 @@ const print = (text: string) => {
     right: 0;
   }
 
+.detail-page {
+  max-width: 1120px;
+
+
+
   .content {
     padding: 24px;
 
     @media (min-width: $breakpoint-md-min) {
       padding: 24px 40px;
+    }
+  }
+
+  .content-discover {
+    padding: 24px;
+
+    @media (min-width: $breakpoint-md-min) {
+      padding: 48px 40px;
     }
   }
 }

@@ -44,9 +44,33 @@
   width: 50%;
 }
 
+.col-xl-12 {
+  @media (min-width: $breakpoint-xl-min) {
+    width: 100% !important;
+  }
+}
+
+.col-xl-6 {
+  @media (min-width: $breakpoint-xl-min) {
+    width: 45%;
+  }
+}
+
+.col-lg-6 {
+  @media (min-width: $breakpoint-lg-min) {
+    width: 45%;
+  }
+}
+
 .col-md-6 {
   @media (min-width: $breakpoint-md-min) {
     width: 45%;
+  }
+}
+
+.col-xl-3 {
+  @media (min-width: $breakpoint-xl-min) {
+    width: 25%;
   }
 }
 
