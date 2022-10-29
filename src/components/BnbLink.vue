@@ -7,7 +7,6 @@ defineProps<{
   color?: string;
   outlined?: boolean;
 }>();
-
 </script>
 
 <template>

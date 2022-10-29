@@ -7,11 +7,11 @@ defineProps<{
 <template>
   <div class="bnb-calendar">
     <div class="row items-center justify-between mb-16">
-      <bnb-button icon="src/assets/icons/arrow-left.svg" round />
+      <bnb-button icon="/src/assets/icons/arrow-left.svg" round />
       <div class="bold">{{ month }} {{ year }}</div>
-      <bnb-button icon="src/assets/icons/arrow-right.svg" round />
+      <bnb-button icon="/src/assets/icons/arrow-right.svg" round />
     </div>
-    
+
     <table class="mb-8">
       <tr class="caption text-dark-grey bold">
         <th>Lun.</th>
@@ -23,7 +23,7 @@ defineProps<{
         <th>Dim.</th>
       </tr>
     </table>
-    
+
     <table class="text-center subtitle bold mb-16">
       <tr>
         <td><div class="date"></div></td>
@@ -73,17 +73,15 @@ defineProps<{
     </table>
 
     <div class="caption underline bold">Effacer les dates</div>
-    
   </div>
 </template>
 <style lang="scss">
 .bnb-calendar {
-
   table {
     width: 100%;
     border-spacing: 0px;
   }
-  
+
   td {
     width: 14%;
     position: relative;

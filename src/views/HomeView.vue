@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import BnbButton from "@/components/BnbButton.vue";
-import BnbLink from "@/components/BnbLink.vue";
+import BnbButton from '@/components/BnbButton.vue';
+import BnbLink from '@/components/BnbLink.vue';
 </script>
 
 <template>
@@ -9,29 +9,18 @@ import BnbLink from "@/components/BnbLink.vue";
     <bnb-button label="OK" border="dark" size="lg" bg-color="dark" />
     <bnb-button label="Devenez hôte" rounded />
     <bnb-button
-      icon-left="src/assets/burger-menu.svg"
-      icon-right="src/assets/account.svg"
+      icon-left="/src/assets/burger-menu.svg"
+      icon-right="/src/assets/account.svg"
       border="light"
       size="sm"
       rounded
       shadow
       dense
     />
-    <bnb-button
-      label="Afficher la carte"
-      icon-right="src/assets/map-icon.svg"
-      size="lg"
-      rounded
-      bg-color="dark"
-    />
-    <bnb-button icon="src/assets/language.svg" round />
-    <bnb-button icon="src/assets/search-icon.svg" bg-color="primary" round />
-    <bnb-button
-      icon-left="src/assets/search-icon.svg"
-      label="Rechercher"
-      bg-color="gradient"
-      rounded
-    />
+    <bnb-button label="Afficher la carte" icon-right="/src/assets/map-icon.svg" size="lg" rounded bg-color="dark" />
+    <bnb-button icon="/src/assets/language.svg" round />
+    <bnb-button icon="/src/assets/search-icon.svg" bg-color="primary" round />
+    <bnb-button icon-left="/src/assets/search-icon.svg" label="Rechercher" bg-color="gradient" rounded />
 
     <bnb-link label="Assistance et ressources" href="a" />
     <bnb-link label="Politique en matière de cookies" href="a" outlined />

@@ -21,9 +21,7 @@
 
       <div>
         <h2 class="mb-2">Proposé par Ian</h2>
-        <div class="subtitle text-dark-grey">
-          Membre depuis mai 2015 · Professionnel
-        </div>
+        <div class="subtitle text-dark-grey">Membre depuis mai 2015 · Professionnel</div>
       </div>
     </div>
 
@@ -31,20 +29,14 @@
       <div class="col col-md-6">
         <div class="row items-center mb-16">
           <div class="mr-8 row items-center">
-            <img
-              src="@/assets/icons/star.svg"
-              style="width: 16px; height: 16px"
-            />
+            <img src="@/assets/icons/star.svg" style="width: 16px; height: 16px" />
           </div>
           <div>376 commentaires</div>
         </div>
 
         <div class="row items-center mb-24">
           <div class="mr-8 row items-center">
-            <img
-              src="@/assets/icons/identity-verified.svg"
-              style="width: 16px; height: 16px"
-            />
+            <img src="@/assets/icons/identity-verified.svg" style="width: 16px; height: 16px" />
           </div>
           <div>Identité vérifiée</div>
         </div>
@@ -61,9 +53,8 @@
           <div class="bold mb-8">Pendant votre séjour</div>
 
           <div class="mb-24">
-            Vous vous sentirez à l'aise à l'extrémité nord de l'île, à l'abri de
-            toute perturbation de notre part ou de la part des voyageurs
-            séjournant dans l'autre propriété. Avec un arrang…
+            Vous vous sentirez à l'aise à l'extrémité nord de l'île, à l'abri de toute perturbation de notre part ou de
+            la part des voyageurs séjournant dans l'autre propriété. Avec un arrang…
             <div class="bold underline">lire la suite</div>
           </div>
         </div>
@@ -76,25 +67,20 @@
 
         <div class="mb-24">Délai de réponse : Dans la journée</div>
 
-        <bnb-button
-          class="mb-24 contact-btn"
-          label="Contacter l’hôte"
-          border="dark"
-        />
+        <bnb-button class="mb-24 contact-btn" label="Contacter l’hôte" border="dark" />
 
         <div class="row items-center">
           <div class="gt-sm mr-16">
             <img src="@/assets/icons/bnb-warning.svg" />
           </div>
           <div class="caption mr-16">
-            Pour protéger votre paiement, ne transférez jamais d'argent et ne
-            communiquez pas en dehors du site ou de l'application Airbnb.
+            Pour protéger votre paiement, ne transférez jamais d'argent et ne communiquez pas en dehors du site ou de
+            l'application Airbnb.
           </div>
           <div class="lt-md"><img src="@/assets/icons/bnb-warning.svg" /></div>
         </div>
       </div>
     </div>
-
   </div>
 </template>
 <style lang="scss" scoped>

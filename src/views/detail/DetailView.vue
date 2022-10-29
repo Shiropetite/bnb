@@ -1,25 +1,25 @@
 <script lang="ts" setup>
-import BnbSidebar from "./components/BnbSidebar.vue";
+import BnbSidebar from './components/BnbSidebar.vue';
 
-import MobilePhotos from "./components/MobilePhotos.vue";
-import LaptopPhotos from "./components/LaptopPhotos.vue";
-import BnbTitle from "./components/BnbTitle.vue";
-import BnbSubtitle from "./components/BnbSubtitle.vue";
+import MobilePhotos from './components/MobilePhotos.vue';
+import LaptopPhotos from './components/LaptopPhotos.vue';
+import BnbTitle from './components/BnbTitle.vue';
+import BnbSubtitle from './components/BnbSubtitle.vue';
 
-import BnbPromote from "./components/BnbPromote.vue";
-import BnbAircover from "./components/BnbAircover.vue";
-import BnbDescription from "./components/BnbDescription.vue";
-import BnbRooms from "./components/BnbRooms.vue";
-import BnbEquipment from "./components/BnbEquipment.vue";
-import BnbLocation from "./components/BnbLocation.vue";
-import MobileReviews from "./components/MobileReviews.vue";
-import LaptopReviews from "./components/LaptopReviews.vue";
-import BnbInformations from "./components/BnbInformations.vue";
-import MobileRules from "./components/MobileRules.vue";
-import LaptopRules from "./components/LaptopRules.vue";
-import BnbDiscover from "./components/BnbDiscover.vue";
-import BnbFooter from "./components/BnbFooter.vue";
-import BnbSummary from "./components/BnbSummary.vue";
+import BnbPromote from './components/BnbPromote.vue';
+import BnbAircover from './components/BnbAircover.vue';
+import BnbDescription from './components/BnbDescription.vue';
+import BnbRooms from './components/BnbRooms.vue';
+import BnbEquipment from './components/BnbEquipment.vue';
+import BnbLocation from './components/BnbLocation.vue';
+import MobileReviews from './components/MobileReviews.vue';
+import LaptopReviews from './components/LaptopReviews.vue';
+import BnbInformations from './components/BnbInformations.vue';
+import MobileRules from './components/MobileRules.vue';
+import LaptopRules from './components/LaptopRules.vue';
+import BnbDiscover from './components/BnbDiscover.vue';
+import BnbFooter from './components/BnbFooter.vue';
+import BnbSummary from './components/BnbSummary.vue';
 
 const print = (text: string) => {
   console.log(text);
@@ -73,20 +73,10 @@ const print = (text: string) => {
             <div class="separator mt-24 mb-32 lt-md"></div>
 
             <h2 class="mb-8">6 nuit à Badachro</h2>
-            <div class="subtitle text-dark-grey mb-24">
-              19 nov. 2022 - 25 nov. 2022
-            </div>
+            <div class="subtitle text-dark-grey mb-24">19 nov. 2022 - 25 nov. 2022</div>
             <div class="row items-center justify-between">
-              <bnb-calendar
-                class="col col-xl-6"
-                month="Novembre"
-                :year="2022"
-              />
-              <bnb-calendar
-                class="col col-xl-6 gt-lg"
-                month="Décembre"
-                :year="2022"
-              />
+              <bnb-calendar class="col col-xl-6" month="Novembre" :year="2022" />
+              <bnb-calendar class="col col-xl-6 gt-lg" month="Décembre" :year="2022" />
             </div>
           </div>
 
@@ -145,16 +135,10 @@ const print = (text: string) => {
         <div class="title mr-4">172 €</div>
         <div class="subtitle">par nuit</div>
       </div>
-      <div class="subtitle underline" @click="print('Open dates popup')">
-        19-25 nov.
-      </div>
+      <div class="subtitle underline" @click="print('Open dates popup')">19-25 nov.</div>
     </div>
 
-    <bnb-button
-      label="Réserver"
-      bg-color="gradient"
-      @click="print('Open reservation popup')"
-    />
+    <bnb-button label="Réserver" bg-color="gradient" @click="print('Open reservation popup')" />
   </div>
 </template>
 
@@ -205,8 +189,7 @@ const print = (text: string) => {
   }
 
   @media (min-width: $breakpoint-lg-min) {
-      padding: 40px 80px !important;
-    }
-
+    padding: 40px 80px !important;
+  }
 }
 </style>

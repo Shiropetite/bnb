@@ -8,7 +8,7 @@
             <div>par nuit</div>
           </div>
           <div class="row items-center gap-4 subtitle mb-24">
-            <img src="src/assets/icons/star.svg" />
+            <img src="/src/assets/icons/star.svg" />
             <div>4,71 ·</div>
             <div class="bold underline text-dark-grey">43 commentaires</div>
           </div>
@@ -32,9 +32,7 @@
 
           <bnb-button class="col mb-16" label="Réserver" bg-color="gradient" />
 
-          <div class="subtitle text-center mb-24">
-            Aucun montant ne vous sera débité pour le moment
-          </div>
+          <div class="subtitle text-center mb-24">Aucun montant ne vous sera débité pour le moment</div>
 
           <div class="row items-center justify-between mb-16">
             <div class="underline">172 x 6 nuits</div>
@@ -53,10 +51,8 @@
             <div>1 203 €</div>
           </div>
         </div>
-        <div
-          class="signal row items-center justify-center bold underline text-dark-grey"
-        >
-          <img class="mr-16" src="src/assets/icons/signal.svg" />
+        <div class="signal row items-center justify-center bold underline text-dark-grey">
+          <img class="mr-16" src="/src/assets/icons/signal.svg" />
           <div>Signaler cette annonce</div>
         </div>
       </div>
@@ -68,7 +64,7 @@
   position: relative;
   width: 33.33%;
   margin-left: 8.33%;
-  min-width: 220px ;
+  min-width: 220px;
 }
 
 .sticky {

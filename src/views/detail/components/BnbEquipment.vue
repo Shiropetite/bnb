@@ -28,13 +28,8 @@
         <div>Parking gratuit sur place</div>
       </div>
     </div>
-    
 
-    <bnb-button
-      class="equipment-btn"
-      label="Afficher les 37 équipement"
-      border="dark"
-    />
+    <bnb-button class="equipment-btn" label="Afficher les 37 équipement" border="dark" />
   </div>
 </template>
 <style lang="scss" scoped>

@@ -15,20 +15,15 @@
         -webkit-box-orient: vertical;
       "
     >
-      L'île Dry est située dans les eaux tranquilles de Gair Loch (littéralement
-      le «loch court»), où les Mackenzies vivent, pêchent et cultivent depuis le
-      15e siècle. Le propriétaire actuel de Dry Island, Ian McWhinney, est un
-      descendant des Mackenzy et il pêche encore des mollusques et des crustacés
-      de l'île. Il est très heureux d'emmener les visiteurs récolter les
-      langoustines, les crabes et les homards squats de ses fouines.
+      L'île Dry est située dans les eaux tranquilles de Gair Loch (littéralement le «loch court»), où les Mackenzies
+      vivent, pêchent et cultivent depuis le 15e siècle. Le propriétaire actuel de Dry Island, Ian McWhinney, est un
+      descendant des Mackenzy et il pêche encore des mollusques et des crustacés de l'île. Il est très heureux d'emmener
+      les visiteurs récolter les langoustines, les crabes et les homards squats de ses fouines.
     </div>
 
     <div class="row items-center">
       <div class="subtitle bold underline mr-4">En savoir plus</div>
-      <img
-        src="@/assets/icons/arrow-right.svg"
-        style="height: 12px; width: 12px"
-      />
+      <img src="@/assets/icons/arrow-right.svg" style="height: 12px; width: 12px" />
     </div>
   </div>
 </template>

@@ -1,15 +1,10 @@
 <template>
   <div>
     <div class="top-link">
-      <bnb-button icon="src/assets/icons/arrow-left.svg" shadow round />
+      <bnb-button icon="/src/assets/icons/arrow-left.svg" shadow round />
       <div class="row">
-        <bnb-button
-          class="mr-16"
-          icon="src/assets/icons/mobile-share.svg"
-          shadow
-          round
-        />
-        <bnb-button icon="src/assets/icons/mobile-save.svg" shadow round />
+        <bnb-button class="mr-16" icon="/src/assets/icons/mobile-share.svg" shadow round />
+        <bnb-button icon="/src/assets/icons/mobile-save.svg" shadow round />
       </div>
     </div>
 
