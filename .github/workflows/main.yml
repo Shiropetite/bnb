@@ -30,6 +30,8 @@ jobs:
 
       - name: Build dist file
         run: npm run build
+        
+      - run: ls
 
       - name: Upload dist file
         uses: actions/upload-artifact@v3
