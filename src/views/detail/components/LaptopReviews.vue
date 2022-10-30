@@ -1,13 +1,13 @@
 <template>
   <div>
     <div class="row items-center gap-8 mb-4">
-      <img src="/src/assets/icons/star.svg" width="16" />
+      <img src="@/assets/icons/star.svg" width="16" />
       <h2>4,72 · 43 commentaires</h2>
     </div>
 
     <div class="row items-center gap-4 text-dark-grey subtitle mb-32">
       <div>Découvrez comment fonctionnent les commentaires</div>
-      <img src="/src/assets/icons/info.svg" />
+      <img src="@/assets/icons/info.svg" />
     </div>
 
     <div class="row mb-32">

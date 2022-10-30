@@ -8,7 +8,7 @@
             <div>par nuit</div>
           </div>
           <div class="row items-center gap-4 subtitle mb-24">
-            <img src="/src/assets/icons/star.svg" />
+            <img src="@/assets/icons/star.svg" />
             <div>4,71 ·</div>
             <div class="bold underline text-dark-grey">43 commentaires</div>
           </div>
@@ -52,7 +52,7 @@
           </div>
         </div>
         <div class="signal row items-center justify-center bold underline text-dark-grey">
-          <img class="mr-16" src="/src/assets/icons/signal.svg" />
+          <img class="mr-16" src="@/assets/icons/signal.svg" />
           <div>Signaler cette annonce</div>
         </div>
       </div>

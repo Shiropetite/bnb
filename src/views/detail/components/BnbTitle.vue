@@ -16,11 +16,11 @@
 
     <div class="row items-center gt-sm">
       <div class="row items-center gap-8 mr-12">
-        <img src="/src/assets/icons/share.svg" />
+        <img src="@/assets/icons/share.svg" />
         <div class="subtitle underline">Partager</div>
       </div>
       <div class="row items-center gap-8">
-        <img src="/src/assets/icons/save.svg" />
+        <img src="@/assets/icons/save.svg" />
         <div class="subtitle underline">Enregistrer</div>
       </div>
     </div>
