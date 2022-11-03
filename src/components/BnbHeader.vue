@@ -2,26 +2,26 @@
   <div class="bnb-header">
     <div class="row justify-between" style="max-width: 1120px; width: 100%">
       <div class="row items-center">
-        <img class="mr-24 lt-lg" src="src/assets/small-logo.svg" />
-        <img class="mr-24 gt-md" src="src/assets/logo.svg" />
+        <img class="mr-24 lt-lg" src="/small-logo.svg" />
+        <img class="mr-24 gt-md" src="/logo.svg" />
 
         <div class="search subtitle bold lt-lg">
           <div>Commencer votre recherche</div>
-          <bnb-button icon="/bnb/src/assets/icons/search.svg" bg-color="primary" round />
+          <bnb-button icon="/icons/search.svg" bg-color="primary" round />
         </div>
       </div>
 
       <div class="search subtitle bold gt-md">
         <div>Commencer votre recherche</div>
-        <bnb-button icon="/bnb/src/assets/icons/search.svg" bg-color="primary" round />
+        <bnb-button icon="/icons/search.svg" bg-color="primary" round />
       </div>
 
       <div class="row items-center">
         <bnb-button label="Devenez hôte" rounded />
-        <bnb-button class="mr-8" icon="/bnb/src/assets/icons/language.svg" round />
+        <bnb-button class="mr-8" icon="/icons/language.svg" round />
         <bnb-button
-          icon-left="src/assets/icons/menu.svg"
-          icon-right="src/assets/icons/account.svg"
+          icon-left="/icons/menu.svg"
+          icon-right="/icons/account.svg"
           border="light"
           size="sm"
           rounded

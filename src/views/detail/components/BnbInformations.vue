@@ -29,14 +29,14 @@
       <div class="col col-md-6">
         <div class="row items-center mb-16">
           <div class="mr-8 row items-center">
-            <img src="src/assets/icons/star.svg" style="width: 16px; height: 16px" />
+            <img src="/icons/star.svg" style="width: 16px; height: 16px" />
           </div>
           <div>376 commentaires</div>
         </div>
 
         <div class="row items-center mb-24">
           <div class="mr-8 row items-center">
-            <img src="src/assets/icons/identity-verified.svg" style="width: 16px; height: 16px" />
+            <img src="/icons/identity-verified.svg" style="width: 16px; height: 16px" />
           </div>
           <div>Identité vérifiée</div>
         </div>
@@ -71,13 +71,13 @@
 
         <div class="row items-center">
           <div class="gt-sm mr-16">
-            <img src="src/assets/icons/bnb-warning.svg" />
+            <img src="/icons/bnb-warning.svg" />
           </div>
           <div class="caption mr-16">
             Pour protéger votre paiement, ne transférez jamais d'argent et ne communiquez pas en dehors du site ou de
             l'application Airbnb.
           </div>
-          <div class="lt-md"><img src="src/assets/icons/bnb-warning.svg" /></div>
+          <div class="lt-md"><img src="/icons/bnb-warning.svg" /></div>
         </div>
       </div>
     </div>

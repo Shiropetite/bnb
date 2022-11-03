@@ -7,9 +7,9 @@ defineProps<{
 <template>
   <div class="bnb-calendar">
     <div class="row items-center justify-between mb-16">
-      <bnb-button icon="/bnb/src/assets/icons/arrow-left.svg" round />
+      <bnb-button icon="/icons/arrow-left.svg" round />
       <div class="bold">{{ month }} {{ year }}</div>
-      <bnb-button icon="/bnb/src/assets/icons/arrow-right.svg" round />
+      <bnb-button icon="/icons/arrow-right.svg" round />
     </div>
 
     <table class="mb-8">

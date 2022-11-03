@@ -19,19 +19,19 @@
     <div class="row wrap subtitle items-center gap-8">
       <div>Airbnb</div>
       <div>
-        <img src="src/assets/icons/arrow-right.svg" style="height: 7px; width: 7px" />
+        <img src="/icons/arrow-right.svg" style="height: 7px; width: 7px" />
       </div>
       <div>Royaume-Uni</div>
       <div>
-        <img src="src/assets/icons/arrow-right.svg" style="height: 7px; width: 7px" />
+        <img src="/icons/arrow-right.svg" style="height: 7px; width: 7px" />
       </div>
       <div>Écosse</div>
       <div>
-        <img src="src/assets/icons/arrow-right.svg" style="height: 7px; width: 7px" />
+        <img src="/icons/arrow-right.svg" style="height: 7px; width: 7px" />
       </div>
       <div>Highland Council</div>
       <div>
-        <img src="src/assets/icons/arrow-right.svg" style="height: 7px; width: 7px" />
+        <img src="/icons/arrow-right.svg" style="height: 7px; width: 7px" />
       </div>
       <div>Skye</div>
     </div>

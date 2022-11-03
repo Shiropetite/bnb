@@ -65,14 +65,14 @@
       </div>
 
       <div class="row mb-16">
-        <img class="mr-8" src="src/assets/icons/language.svg" />
+        <img class="mr-8" src="/icons/language.svg" />
         <div class="bold mr-32">Français (FR)</div>
         <div class="bold">€ EUR</div>
 
         <div class="gt-sm" style="margin-left: 52px">
-          <img class="mr-24" src="src/assets/icons/facebook.svg" />
-          <img class="mr-24" src="src/assets/icons/twitter.svg" />
-          <img src="src/assets/icons/instagram.svg" />
+          <img class="mr-24" src="/icons/facebook.svg" />
+          <img class="mr-24" src="/icons/twitter.svg" />
+          <img src="/icons/instagram.svg" />
         </div>
       </div>
     </div>

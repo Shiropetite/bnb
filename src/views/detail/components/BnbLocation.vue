@@ -23,7 +23,7 @@
 
     <div class="row items-center">
       <div class="subtitle bold underline mr-4">En savoir plus</div>
-      <img src="src/assets/icons/arrow-right.svg" style="height: 12px; width: 12px" />
+      <img src="/icons/arrow-right.svg" style="height: 12px; width: 12px" />
     </div>
   </div>
 </template>

@@ -9,18 +9,18 @@ import BnbLink from 'src/components/BnbLink.vue';
     <bnb-button label="OK" border="dark" size="lg" bg-color="dark" />
     <bnb-button label="Devenez hôte" rounded />
     <bnb-button
-      icon-left="/bnb/src/assets/burger-menu.svg"
-      icon-right="/bnb/src/assets/account.svg"
+      icon-left="/burger-menu.svg"
+      icon-right="/account.svg"
       border="light"
       size="sm"
       rounded
       shadow
       dense
     />
-    <bnb-button label="Afficher la carte" icon-right="src/assets/map-icon.svg" size="lg" rounded bg-color="dark" />
-    <bnb-button icon="/bnb/src/assets/language.svg" round />
-    <bnb-button icon="/bnb/src/assets/search-icon.svg" bg-color="primary" round />
-    <bnb-button icon-left="src/assets/search-icon.svg" label="Rechercher" bg-color="gradient" rounded />
+    <bnb-button label="Afficher la carte" icon-right="/map-icon.svg" size="lg" rounded bg-color="dark" />
+    <bnb-button icon="/language.svg" round />
+    <bnb-button icon="/search-icon.svg" bg-color="primary" round />
+    <bnb-button icon-left="/search-icon.svg" label="Rechercher" bg-color="gradient" rounded />
 
     <bnb-link label="Assistance et ressources" href="a" />
     <bnb-link label="Politique en matière de cookies" href="a" outlined />
