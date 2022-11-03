@@ -24,6 +24,8 @@ import BnbSummary from './components/BnbSummary.vue';
 const print = (text: string) => {
   console.log(text);
 };
+
+const test = '/icons/translate.svg';
 </script>
 
 <template>
@@ -44,9 +46,8 @@ const print = (text: string) => {
 
         <div class="row">
           <div style="width: 66.66%">
-
             <button>
-              <img src="/icons/translate.svg" style="height: 16px; width: 16px" />
+              <img :src="test" style="height: 16px; width: 16px" />
             </button>
 
             <bnb-subtitle />
