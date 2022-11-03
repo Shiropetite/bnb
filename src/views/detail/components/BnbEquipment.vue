@@ -4,27 +4,27 @@
 
     <div class="row items-center wrap">
       <div class="col col-xl-6 row items-center mb-14">
-        <img class="mr-18" src="@/assets/icons/waterfront.svg" />
+        <img class="mr-18" src="src/assets/icons/waterfront.svg" />
         <div>Front de mer</div>
       </div>
 
       <div class="col col-xl-6 row items-center mb-14">
-        <img class="mr-18" src="@/assets/icons/kitchen.svg" />
+        <img class="mr-18" src="src/assets/icons/kitchen.svg" />
         <div>Cuisine</div>
       </div>
 
       <div class="col col-xl-6 row items-center mb-14">
-        <img class="mr-18" src="@/assets/icons/wifi.svg" />
+        <img class="mr-18" src="src/assets/icons/wifi.svg" />
         <div>Wifi</div>
       </div>
 
       <div class="col col-xl-6 row items-center mb-14">
-        <img class="mr-18" src="@/assets/icons/dedicated-workspace.svg" />
+        <img class="mr-18" src="src/assets/icons/dedicated-workspace.svg" />
         <div>Espace de travail dédié</div>
       </div>
 
       <div class="col col-xl-6 row items-center mb-24">
-        <img class="mr-18" src="@/assets/icons/free-parking.svg" />
+        <img class="mr-18" src="src/assets/icons/free-parking.svg" />
         <div>Parking gratuit sur place</div>
       </div>
     </div>

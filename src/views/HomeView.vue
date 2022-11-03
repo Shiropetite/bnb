@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import BnbButton from '@/components/BnbButton.vue';
-import BnbLink from '@/components/BnbLink.vue';
+import BnbButton from 'src/components/BnbButton.vue';
+import BnbLink from 'src/components/BnbLink.vue';
 </script>
 
 <template>
@@ -17,10 +17,10 @@ import BnbLink from '@/components/BnbLink.vue';
       shadow
       dense
     />
-    <bnb-button label="Afficher la carte" icon-right="@/assets/map-icon.svg" size="lg" rounded bg-color="dark" />
+    <bnb-button label="Afficher la carte" icon-right="src/assets/map-icon.svg" size="lg" rounded bg-color="dark" />
     <bnb-button icon="/bnb/src/assets/language.svg" round />
     <bnb-button icon="/bnb/src/assets/search-icon.svg" bg-color="primary" round />
-    <bnb-button icon-left="@/assets/search-icon.svg" label="Rechercher" bg-color="gradient" rounded />
+    <bnb-button icon-left="src/assets/search-icon.svg" label="Rechercher" bg-color="gradient" rounded />
 
     <bnb-link label="Assistance et ressources" href="a" />
     <bnb-link label="Politique en matière de cookies" href="a" outlined />

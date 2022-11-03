@@ -35,7 +35,7 @@ onMounted(() => {
             <div class="subtitle">par nuit</div>
           </div>
           <div class="row items-center gap-4 caption">
-            <img src="@/assets/icons/star.svg" />
+            <img src="src/assets/icons/star.svg" />
             <div class="bold">4,71 ·</div>
             <div class="bold underline text-dark-grey">43 commentaires</div>
           </div>

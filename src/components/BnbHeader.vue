@@ -2,8 +2,8 @@
   <div class="bnb-header">
     <div class="row justify-between" style="max-width: 1120px; width: 100%">
       <div class="row items-center">
-        <img class="mr-24 lt-lg" src="@/assets/small-logo.svg" />
-        <img class="mr-24 gt-md" src="@/assets/logo.svg" />
+        <img class="mr-24 lt-lg" src="src/assets/small-logo.svg" />
+        <img class="mr-24 gt-md" src="src/assets/logo.svg" />
 
         <div class="search subtitle bold lt-lg">
           <div>Commencer votre recherche</div>
@@ -20,8 +20,8 @@
         <bnb-button label="Devenez hôte" rounded />
         <bnb-button class="mr-8" icon="/bnb/src/assets/icons/language.svg" round />
         <bnb-button
-          icon-left="@/assets/icons/menu.svg"
-          icon-right="@/assets/icons/account.svg"
+          icon-left="src/assets/icons/menu.svg"
+          icon-right="src/assets/icons/account.svg"
           border="light"
           size="sm"
           rounded
