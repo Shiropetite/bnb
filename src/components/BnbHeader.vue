@@ -7,18 +7,18 @@
 
         <div class="search subtitle bold lt-lg">
           <div>Commencer votre recherche</div>
-          <bnb-button icon="@/assets/icons/search.svg" bg-color="primary" round />
+          <bnb-button icon="src/assets/icons/search.svg" bg-color="primary" round />
         </div>
       </div>
 
       <div class="search subtitle bold gt-md">
         <div>Commencer votre recherche</div>
-        <bnb-button icon="@/assets/icons/search.svg" bg-color="primary" round />
+        <bnb-button icon="src/assets/icons/search.svg" bg-color="primary" round />
       </div>
 
       <div class="row items-center">
         <bnb-button label="Devenez hôte" rounded />
-        <bnb-button class="mr-8" icon="@/assets/icons/language.svg" round />
+        <bnb-button class="mr-8" icon="src/assets/icons/language.svg" round />
         <bnb-button
           icon-left="@/assets/icons/menu.svg"
           icon-right="@/assets/icons/account.svg"
