@@ -44,6 +44,11 @@ const print = (text: string) => {
 
         <div class="row">
           <div style="width: 66.66%">
+
+            <button>
+              <img src="/icons/translate.svg" style="height: 16px; width: 16px" />
+            </button>
+
             <bnb-subtitle />
 
             <div class="separator mt-24 mb-24"></div>
