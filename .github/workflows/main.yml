@@ -1,9 +1,9 @@
-- name: Build & Deploy
+name: Build & Deploy
 
 on:
   push:
     branches: [ master ]
-    
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -14,16 +14,16 @@ jobs:
 
       - name: Setup Node
         uses: actions/setup-node@v1
-        node-version: '16.x'
+        with:
+          node-version: '16.x'
 
-    - name: Cache
-      uses: actions/cache@v1
-      with:
-        path: ~/.npm
-        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: |
+      - name: Cache
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
             ${{ runner.os }}-node-
-
       - name: Install
         run: npm install
 
@@ -50,6 +50,8 @@ jobs:
         with:
           name: dist-file
           path: ./dist
+          
+      - run : ls
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.2.5
