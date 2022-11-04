@@ -29,9 +29,6 @@ const onHover = (event: any): void => {
   }
 };
 
-const iconUrl = new URL(`/bnb${props.icon}`, import.meta.url).href
-const iconLeftUrl = new URL(`/bnb${props.iconLeft}`, import.meta.url).href
-const iconRightUrl = new URL(`/bnb${props.iconRight}`, import.meta.url).href
 </script>
 
 <template>
@@ -53,10 +50,10 @@ const iconRightUrl = new URL(`/bnb${props.iconRight}`, import.meta.url).href
     }"
     v-on:mousemove="onHover"
   >
-    <img v-if="icon" :src="iconUrl" />
-    <img v-if="iconLeft" :class="{ 'icon-left': !iconRight }" :src="iconLeftUrl" />
+    <img v-if="icon" :src="icon" />
+    <img v-if="iconLeft" :class="{ 'icon-left': !iconRight }" :src="iconLeft" />
     <span v-if="label">{{ label }}</span>
-    <img v-if="iconRight" :class="{ 'icon-right': !iconLeft || !label }" :src="iconRightUrl" />
+    <img v-if="iconRight" :class="{ 'icon-right': !iconLeft || !label }" :src="iconRight" />
   </button>
 </template>
 
