@@ -50,10 +50,10 @@ const onHover = (event: any): void => {
     }"
     v-on:mousemove="onHover"
   >
-    <img v-if="icon" :src="icon" />
-    <img v-if="iconLeft" :class="{ 'icon-left': !iconRight }" :src="iconLeft" />
+    <img v-if="icon" :src="`/bnb${icon}`" />
+    <img v-if="iconLeft" :class="{ 'icon-left': !iconRight }" :src="`/bnb${iconLeft}`" />
     <span v-if="label">{{ label }}</span>
-    <img v-if="iconRight" :class="{ 'icon-right': !iconLeft || !label }" :src="iconRight" />
+    <img v-if="iconRight" :class="{ 'icon-right': !iconLeft || !label }" :src="`/bnb${iconRight}`" />
   </button>
 </template>
 
