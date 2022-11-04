@@ -29,9 +29,9 @@ const onHover = (event: any): void => {
   }
 };
 
-const iconUrl = new URL(props.icon ?? '', import.meta.url).toString()
-const iconLeftUrl = new URL(props.iconLeft ?? '', import.meta.url).toString()
-const iconRightUrl = new URL(props.iconRight ?? '', import.meta.url).toString()
+const iconUrl = new URL(props.icon ?? '', import.meta.url).href
+const iconLeftUrl = new URL(props.iconLeft ?? '', import.meta.url).href
+const iconRightUrl = new URL(props.iconRight ?? '', import.meta.url).href
 </script>
 
 <template>
