@@ -28,6 +28,10 @@ const onHover = (event: any): void => {
     button.style.setProperty('--mouse-y', y.toString());
   }
 };
+
+const iconUrl = new URL(props.icon ?? '', import.meta.url).toString()
+const iconLeftUrl = new URL(props.iconLeft ?? '', import.meta.url).toString()
+const iconRightUrl = new URL(props.iconRight ?? '', import.meta.url).toString()
 </script>
 
 <template>
@@ -49,10 +53,10 @@ const onHover = (event: any): void => {
     }"
     v-on:mousemove="onHover"
   >
-    <img v-if="icon" :src="icon" />
-    <img v-if="iconLeft" :class="{ 'icon-left': !iconRight }" :src="iconLeft" />
+    <img v-if="icon" :src="iconUrl" />
+    <img v-if="iconLeft" :class="{ 'icon-left': !iconRight }" :src="iconLeftUrl" />
     <span v-if="label">{{ label }}</span>
-    <img v-if="iconRight" :class="{ 'icon-right': !iconLeft || !label }" :src="iconRight" />
+    <img v-if="iconRight" :class="{ 'icon-right': !iconLeft || !label }" :src="iconRightUrl" />
   </button>
 </template>
 
