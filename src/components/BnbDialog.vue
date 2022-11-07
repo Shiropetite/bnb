@@ -1,20 +1,15 @@
 <script lang="ts" setup>
 import { ref, watch } from 'vue';
+import { useDialog } from '@/stores/dialog';
 
-const props = defineProps<{
-  modelValue: boolean
-}>();
-
-const emits = defineEmits<{
-  (e: 'update:modelValue', value: boolean): void
-}>()
+const store = useDialog();
 
 const show = ref(false);
 const hide = ref(true);
 const appear = ref(false);
 const disapear = ref(false);
 
-watch(() => props.modelValue, (value) => {
+watch(() => store.isOpen, (value) => {
   if (!value) {
     show.value = false;
     disapear.value = true;
@@ -36,9 +31,9 @@ watch(() => props.modelValue, (value) => {
 </script>
 
 <template>
-  <div class="dialog-container" :class="{show, hide, appear, disapear}" @click="emits('update:modelValue', false)">
+  <div class="dialog-container" :class="{show, hide, appear, disapear}" @click="store.toggle()">
     <div class="dialog">
-      <slot />
+      <component :is="store.component" />
     </div>
   </div>
 </template>
@@ -55,17 +50,24 @@ watch(() => props.modelValue, (value) => {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 40px;
 }
 
 .dialog {
   position: fixed;
-  top: 40px;
-  bottom: 40px;
   background-color: white;
   max-width: 780px;
+  top: 40px;
+  bottom: 40px;
   width: 100%;
   border-radius: 12px;
+
+  @media (max-width: $breakpoint-sm-max) {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 0;
+  }
 }
 
 @keyframes fade-in {

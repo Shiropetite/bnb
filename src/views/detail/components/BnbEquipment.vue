@@ -1,14 +1,8 @@
 <script lang="ts" setup>
-import { ref, watch } from 'vue';
-import BnbEquipmentDialog from './BnbEquipmentDialog.vue';
 import { useDialog } from '@/stores/dialog';
 
-const { toggle } = useDialog();
-const isOpen = ref(false);
+const { openDialog } = useDialog();
 
-watch(isOpen, () => {
-  toggle();
-})
 </script>
 
 <template>
@@ -17,28 +11,43 @@ watch(isOpen, () => {
 
     <div class="row items-center wrap">
       <div class="col col-xl-6 row items-center mb-14">
-        <img class="mr-18" src="/icons/waterfront.svg" />
-        <div>Front de mer</div>
+        <img class="gt-sm mr-18" src="/icons/waterfront.svg" />
+        <div class="col row justify-between items-center">
+          <div>Front de mer</div>
+          <img class="lt-md mr-18" src="/icons/waterfront.svg" />
+        </div>
       </div>
 
       <div class="col col-xl-6 row items-center mb-14">
-        <img class="mr-18" src="/icons/kitchen.svg" />
-        <div>Cuisine</div>
+        <img class="gt-sm mr-18" src="/icons/kitchen.svg" />
+        <div class="col row justify-between items-center">
+          <div>Cuisine</div>
+          <img class="lt-md mr-18" src="/icons/kitchen.svg" />
+        </div>
       </div>
 
       <div class="col col-xl-6 row items-center mb-14">
-        <img class="mr-18" src="/icons/wifi.svg" />
-        <div>Wifi</div>
+        <img class="gt-sm mr-18" src="/icons/wifi.svg" />
+        <div class="col row justify-between items-center">
+          <div>Wifi</div>
+          <img class="lt-md mr-18" src="/icons/wifi.svg" />
+        </div>
       </div>
 
       <div class="col col-xl-6 row items-center mb-14">
-        <img class="mr-18" src="/icons/dedicated-workspace.svg" />
-        <div>Espace de travail dédié</div>
+        <img class="gt-sm mr-18" src="/icons/dedicated-workspace.svg" />
+        <div class="col row justify-between items-center">
+          <div>Espace de travail dédié</div>
+          <img class="lt-md mr-18" src="/icons/dedicated-workspace.svg" />
+        </div>
       </div>
 
       <div class="col col-xl-6 row items-center mb-14">
-        <img class="mr-18" src="/icons/free-parking.svg" />
-        <div>Parking gratuit sur place</div>
+        <img class="gt-sm mr-18" src="/icons/free-parking.svg" />
+        <div class="col row justify-between items-center">
+          <div>Parking gratuit sur place</div>
+          <img class="lt-md mr-18" src="/icons/free-parking.svg" />
+        </div>
       </div>
 
       <div class="col col-xl-6 row items-center mb-14 gt-lg">
@@ -67,10 +76,7 @@ watch(isOpen, () => {
       </div>
     </div>
 
-    <bnb-button class="mt-10 equipment-btn" label="Afficher les 37 équipement" border="dark" @click="isOpen = true" />
-    <bnb-dialog v-model="isOpen" >
-      <bnb-equipment-dialog />
-    </bnb-dialog> 
+    <bnb-button class="mt-10 equipment-btn" label="Afficher les 37 équipement" border="dark" @click="openDialog('bnb-equipment-dialog')" />
     
   </div>
 </template>

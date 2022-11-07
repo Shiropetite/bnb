@@ -44,7 +44,7 @@ const print = (text: string) => {
         </div>
 
         <div class="row">
-          <div style="width: 66.66%">
+          <div class="container">
 
             <bnb-subtitle />
 
@@ -192,6 +192,14 @@ const print = (text: string) => {
 
   @media (min-width: $breakpoint-lg-min) {
     padding: 40px 80px !important;
+  }
+}
+
+.container {
+  width: 66.66%;
+
+  @media (max-width: $breakpoint-sm-max) {
+    width: 100%;
   }
 }
 </style>

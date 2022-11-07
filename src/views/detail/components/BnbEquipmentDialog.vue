@@ -1,9 +1,8 @@
 <template>
   <div>
-    <div class="ma-24">
+    <div class="ma-16">
       <bnb-button icon="/icons/close.svg" round />
     </div>
-    <div class="separator"></div>
     <div class="dialog-body">
       <div class="ma-24">
         <h2 class="mb-32">Ce que propose le logement</h2>

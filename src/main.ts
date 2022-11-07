@@ -12,6 +12,7 @@ import BnbCalendar from './components/BnbCalendar.vue';
 import BnbReview from './components/BnbReview.vue';
 import BnbHeader from './components/BnbHeader.vue';
 import BnbDialog from './components/BnbDialog.vue';
+import BnbEquipmentDialog from './views/detail/components/BnbEquipmentDialog.vue';
 
 const app = createApp(App);
 
@@ -23,5 +24,8 @@ app.component('BnbButton', BnbButton);
 app.component('BnbCalendar', BnbCalendar);
 app.component('BnbReview', BnbReview);
 app.component('BnbDialog', BnbDialog);
+
+// Others
+app.component('BnbEquipmentDialog', BnbEquipmentDialog);
 
 app.mount('#app');
