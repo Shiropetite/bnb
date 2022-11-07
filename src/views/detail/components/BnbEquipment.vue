@@ -1,3 +1,16 @@
+<script lang="ts" setup>
+import { ref, watch } from 'vue';
+import BnbEquipmentDialog from './BnbEquipmentDialog.vue';
+import { useDialog } from '@/stores/dialog';
+
+const { toggle } = useDialog();
+const isOpen = ref(false);
+
+watch(isOpen, () => {
+  toggle();
+})
+</script>
+
 <template>
   <div>
     <h2 class="mb-24">Ce que propose ce logement</h2>
@@ -29,7 +42,11 @@
       </div>
     </div>
 
-    <bnb-button class="equipment-btn" label="Afficher les 37 équipement" border="dark" />
+    <bnb-button class="equipment-btn" label="Afficher les 37 équipement" border="dark" @click="isOpen = true" />
+    <bnb-dialog v-model="isOpen" >
+      <bnb-equipment-dialog />
+    </bnb-dialog> 
+    
   </div>
 </template>
 <style lang="scss" scoped>
