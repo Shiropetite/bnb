@@ -36,13 +36,38 @@ watch(isOpen, () => {
         <div>Espace de travail dédié</div>
       </div>
 
-      <div class="col col-xl-6 row items-center mb-24">
+      <div class="col col-xl-6 row items-center mb-14">
         <img class="mr-18" src="/icons/free-parking.svg" />
         <div>Parking gratuit sur place</div>
       </div>
+
+      <div class="col col-xl-6 row items-center mb-14 gt-lg">
+        <img class="mr-18" src="/icons/jacuzzi.svg" />
+        <div>Jacuzzi privé</div>
+      </div>
+
+      <div class="col col-xl-6 row items-center mb-14 gt-lg">
+        <img class="mr-18" src="/icons/pet.svg" />
+        <div>Animaux acceptés</div>
+      </div>
+
+      <div class="col col-xl-6 row items-center mb-14 gt-lg">
+        <img class="mr-18" src="/icons/television.svg" />
+        <div>Télévision</div>
+      </div>
+
+      <div class="col col-xl-6 row items-center mb-14 gt-lg">
+        <img class="mr-18" src="/icons/washing-machine.svg" />
+        <div>Lave-linge</div>
+      </div>
+
+      <div class="col col-xl-6 row items-center mb-14 gt-lg">
+        <img class="mr-18" src="/icons/patio.svg" />
+        <div>Patio ou balcon</div>
+      </div>
     </div>
 
-    <bnb-button class="equipment-btn" label="Afficher les 37 équipement" border="dark" @click="isOpen = true" />
+    <bnb-button class="mt-10 equipment-btn" label="Afficher les 37 équipement" border="dark" @click="isOpen = true" />
     <bnb-dialog v-model="isOpen" >
       <bnb-equipment-dialog />
     </bnb-dialog> 
