@@ -1,7 +1,14 @@
+<script lang="ts" setup>
+import { useDialog } from '@/stores/dialog';
+
+const store = useDialog();
+</script>
+
 <template>
   <div>
-    <div class="ma-16">
-      <bnb-button icon="/icons/close.svg" round />
+    <div class="ma-12">
+      <bnb-button class="gt-sm" icon="/icons/close.svg" @click="store.toggle()" round />
+      <bnb-button class="lt-md" icon="/icons/arrow-left.svg" @click="store.toggle()" round />
     </div>
     <div class="dialog-body">
       <div class="ma-24">
@@ -155,7 +162,7 @@
 </template>
 
 <style lang="scss">
-.show .dialog-body {
+.dialog-body {
   overflow-y: scroll;
   max-height: calc(100vh - 165px);
 }

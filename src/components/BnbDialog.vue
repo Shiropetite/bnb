@@ -31,7 +31,7 @@ watch(() => store.isOpen, (value) => {
 </script>
 
 <template>
-  <div class="dialog-container" :class="{show, hide, appear, disapear}" @click="store.toggle()">
+  <div class="dialog-container" :class="{show, hide, appear, disapear}" >
     <div class="dialog">
       <component :is="store.component" />
     </div>
@@ -50,6 +50,7 @@ watch(() => store.isOpen, (value) => {
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
 .dialog {
