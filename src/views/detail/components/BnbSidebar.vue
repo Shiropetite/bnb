@@ -17,11 +17,11 @@
             <div class="row">
               <div class="col-6 cell">
                 <div class="bold mb-2">Arrivée</div>
-                <div>19/11/20...</div>
+                <div>09/01/20...</div>
               </div>
               <div class="col-6 cell cell-right">
                 <div class="bold mb-2">Départ</div>
-                <div>25/11/20...</div>
+                <div>15/01/20...</div>
               </div>
             </div>
             <div class="cell cell-bottom">

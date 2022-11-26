@@ -1,14 +1,20 @@
 <script lang="ts" setup>
-defineProps<{
-  month: string;
+import { useDatePicker, getMonthName } from '@/utils/date';
+
+const props = defineProps<{
+  startDate?: string;
+  endDate?: string;
+  month: number;
   year: number;
 }>();
+
+const { nbWeeks, dayNumber, isDayValid, isSelectedDate, isStartDate, isRangeDate, isEndDate } = useDatePicker(props.month, props.year, props.startDate, props.endDate);
 </script>
 <template>
   <div class="bnb-calendar">
     <div class="row items-center justify-between mb-16">
       <bnb-button icon="/icons/arrow-left.svg" round />
-      <div class="bold">{{ month }} {{ year }}</div>
+      <div class="bold">{{ getMonthName(month) }} {{ year }}</div>
       <bnb-button icon="/icons/arrow-right.svg" round />
     </div>
 
@@ -25,54 +31,22 @@ defineProps<{
     </table>
 
     <table class="text-center subtitle bold mb-16">
-      <tr>
-        <td><div class="date"></div></td>
-        <td><div class="date not-available">1</div></td>
-        <td><div class="date not-available">2</div></td>
-        <td><div class="date not-available">3</div></td>
-        <td><div class="date not-available">4</div></td>
-        <td><div class="date">5</div></td>
-        <td><div class="date">6</div></td>
-      </tr>
-      <tr>
-        <td><div class="date">7</div></td>
-        <td><div class="date min">8</div></td>
-        <td><div class="date min">9</div></td>
-        <td><div class="date not-available">10</div></td>
-        <td><div class="date not-available">11</div></td>
-        <td><div class="date not-available">12</div></td>
-        <td><div class="date not-available">13</div></td>
-      </tr>
-      <tr>
-        <td><div class="date not-available">14</div></td>
-        <td><div class="date not-available">15</div></td>
-        <td><div class="date not-available">16</div></td>
-        <td><div class="date not-available">17</div></td>
-        <td><div class="date not-available">18</div></td>
-        <td class="td-first"><div class="date selected">19</div></td>
-        <td class="td-range"><div class="date range">20</div></td>
-      </tr>
-      <tr>
-        <td class="td-range"><div class="date range">21</div></td>
-        <td class="td-range"><div class="date range">22</div></td>
-        <td class="td-range"><div class="date range">23</div></td>
-        <td class="td-range"><div class="date range">24</div></td>
-        <td class="td-last"><div class="date selected">25</div></td>
-        <td><div class="date">26</div></td>
-        <td><div class="date">27</div></td>
-      </tr>
-      <tr>
-        <td><div class="date">28</div></td>
-        <td><div class="date">29</div></td>
-        <td><div class="date">30</div></td>
-        <td><div class="date"></div></td>
-        <td><div class="date"></div></td>
-        <td><div class="date"></div></td>
-        <td><div class="date"></div></td>
+      <tr v-for="(_, weekIndex) in nbWeeks">
+        <td v-for="(_, dayIndex) in 7">
+          <button 
+            class="date"
+            :class="{
+              'available': isDayValid(dayNumber(weekIndex, dayIndex)),
+              'start-date': isStartDate(weekIndex, dayIndex),
+              'range-date': isRangeDate(weekIndex, dayIndex),
+              'end-date': isEndDate(weekIndex, dayIndex),
+              'selected': isSelectedDate(weekIndex, dayIndex)
+            }" 
+          >{{ isDayValid(dayNumber(weekIndex, dayIndex)) ? dayNumber(weekIndex, dayIndex) : "" }}</button>
+        </td>
       </tr>
     </table>
 
-    <div class="caption underline bold">Effacer les dates</div>
   </div>
 </template>
 <style lang="scss">
@@ -103,6 +77,36 @@ defineProps<{
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor:default;
+  }
+
+  .available:hover {
+    border: solid 1px black;
+    cursor: pointer;
+  }
+
+  .start-date {
+    background-color: #222;
+    color: white;
+  }
+
+  td:has(.start-date) {
+    background-color: #ddd;
+    border-radius: 50% 0 0 50%;
+  }
+
+  td:has(.range-date) {
+    background-color: #ddd;
+  }
+
+  .end-date {
+    background-color: #222;
+    color: white;
+  }
+
+  td:has(.end-date) {
+    background-color: #ddd;
+    border-radius: 0 50% 50% 0;
   }
 
   .not-available {
