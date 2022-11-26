@@ -20,6 +20,7 @@ import LaptopRules from './components/LaptopRules.vue';
 import BnbDiscover from './components/BnbDiscover.vue';
 import BnbFooter from './components/BnbFooter.vue';
 import BnbSummary from './components/BnbSummary.vue';
+import BnbDate from './components/BnbDate.vue';
 
 const print = (text: string) => {
   console.log(text);
@@ -74,12 +75,7 @@ const print = (text: string) => {
 
             <div class="separator mt-24 mb-32 lt-md"></div>
 
-            <h2 class="mb-8">6 nuit à Badachro</h2>
-            <div class="subtitle text-dark-grey mb-24">19 nov. 2022 - 25 nov. 2022</div>
-            <div class="row items-center justify-between">
-              <bnb-calendar class="col col-xl-6" month="Novembre" :year="2022" />
-              <bnb-calendar class="col col-xl-6 gt-lg" month="Décembre" :year="2022" />
-            </div>
+            <bnb-date />
           </div>
 
           <bnb-sidebar class="gt-sm" />

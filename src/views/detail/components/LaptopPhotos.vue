@@ -45,7 +45,7 @@
   }
 
   @media (min-width: $breakpoint-xl-min) {
-    padding-top: 480px !important;
+    padding-top: 420px !important;
   }
 }
 
@@ -59,7 +59,7 @@
   max-height: 380px;
 
   @media (min-width: $breakpoint-xl-min) {
-    max-height: 480px !important;
+    max-height: 420px !important;
   }
 }
 
