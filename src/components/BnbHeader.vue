@@ -19,7 +19,7 @@
       <div class="row items-center">
         <bnb-button label="Devenez hôte" rounded />
         <bnb-button class="mr-8" icon="/icons/language.svg" round />
-        <bnb-button
+        <bnb-dropdown-button
           icon-left="/icons/menu.svg"
           icon-right="/icons/account.svg"
           border="light"
@@ -27,7 +27,9 @@
           rounded
           shadow
           dense
-        />
+        >
+        <bnb-account-menu />
+      </bnb-dropdown-button>
       </div>
     </div>
   </div>

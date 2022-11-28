@@ -164,7 +164,7 @@ const store = useDialog();
 <style lang="scss">
 .dialog-body {
   overflow-y: scroll;
-  max-height: calc(100vh - 165px);
+  max-height: calc(100vh - 134px);
 }
 
 .not-included {

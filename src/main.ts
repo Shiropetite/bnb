@@ -8,6 +8,8 @@ import './css/index.scss';
 
 // Components
 import BnbButton from './components/BnbButton.vue';
+import BnbDropdownButton from './components/BnbDropdownButton.vue';
+import BnbAccountMenu from './components/BnbAccountMenu.vue';
 import BnbCalendar from './components/BnbCalendar.vue';
 import BnbReview from './components/BnbReview.vue';
 import BnbHeader from './components/BnbHeader.vue';
@@ -24,6 +26,8 @@ app.component('BnbButton', BnbButton);
 app.component('BnbCalendar', BnbCalendar);
 app.component('BnbReview', BnbReview);
 app.component('BnbDialog', BnbDialog);
+app.component('BnbDropdownButton', BnbDropdownButton);
+app.component('BnbAccountMenu', BnbAccountMenu);
 
 // Others
 app.component('BnbEquipmentDialog', BnbEquipmentDialog);
