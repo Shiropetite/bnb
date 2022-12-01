@@ -12,10 +12,13 @@
     </div>
 
     <div class="mb-8 text">
-      Experience unique et super. le logement de Ian se situe sur une île privée, au milieu de la nature et bénéficie de
-      tout le confort nécessaire (cuisine complète, salle de bains etc.). tout est propre. hôte très agréable et réactif
-      !!! Merci Ian pour votre réponse rapide à notre demande de dernière minute et pour votre amabilité, vos conseils
-      et propositions. Enfin, superbe vue sur une belle rivière, au pied de la maison.
+      Experience unique et super. le logement de Ian se situe sur une île
+      privée, au milieu de la nature et bénéficie de tout le confort nécessaire
+      (cuisine complète, salle de bains etc.). tout est propre. hôte très
+      agréable et réactif !!! Merci Ian pour votre réponse rapide à notre
+      demande de dernière minute et pour votre amabilité, vos conseils et
+      propositions. Enfin, superbe vue sur une belle rivière, au pied de la
+      maison.
     </div>
 
     <div class="row items-center">

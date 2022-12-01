@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-import { onMounted, ref } from 'vue';
+import { onMounted, ref } from "vue";
 
 const isVisible = ref(false);
 const isPrice = ref(false);
 
 onMounted(() => {
-  window.addEventListener('scroll', function () {
+  window.addEventListener("scroll", function () {
     if (window.scrollY > 500) {
       isVisible.value = true;
       if (window.scrollY > 2400) {

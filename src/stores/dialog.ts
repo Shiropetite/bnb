@@ -1,25 +1,26 @@
-import { defineStore } from 'pinia';
+import { defineStore } from "pinia";
 
-export const useDialog = defineStore('dialog', {
+export const useDialog = defineStore("dialog", {
   state: () => ({
     isOpen: false,
-    component: undefined
+    component: undefined as string | undefined,
   }),
 
   actions: {
     openDialog(newComponent: string) {
       this.component = newComponent;
 
-      if (!this.isOpen) { this.toggle(); }
+      if (!this.isOpen) {
+        this.toggle();
+      }
     },
     toggle() {
-      this.isOpen = !this.isOpen
-      if(this.isOpen) {
-        document.body.style.overflowY = 'hidden'
+      this.isOpen = !this.isOpen;
+      if (this.isOpen) {
+        document.body.style.overflowY = "hidden";
+      } else {
+        document.body.style.overflowY = "scroll";
       }
-      else {
-        document.body.style.overflowY = 'scroll'
-      }
-    }
-  }
+    },
+  },
 });

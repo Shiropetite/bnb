@@ -13,7 +13,9 @@
     <div class="row items-center justify-between">
       <div class="mr-12">
         <h2 class="mb-8">Santé et sécurité</h2>
-        <div class="subtitle text-dark-grey">Les partiques de sécurité d’Airbnb liées au Covid-19 s’appliquent</div>
+        <div class="subtitle text-dark-grey">
+          Les partiques de sécurité d’Airbnb liées au Covid-19 s’appliquent
+        </div>
       </div>
       <img src="/icons/arrow-right.svg" />
     </div>
@@ -23,10 +25,13 @@
     <div class="row items-center justify-between">
       <div class="mr-12">
         <h2 class="mb-8">Conditions d’annulation</h2>
-        <div class="subtitle text-dark-grey mb-8">Annulation gratuite pendant 48 heures.</div>
+        <div class="subtitle text-dark-grey mb-8">
+          Annulation gratuite pendant 48 heures.
+        </div>
         <div class="subtitle text-dark-grey">
-          Consultez les conditions d'annulation complètes de l'hôte, qui s'appliquent même si vous annulez pour cause de
-          maladie ou de perturbations causées par le Covid-19.
+          Consultez les conditions d'annulation complètes de l'hôte, qui
+          s'appliquent même si vous annulez pour cause de maladie ou de
+          perturbations causées par le Covid-19.
         </div>
       </div>
       <img src="/icons/arrow-right.svg" />

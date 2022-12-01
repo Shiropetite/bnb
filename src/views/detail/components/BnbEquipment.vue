@@ -1,8 +1,7 @@
 <script lang="ts" setup>
-import { useDialog } from '@/stores/dialog';
+import { useDialog } from "@/stores/dialog";
 
 const { openDialog } = useDialog();
-
 </script>
 
 <template>
@@ -76,8 +75,12 @@ const { openDialog } = useDialog();
       </div>
     </div>
 
-    <bnb-button class="mt-10 equipment-btn" label="Afficher les 37 équipement" border="dark" @click="openDialog('bnb-equipment-dialog')" />
-    
+    <bnb-button
+      class="mt-10 equipment-btn"
+      label="Afficher les 37 équipement"
+      border="dark"
+      @click="openDialog('bnb-equipment-dialog')"
+    />
   </div>
 </template>
 <style lang="scss" scoped>

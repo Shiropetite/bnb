@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { ref, watch } from 'vue';
-import { useDialog } from '@/stores/dialog';
+import { ref, watch } from "vue";
+import { useDialog } from "@/stores/dialog";
 
 const store = useDialog();
 
@@ -9,29 +9,30 @@ const hide = ref(true);
 const appear = ref(false);
 const disapear = ref(false);
 
-watch(() => store.isOpen, (value) => {
-  if (!value) {
-    show.value = false;
-    disapear.value = true;
-    setTimeout(() => {
-      disapear.value = false;
-      hide.value = true;
-    }, 500)
+watch(
+  () => store.isOpen,
+  (value) => {
+    if (!value) {
+      show.value = false;
+      disapear.value = true;
+      setTimeout(() => {
+        disapear.value = false;
+        hide.value = true;
+      }, 500);
+    } else {
+      hide.value = false;
+      appear.value = true;
+      setTimeout(() => {
+        appear.value = false;
+        show.value = true;
+      }, 500);
+    }
   }
-  else {
-    hide.value = false;
-    appear.value = true;
-    setTimeout(() => {
-      appear.value = false;
-      show.value = true;
-    }, 500)
-  }
-})
-
+);
 </script>
 
 <template>
-  <div class="dialog-container" :class="{show, hide, appear, disapear}" >
+  <div class="dialog-container" :class="{ show, hide, appear, disapear }">
     <div class="dialog">
       <component :is="store.component" />
     </div>
@@ -46,11 +47,10 @@ watch(() => store.isOpen, (value) => {
   width: 100%;
   height: 100%;
   z-index: 10;
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0, 0, 0, 0.4);
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .dialog {
@@ -72,23 +72,39 @@ watch(() => store.isOpen, (value) => {
 }
 
 @keyframes fade-in {
-  from {background-color: rgba(0,0,0,0)}
-  to {background-color: rgba(0,0,0,0.4)}
+  from {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
 }
 
 @keyframes fade-out {
-  from {background-color: rgba(0,0,0,0.4)}
-  to {background-color: rgba(0,0,0,0)}
+  from {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0);
+  }
 }
 
 @keyframes slide-in {
-  from {top: 100%}
-  to {top: 40px}
+  from {
+    top: 100%;
+  }
+  to {
+    top: 40px;
+  }
 }
 
 @keyframes slide-out {
-  from {top: 40px}
-  to {top: 100%}
+  from {
+    top: 40px;
+  }
+  to {
+    top: 100%;
+  }
 }
 
 .hide {
