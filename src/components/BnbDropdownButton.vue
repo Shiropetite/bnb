@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref } from "vue";
 
-type Size = 'sm' | 'lg';
-type BgColor = 'dark' | 'primary' | 'gradient';
+type Size = "sm" | "lg";
+type BgColor = "dark" | "primary" | "gradient";
 
 defineProps<{
   label?: string;
@@ -18,15 +18,15 @@ defineProps<{
   rounded?: boolean;
   shadow?: boolean;
   round?: boolean;
-}>()
+}>();
 
 const showDropdown = ref(false);
 </script>
 
 <template>
   <div class="bnb-dropdown-button">
-    <bnb-button 
-      :label="label"  
+    <bnb-button
+      :label="label"
       :to="to"
       :href="href"
       :target="target"
@@ -49,7 +49,9 @@ const showDropdown = ref(false);
 </template>
 
 <style lang="scss">
-.bnb-dropdown-button { position: relative; }
+.bnb-dropdown-button {
+  position: relative;
+}
 
 .dropdown-menu {
   position: absolute;

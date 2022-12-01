@@ -4,7 +4,9 @@
       <img class="mr-18" src="/icons/pet.svg" />
       <div>
         <div class="bold">Amis à quatre pattes bienvenus</div>
-        <div class="subtitle text-dark-grey">Emmenez vos animaux de compagnie avec vous.</div>
+        <div class="subtitle text-dark-grey">
+          Emmenez vos animaux de compagnie avec vous.
+        </div>
       </div>
     </div>
 

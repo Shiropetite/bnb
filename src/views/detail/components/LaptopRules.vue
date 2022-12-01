@@ -47,7 +47,9 @@
 
         <div class="row items-center mb-8">
           <img class="mr-12" src="/icons/clock.svg" />
-          <div>Les partiques de sécurité d’Airbnb liées au Covid-19 s’appliquent.</div>
+          <div>
+            Les partiques de sécurité d’Airbnb liées au Covid-19 s’appliquent.
+          </div>
         </div>
 
         <div class="row items-center mb-8">
@@ -72,8 +74,9 @@
         <div class="mb-8">Annulation gratuite pendant 48 heures</div>
 
         <div class="mb-24">
-          Consultez les conditions d'annulation complètes de l'hôte, qui s'appliquent même si vous annulez pour cause de
-          maladie ou de perturbations causées par le Covid-19.
+          Consultez les conditions d'annulation complètes de l'hôte, qui
+          s'appliquent même si vous annulez pour cause de maladie ou de
+          perturbations causées par le Covid-19.
         </div>
 
         <div class="row items-center">

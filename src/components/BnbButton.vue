@@ -1,6 +1,6 @@
 <script setup lang="ts">
-type Size = 'sm' | 'lg';
-type BgColor = 'dark' | 'primary' | 'gradient';
+type Size = "sm" | "lg";
+type BgColor = "dark" | "primary" | "gradient";
 
 const props = defineProps<{
   label?: string;
@@ -18,17 +18,17 @@ const props = defineProps<{
   round?: boolean;
 }>();
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const onHover = (event: any): void => {
-  if (props.bgColor === 'gradient') {
+  if (props.bgColor === "gradient") {
     const button = event.target;
     const rect = button.getBoundingClientRect();
     const x = ((event.clientX - rect.left) * 100) / button.clientWidth;
     const y = ((event.clientY - rect.top) * 100) / button.clientHeight;
-    button.style.setProperty('--mouse-x', x.toString());
-    button.style.setProperty('--mouse-y', y.toString());
+    button.style.setProperty("--mouse-x", x.toString());
+    button.style.setProperty("--mouse-y", y.toString());
   }
 };
-
 </script>
 
 <template>
@@ -51,9 +51,17 @@ const onHover = (event: any): void => {
     v-on:mousemove="onHover"
   >
     <img v-if="icon" :src="`/bnb${icon}`" />
-    <img v-if="iconLeft" :class="{ 'icon-left': !iconRight }" :src="`/bnb${iconLeft}`" />
+    <img
+      v-if="iconLeft"
+      :class="{ 'icon-left': !iconRight }"
+      :src="`/bnb${iconLeft}`"
+    />
     <span v-if="label">{{ label }}</span>
-    <img v-if="iconRight" :class="{ 'icon-right': !iconLeft || !label }" :src="`/bnb${iconRight}`" />
+    <img
+      v-if="iconRight"
+      :class="{ 'icon-right': !iconLeft || !label }"
+      :src="`/bnb${iconRight}`"
+    />
   </button>
 </template>
 
@@ -110,7 +118,8 @@ const onHover = (event: any): void => {
   border-radius: 32px !important;
 
   &-shadow {
-    box-shadow: 0px 0px 0px 1px transparent, 0px 0px 0px 4px transparent, 0px 2px 4px rgb(0 0 0 / 18%) !important;
+    box-shadow: 0px 0px 0px 1px transparent, 0px 0px 0px 4px transparent,
+      0px 2px 4px rgb(0 0 0 / 18%) !important;
   }
 }
 
@@ -138,8 +147,14 @@ const onHover = (event: any): void => {
   --mouse-x: 50;
   --mouse-y: 50;
   background-size: 200% 200%;
-  background-position: calc((100 - var(--mouse-x, 0)) * 1%) calc((100 - var(--mouse-y, 0)) * 1%);
-  background-image: radial-gradient(circle, #ffa666 0%, #ff552f 80%, #e13838 100%);
+  background-position: calc((100 - var(--mouse-x, 0)) * 1%)
+    calc((100 - var(--mouse-y, 0)) * 1%);
+  background-image: radial-gradient(
+    circle,
+    #ffa666 0%,
+    #ff552f 80%,
+    #e13838 100%
+  );
   border: solid 1px #ffa666;
   color: white;
 }

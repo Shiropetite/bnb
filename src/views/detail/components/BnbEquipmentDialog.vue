@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { useDialog } from '@/stores/dialog';
+import { useDialog } from "@/stores/dialog";
 
 const store = useDialog();
 </script>
@@ -7,8 +7,18 @@ const store = useDialog();
 <template>
   <div>
     <div class="ma-12">
-      <bnb-button class="gt-sm" icon="/icons/close.svg" @click="store.toggle()" round />
-      <bnb-button class="lt-md" icon="/icons/arrow-left.svg" @click="store.toggle()" round />
+      <bnb-button
+        class="gt-sm"
+        icon="/icons/close.svg"
+        @click="store.toggle()"
+        round
+      />
+      <bnb-button
+        class="lt-md"
+        icon="/icons/arrow-left.svg"
+        @click="store.toggle()"
+        round
+      />
     </div>
     <div class="dialog-body">
       <div class="ma-24">
@@ -25,14 +35,18 @@ const store = useDialog();
           <div class="separator"></div>
           <div class="mb-24 mt-24">
             <div>Équipements de base</div>
-            <div class="mt-4 text-dark-grey">Serviettes, draps, savon et papier toilette</div>
+            <div class="mt-4 text-dark-grey">
+              Serviettes, draps, savon et papier toilette
+            </div>
           </div>
           <div class="separator"></div>
           <div class="mb-24 mt-24">Cintres</div>
           <div class="separator"></div>
           <div class="mb-24 mt-24">Draps</div>
           <div class="separator"></div>
-          <div class="mb-24 mt-24">Oreillers et couvertures supplémentaires</div>
+          <div class="mb-24 mt-24">
+            Oreillers et couvertures supplémentaires
+          </div>
           <div class="separator"></div>
         </div>
         <div class="mb-60">
@@ -68,25 +82,31 @@ const store = useDialog();
         <div class="mb-60">
           <h3 class="mb-40">Cuisine et salle à manger</h3>
           <div class="mb-24 mt-24">
-              <div>Cuisine</div>
-              <div class="mt-4 text-dark-grey">Espace où les voyageurs peuvent cuisiner</div>
+            <div>Cuisine</div>
+            <div class="mt-4 text-dark-grey">
+              Espace où les voyageurs peuvent cuisiner
             </div>
+          </div>
           <div class="separator"></div>
           <div class="mb-24 mt-24">Réfrigérateur</div>
           <div class="separator"></div>
           <div class="mb-24 mt-24">Four à micro-ondes</div>
           <div class="separator"></div>
           <div class="mb-24 mt-24">
-              <div>Équipements de cuisine de base</div>
-              <div class="mt-4 text-dark-grey">Casseroles et poêles, huile, sel et poivre</div>
+            <div>Équipements de cuisine de base</div>
+            <div class="mt-4 text-dark-grey">
+              Casseroles et poêles, huile, sel et poivre
             </div>
-            <div class="separator"></div>
-            <div class="mb-24 mt-24">
-              <div>Vaisselle et couverts</div>
-              <div class="mt-4 text-dark-grey">Bols, baguettes, assiettes, tasses, etc.</div>
+          </div>
+          <div class="separator"></div>
+          <div class="mb-24 mt-24">
+            <div>Vaisselle et couverts</div>
+            <div class="mt-4 text-dark-grey">
+              Bols, baguettes, assiettes, tasses, etc.
             </div>
-            <div class="separator"></div>
-            <div class="mb-24 mt-24">Lave-vaisselle</div>
+          </div>
+          <div class="separator"></div>
+          <div class="mb-24 mt-24">Lave-vaisselle</div>
           <div class="separator"></div>
           <div class="mb-24 mt-24">Cuisinière</div>
           <div class="separator"></div>
@@ -98,14 +118,16 @@ const store = useDialog();
         <div class="mb-60">
           <h3 class="mb-40">Caractéristiques de l'emplacement</h3>
           <div class="mb-24 mt-24">
-              <div>Front de mer</div>
-              <div class="mt-4 text-dark-grey">Juste à côté d'un plan d'eau</div>
-            </div>
+            <div>Front de mer</div>
+            <div class="mt-4 text-dark-grey">Juste à côté d'un plan d'eau</div>
+          </div>
           <div class="separator"></div>
           <div class="mb-24 mt-24">
-              <div>Entrée privée</div>
-              <div class="mt-4 text-dark-grey">Entrée par une rue différente ou un immeuble séparé</div>
+            <div>Entrée privée</div>
+            <div class="mt-4 text-dark-grey">
+              Entrée par une rue différente ou un immeuble séparé
             </div>
+          </div>
           <div class="separator"></div>
         </div>
         <div class="mb-60">
@@ -113,9 +135,11 @@ const store = useDialog();
           <div class="mb-24 mt-24">Patio ou balcon</div>
           <div class="separator"></div>
           <div class="mb-24 mt-24">
-              <div>Arrière-cour</div>
-              <div class="mt-4 text-dark-grey">Un espace ouvert du logement généralement recouvert d'herbe</div>
+            <div>Arrière-cour</div>
+            <div class="mt-4 text-dark-grey">
+              Un espace ouvert du logement généralement recouvert d'herbe
             </div>
+          </div>
           <div class="separator"></div>
           <div class="mb-24 mt-24">Barbecue</div>
           <div class="separator"></div>
@@ -130,19 +154,26 @@ const store = useDialog();
         <div class="mb-60">
           <h3 class="mb-40">Services</h3>
           <div class="mb-24 mt-24">
-              <div>Animaux acceptés</div>
-              <div class="mt-4 text-dark-grey">Les animaux d'assistance sont toujours autorisés</div>
+            <div>Animaux acceptés</div>
+            <div class="mt-4 text-dark-grey">
+              Les animaux d'assistance sont toujours autorisés
             </div>
+          </div>
           <div class="separator"></div>
           <div class="mb-24 mt-24">
-              <div>Dépôt de bagages autorisé</div>
-              <div class="mt-4 text-dark-grey">Pour le confort des voyageurs en cas d'arrivée anticipée ou de départ tardif</div>
+            <div>Dépôt de bagages autorisé</div>
+            <div class="mt-4 text-dark-grey">
+              Pour le confort des voyageurs en cas d'arrivée anticipée ou de
+              départ tardif
             </div>
+          </div>
           <div class="separator"></div>
           <div class="mb-24 mt-24">
-              <div>Séjours longue durée autorisés</div>
-              <div class="mt-4 text-dark-grey">Séjours de 28 jours ou plus autorisés</div>
+            <div>Séjours longue durée autorisés</div>
+            <div class="mt-4 text-dark-grey">
+              Séjours de 28 jours ou plus autorisés
             </div>
+          </div>
           <div class="separator"></div>
           <div class="mb-24 mt-24">Clés remises par l'hôte</div>
           <div class="separator"></div>
@@ -158,7 +189,7 @@ const store = useDialog();
         </div>
       </div>
     </div>
- </div>
+  </div>
 </template>
 
 <style lang="scss">

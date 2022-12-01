@@ -20,7 +20,11 @@
       </div>
     </div>
 
-    <bnb-button style="width: 100%" label="Afficher les 43 commentaires" border="dark" />
+    <bnb-button
+      style="width: 100%"
+      label="Afficher les 43 commentaires"
+      border="dark"
+    />
   </div>
 </template>
 <style lang="scss" scoped>

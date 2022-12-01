@@ -1,29 +1,32 @@
 name: Build & Deploy
 
 on:
+  pull_request:
+    branches: [ master ]
   push:
     branches: [ master ]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2.5.0
 
       - name: Setup Node
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3.5.1
         with:
-          node-version: '16.x'
+          node-version: '18.12.1'
 
       - name: Cache
-        uses: actions/cache@v1
+        uses: actions/cache@v3.0.11
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
+
       - name: Install
         run: npm install
 
@@ -36,22 +39,57 @@ jobs:
           name: dist-file
           path: ./dist
 
-
-  deploy:
+  lint: 
+    if: ${{github.event_name == 'pull_request'}}
     needs: [build]
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2.5.0
+
+      - name: Install Eslint
+        run: npm install eslint
+
+      - name: Check lint
+        run: npm run lint
+
+  test:
+    if: ${{github.event_name == 'pull_request'}}
+    needs: [lint]
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.5.0
+
+      - name: Install Vitest
+        run: npm install vitest
+
+      - name: Check unit test
+        run: npm run test:unit
+
+      - name: Install Cypress
+        run: npm install cypress
+
+      - name: Check e2e test
+        run: npm run test:e2e
+
+
+  deploy:
+    if: ${{github.event_name == 'push'}}
+    needs: [build]
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.5.0
 
       - name: Download a single artifact
         uses: actions/download-artifact@v3
         with:
           name: dist-file
           path: ./dist
-          
-      - run : ls
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.2.5

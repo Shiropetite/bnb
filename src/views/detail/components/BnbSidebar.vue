@@ -32,7 +32,9 @@
 
           <bnb-button class="col mb-16" label="Réserver" bg-color="gradient" />
 
-          <div class="subtitle text-center mb-24">Aucun montant ne vous sera débité pour le moment</div>
+          <div class="subtitle text-center mb-24">
+            Aucun montant ne vous sera débité pour le moment
+          </div>
 
           <div class="row items-center justify-between mb-16">
             <div class="underline">172 x 6 nuits</div>
@@ -51,7 +53,9 @@
             <div>1 203 €</div>
           </div>
         </div>
-        <div class="signal row items-center justify-center bold underline text-dark-grey">
+        <div
+          class="signal row items-center justify-center bold underline text-dark-grey"
+        >
           <img class="mr-16" src="/icons/signal.svg" />
           <div>Signaler cette annonce</div>
         </div>

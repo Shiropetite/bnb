@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { useDatePicker, getMonthName } from '@/utils/date';
+import { useDatePicker, getMonthName } from "@/utils/date";
 
 const props = defineProps<{
   startDate?: string;
@@ -8,7 +8,15 @@ const props = defineProps<{
   year: number;
 }>();
 
-const { nbWeeks, dayNumber, isDayValid, isSelectedDate, isStartDate, isRangeDate, isEndDate } = useDatePicker(props.month, props.year, props.startDate, props.endDate);
+const {
+  nbWeeks,
+  dayNumber,
+  isDayValid,
+  isSelectedDate,
+  isStartDate,
+  isRangeDate,
+  isEndDate,
+} = useDatePicker(props.month, props.year, props.startDate, props.endDate);
 </script>
 <template>
   <div class="bnb-calendar">
@@ -31,22 +39,27 @@ const { nbWeeks, dayNumber, isDayValid, isSelectedDate, isStartDate, isRangeDate
     </table>
 
     <table class="text-center subtitle bold mb-16">
-      <tr v-for="(_, weekIndex) in nbWeeks">
-        <td v-for="(_, dayIndex) in 7">
-          <button 
+      <tr v-for="(_, weekIndex) in nbWeeks" :key="weekIndex">
+        <td v-for="(_, dayIndex) in 7" :key="dayIndex">
+          <button
             class="date"
             :class="{
-              'available': isDayValid(dayNumber(weekIndex, dayIndex)),
+              available: isDayValid(dayNumber(weekIndex, dayIndex)),
               'start-date': isStartDate(weekIndex, dayIndex),
               'range-date': isRangeDate(weekIndex, dayIndex),
               'end-date': isEndDate(weekIndex, dayIndex),
-              'selected': isSelectedDate(weekIndex, dayIndex)
-            }" 
-          >{{ isDayValid(dayNumber(weekIndex, dayIndex)) ? dayNumber(weekIndex, dayIndex) : "" }}</button>
+              selected: isSelectedDate(weekIndex, dayIndex),
+            }"
+          >
+            {{
+              isDayValid(dayNumber(weekIndex, dayIndex))
+                ? dayNumber(weekIndex, dayIndex)
+                : ""
+            }}
+          </button>
         </td>
       </tr>
     </table>
-
   </div>
 </template>
 <style lang="scss">
@@ -62,7 +75,7 @@ const { nbWeeks, dayNumber, isDayValid, isSelectedDate, isStartDate, isRangeDate
   }
 
   td:after {
-    content: '';
+    content: "";
     display: block;
     margin-top: 100%;
   }
@@ -77,7 +90,7 @@ const { nbWeeks, dayNumber, isDayValid, isSelectedDate, isStartDate, isRangeDate
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor:default;
+    cursor: default;
   }
 
   .available:hover {
