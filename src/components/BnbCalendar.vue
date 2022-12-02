@@ -22,7 +22,7 @@ const {
   <div class="bnb-calendar">
     <div class="row items-center justify-between mb-16">
       <bnb-button icon="/icons/arrow-left.svg" round />
-      <div class="bold">{{ getMonthName(month) }} {{ year }}</div>
+      <div class="bold title">{{ getMonthName(month) }} {{ year }}</div>
       <bnb-button icon="/icons/arrow-right.svg" round />
     </div>
 

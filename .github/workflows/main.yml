@@ -63,14 +63,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2.5.0
 
-      - name: Install Vitest
-        run: npm install vitest
+      - name: Install Cypress
+        run: npm install cypress
 
       - name: Check unit test
         run: npm run test:unit
-
-      - name: Install Cypress
-        run: npm install cypress
 
       - name: Check e2e test
         run: npm run test:e2e
