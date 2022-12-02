@@ -1,5 +1,6 @@
 <script setup lang="ts">
 type Size = "sm" | "lg";
+type BorderColor = "dark" | "light";
 type BgColor = "dark" | "primary" | "gradient";
 
 const props = defineProps<{
@@ -10,7 +11,7 @@ const props = defineProps<{
   icon?: string;
   iconRight?: string;
   iconLeft?: string;
-  border?: string;
+  border?: BorderColor;
   size?: Size;
   bgColor?: BgColor;
   rounded?: boolean;
@@ -32,15 +33,13 @@ const onHover = (event: any): void => {
 </script>
 
 <template>
-  <button
-    :id="`bnb-button-${bgColor}`"
+  <a
     class="bnb-button"
     :class="{
       round: round === true,
       rounded: rounded === true,
       shadow: shadow === true,
-      'round-shadow': shadow && round,
-      'bg-black': bgColor === 'dark',
+      'bg-dark': bgColor === 'dark',
       'bg-primary': bgColor === 'primary',
       'bg-gradient': bgColor === 'gradient',
       'border-dark': border === 'dark',
@@ -48,6 +47,9 @@ const onHover = (event: any): void => {
       'button-sm': size === 'sm',
       'button-lg': size === 'lg',
     }"
+    :to="to"
+    :href="href"
+    :target="target"
     v-on:mousemove="onHover"
   >
     <img v-if="icon" :src="`/bnb${icon}`" />
@@ -62,7 +64,7 @@ const onHover = (event: any): void => {
       :class="{ 'icon-right': !iconLeft || !label }"
       :src="`/bnb${iconRight}`"
     />
-  </button>
+  </a>
 </template>
 
 <style lang="scss" scoped>
@@ -123,7 +125,7 @@ const onHover = (event: any): void => {
   }
 }
 
-.bg-black {
+.bg-dark {
   border: solid 1px #222;
   background-color: #222;
   color: white;
@@ -134,12 +136,12 @@ const onHover = (event: any): void => {
 }
 
 .bg-primary {
-  border: solid 1px #ffa666;
-  background-color: #ffa666;
+  border: solid 1px $primary;
+  background-color: $primary;
   color: white;
 
   &:hover {
-    background-color: #ffa666;
+    background-color: $primary;
   }
 }
 

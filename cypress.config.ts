@@ -6,4 +6,12 @@ export default defineConfig({
     baseUrl: "http://localhost:4173",
     video: false,
   },
+  component: {
+    video: false,
+    specPattern: "src/**/__tests__/*.{cy,spec}.{js,ts,jsx,tsx}",
+    devServer: {
+      framework: "vue",
+      bundler: "vite",
+    },
+  },
 });

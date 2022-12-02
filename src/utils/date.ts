@@ -21,7 +21,7 @@ const getNumberOfDayInMonth = (month: number, year: number): number => {
   const numberOfDay = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
   if (month === 1 && year % 4 === 0) {
-    numberOfDay[month] + 1;
+    return numberOfDay[month] + 1;
   }
 
   return numberOfDay[month];
