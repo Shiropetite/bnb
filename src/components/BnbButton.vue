@@ -5,9 +5,6 @@ type BgColor = "dark" | "primary" | "gradient";
 
 const props = defineProps<{
   label?: string;
-  to?: string;
-  href?: string;
-  target?: string;
   icon?: string;
   iconRight?: string;
   iconLeft?: string;
@@ -33,7 +30,7 @@ const onHover = (event: any): void => {
 </script>
 
 <template>
-  <a
+  <button
     class="bnb-button"
     :class="{
       round: round === true,
@@ -47,9 +44,6 @@ const onHover = (event: any): void => {
       'button-sm': size === 'sm',
       'button-lg': size === 'lg',
     }"
-    :to="to"
-    :href="href"
-    :target="target"
     v-on:mousemove="onHover"
   >
     <img v-if="icon" :src="`/bnb${icon}`" />
@@ -64,7 +58,7 @@ const onHover = (event: any): void => {
       :class="{ 'icon-right': !iconLeft || !label }"
       :src="`/bnb${iconRight}`"
     />
-  </a>
+  </button>
 </template>
 
 <style lang="scss" scoped>
