@@ -8,27 +8,6 @@ describe("BnbButton", () => {
     cy.get(".bnb-button").should("contain", label);
   });
 
-  it("should have an 'href' attribute", () => {
-    const href = "https://www.google.fr/";
-    cy.mount(BnbButton, { props: { href } });
-
-    cy.get(".bnb-button").should("have.attr", "href", href);
-  });
-
-  it("should have an 'to' attribute", () => {
-    const to = "/about";
-    cy.mount(BnbButton, { props: { to } });
-
-    cy.get(".bnb-button").should("have.attr", "to", to);
-  });
-
-  it("should have an 'target' attribute", () => {
-    const target = "_blank";
-    cy.mount(BnbButton, { props: { target } });
-
-    cy.get(".bnb-button").should("have.attr", "target", target);
-  });
-
   it("should contain an icon", () => {
     const icon = "/logo.svg";
     cy.mount(BnbButton, { props: { icon } });
