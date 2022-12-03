@@ -14,7 +14,7 @@ import BnbCalendar from "./components/BnbCalendar.vue";
 import BnbReview from "./components/BnbReview.vue";
 import BnbHeader from "./components/BnbHeader.vue";
 import BnbDialog from "./components/BnbDialog.vue";
-import BnbEquipmentDialog from "./views/detail/components/BnbEquipmentDialog.vue";
+import BnbEquipmentDialog from "./pages/detail/components/BnbEquipmentDialog.vue";
 
 const app = createApp(App);
 
