@@ -16,7 +16,7 @@ import BnbDialog from "./components/BnbDialog.vue";
 import BnbLink from "./components/BnbLink.vue";
 
 import BnbEquipmentDialog from "./pages/detail/components/BnbEquipmentDialog.vue";
-import ReviewDialog from "./pages/detail/components/reviews/ReviewDialog.vue";
+import CommentPopup from "./pages/detail/components/reviews/CommentPopup.vue";
 
 const app = createApp(App);
 
@@ -31,8 +31,8 @@ app.component("BnbDialog", BnbDialog);
 app.component("BnbDropdownButton", BnbDropdownButton);
 app.component("BnbAccountMenu", BnbAccountMenu);
 
-// Others
+// Popups
 app.component("BnbEquipmentDialog", BnbEquipmentDialog);
-app.component("ReviewDialog", ReviewDialog);
+app.component("CommentPopup", CommentPopup);
 
 app.mount("#app");

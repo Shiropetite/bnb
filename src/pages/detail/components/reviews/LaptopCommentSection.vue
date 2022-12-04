@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 import { useDialog } from "@/stores/dialog";
 
-import GradeReviews from "./GradeReviews.vue";
-import BnbReview from "./LaptopReview.vue";
+import CommentGrades from "./CommentGrades.vue";
+import LaptopComment from "./LaptopComment.vue";
 
 const { openDialog } = useDialog();
 
@@ -71,10 +71,10 @@ const mockReviews = [
       <img src="/icons/info.svg" />
     </div>
 
-    <grade-reviews inline />
+    <comment-grades inline />
 
     <div class="row items-center justify-between wrap">
-      <bnb-review
+      <laptop-comment
         class="col-xl-6 mb-40"
         v-for="review in mockReviews"
         :key="review.name"
@@ -86,10 +86,11 @@ const mockReviews = [
       class="review-btn"
       label="Afficher les 43 commentaires"
       border="dark"
-      @click="openDialog('review-dialog', 1080)"
+      @click="openDialog('comment-popup')"
     />
   </div>
 </template>
+
 <style lang="scss" scoped>
 .review {
   text-overflow: ellipsis;

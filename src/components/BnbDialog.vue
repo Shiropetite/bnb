@@ -29,11 +29,23 @@ watch(
     }
   }
 );
+
+const componentsMaxWidth: { [key: string]: number } = {
+  "comment-popup": 1080,
+  "bnb-equipment-dialog": 780,
+};
 </script>
 
 <template>
-  <div class="dialog-container" :class="{ show, hide, appear, disapear }">
-    <div class="dialog" :style="`max-width: ${store.maxWidth}px`">
+  <div
+    v-if="store.component"
+    class="dialog-container"
+    :class="{ show, hide, appear, disapear }"
+  >
+    <div
+      class="dialog"
+      :style="`max-width: ${componentsMaxWidth[store.component]}px`"
+    >
       <component :is="store.component" />
     </div>
   </div>

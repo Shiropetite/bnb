@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import BnbReview from "./MobileReview.vue";
+import MobileComment from "./MobileComment.vue";
 
 const mockReviews = [
   {
@@ -41,14 +41,13 @@ const mockReviews = [
     <div class="mb-24">
       <div class="carousel">
         <div class="slide">
-          <bnb-review
-            class="bnb-review"
+          <mobile-comment
             v-for="review in mockReviews"
             :key="review.name"
             :review="review"
           />
           <div class="end row items-center justify-center bold underline">
-            <div>Afficher les 44 commentaires</div>
+            <div>Afficher les 43 commentaires</div>
           </div>
         </div>
       </div>
@@ -82,10 +81,6 @@ const mockReviews = [
   &::-webkit-scrollbar {
     display: none; /* Safari and Chrome */
   }
-}
-
-.bnb-review {
-  flex: 1 0 80%;
 }
 
 .end {

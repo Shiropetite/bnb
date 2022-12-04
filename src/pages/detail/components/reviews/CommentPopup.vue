@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 import { useDialog } from "@/stores/dialog";
 
-import GradeReviews from "./GradeReviews.vue";
-import BnbReview from "./LaptopReview.vue";
+import CommentGrades from "./CommentGrades.vue";
+import LaptopComment from "./LaptopComment.vue";
 
 const store = useDialog();
 
@@ -76,7 +76,7 @@ const mockReviews = [
       />
     </div>
     <div class="dialog-body row justify-between">
-      <div class="grade">
+      <div class="grade-section">
         <h2 class="mb-4">
           <img class="mr-8" src="/icons/star.svg" width="24" />
           <span>4,72 · 43 commentaires</span>
@@ -89,19 +89,19 @@ const mockReviews = [
           <img src="/icons/info.svg" />
         </div>
 
-        <grade-reviews />
+        <comment-grades />
       </div>
 
-      <div class="reviews">
+      <div class="comment-section">
         <div class="search-container">
-          <div class="search">
+          <div class="search-bar">
             <img src="/icons/thin-search.svg" width="16" />
             <input placeholder="Recherchez des commentaires" />
           </div>
         </div>
 
-        <div class="review-list">
-          <bnb-review
+        <div class="comment-list">
+          <laptop-comment
             :class="{ 'mb-40': index < mockReviews.length - 1 }"
             v-for="(review, index) in mockReviews"
             :key="review.name"
@@ -121,21 +121,20 @@ h2 {
   line-height: 32px;
 }
 
-.grade {
+.grade-section {
   width: 30%;
   margin-right: 4%;
   padding: 24px;
-
   font-size: 14px;
 }
 
-.reviews {
+.comment-section {
   width: 60%;
   overflow-y: scroll;
   max-height: calc(100vh - 134px);
 }
 
-.review-list {
+.comment-list {
   padding: 90px 24px 24px 24px;
 }
 
@@ -150,7 +149,7 @@ h2 {
   width: 580px;
 }
 
-.search {
+.search-bar {
   display: flex;
   align-items: center;
   gap: 0 8px;

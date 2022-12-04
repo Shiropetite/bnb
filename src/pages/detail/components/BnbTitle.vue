@@ -18,7 +18,7 @@ const { openDialog } = useDialog();
       <bnb-link
         class="subtitle"
         label="43 commentaires"
-        @click="openDialog('review-dialog', 1080)"
+        @click="openDialog('comment-popup')"
         outlined
       />
       <div class="bold">·</div>

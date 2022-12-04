@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { useDialog } from "@/stores/dialog";
-
 type Review = {
   profilePicture: string;
   name: string;
@@ -10,14 +8,11 @@ type Review = {
 
 defineProps<{
   review: Review;
-  wholeReview?: boolean;
 }>();
-
-const { openDialog } = useDialog();
 </script>
 
 <template>
-  <div class="col">
+  <div class="comment-list">
     <div class="row items-center mb-12">
       <img class="mr-12 profile-picture" :src="review.profilePicture" />
       <div>
@@ -26,26 +21,36 @@ const { openDialog } = useDialog();
       </div>
     </div>
 
-    <div class="mb-8" :class="{ review: wholeReview !== true }">
-      {{ review.comment }}
-    </div>
+    <div class="mb-8 text">{{ review.comment }}</div>
 
     <bnb-link
-      v-if="review.comment.length > 200 && !wholeReview"
+      v-if="review.comment.length > 200"
       class="bold"
       label="En savoir plus"
-      @click="openDialog('review-dialog', 1080)"
       outlined
       arrow
     />
   </div>
 </template>
 <style lang="scss" scoped>
-.review {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
+.comment-list {
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  padding: 16px;
+  flex: 1 0 80%;
+
+  .profile-picture {
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+  }
+
+  .text {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+  }
 }
 </style>

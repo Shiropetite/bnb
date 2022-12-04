@@ -4,13 +4,11 @@ export const useDialog = defineStore("dialog", {
   state: () => ({
     isOpen: false,
     component: undefined as string | undefined,
-    maxWidth: undefined as number | undefined,
   }),
 
   actions: {
-    openDialog(newComponent: string, maxWidth: number) {
+    openDialog(newComponent: string) {
       this.component = newComponent;
-      this.maxWidth = maxWidth;
 
       if (!this.isOpen) {
         this.toggle();

@@ -43,7 +43,7 @@ onMounted(() => {
             <bnb-link
               class="bold text-dark-grey"
               label="43 commentaires"
-              @click="openDialog('review-dialog', 1080)"
+              @click="openDialog('comment-popup')"
               outlined
             />
           </div>
