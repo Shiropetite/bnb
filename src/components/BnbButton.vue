@@ -70,6 +70,7 @@ const onHover = (event: any): void => {
   justify-content: center;
   align-items: center;
   background-color: #fff;
+  font-size: 16px;
 
   &:hover {
     background-color: #f7f7f7;

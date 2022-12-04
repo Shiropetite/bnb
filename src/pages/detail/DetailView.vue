@@ -12,8 +12,8 @@ import BnbDescription from "./components/BnbDescription.vue";
 import BnbRooms from "./components/BnbRooms.vue";
 import BnbEquipment from "./components/BnbEquipment.vue";
 import BnbLocation from "./components/BnbLocation.vue";
-import MobileReviews from "./components/MobileReviews.vue";
-import LaptopReviews from "./components/LaptopReviews.vue";
+import MobileCommentSection from "./components/reviews/MobileCommentSection.vue";
+import LaptopCommentSection from "./components/reviews/LaptopCommentSection.vue";
 import BnbInformations from "./components/BnbInformations.vue";
 import MobileRules from "./components/MobileRules.vue";
 import LaptopRules from "./components/LaptopRules.vue";
@@ -83,7 +83,7 @@ const print = (text: string) => {
       <div class="content">
         <div class="separator mb-32"></div>
 
-        <laptop-reviews class="gt-sm" />
+        <laptop-comment-section class="gt-sm" />
 
         <div class="separator mt-24 mb-32 gt-sm"></div>
 
@@ -91,7 +91,7 @@ const print = (text: string) => {
 
         <div class="separator mt-24 mb-32 gt-sm"></div>
 
-        <mobile-reviews class="lt-md" />
+        <mobile-comment-section class="lt-md" />
 
         <div class="separator mt-24 mb-32 lt-md"></div>
 

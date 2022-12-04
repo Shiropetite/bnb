@@ -1,3 +1,9 @@
+<script lang="ts" setup>
+import { useDialog } from "@/stores/dialog";
+
+const { openDialog } = useDialog();
+</script>
+
 <template>
   <h1 class="mb-8">
     <img class="mr-12" src="/icons/translate.svg" />
@@ -9,7 +15,12 @@
       <img src="/icons/star.svg" />
       <div class="subtitle">4,71</div>
       <div class="bold">·</div>
-      <div class="subtitle underline">43 commentaires</div>
+      <bnb-link
+        class="subtitle"
+        label="43 commentaires"
+        @click="openDialog('comment-popup')"
+        outlined
+      />
       <div class="bold">·</div>
       <div class="subtitle underline">Badachro, Écosse, Royaume-Uni</div>
     </div>
