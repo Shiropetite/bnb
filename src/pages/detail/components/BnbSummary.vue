@@ -1,5 +1,8 @@
 <script lang="ts" setup>
 import { onMounted, ref } from "vue";
+import { useDialog } from "@/stores/dialog";
+
+const { openDialog } = useDialog();
 
 const isVisible = ref(false);
 const isPrice = ref(false);
@@ -37,7 +40,12 @@ onMounted(() => {
           <div class="row items-center gap-4 caption">
             <img src="/icons/star.svg" />
             <div class="bold">4,71 ·</div>
-            <div class="bold underline text-dark-grey">43 commentaires</div>
+            <bnb-link
+              class="bold text-dark-grey"
+              label="43 commentaires"
+              @click="openDialog('review-dialog', 1080)"
+              outlined
+            />
           </div>
         </div>
         <bnb-button label="Réserver" bg-color="gradient" />

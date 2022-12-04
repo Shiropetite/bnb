@@ -33,7 +33,7 @@ watch(
 
 <template>
   <div class="dialog-container" :class="{ show, hide, appear, disapear }">
-    <div class="dialog">
+    <div class="dialog" :style="`max-width: ${store.maxWidth}px`">
       <component :is="store.component" />
     </div>
   </div>
@@ -56,7 +56,6 @@ watch(
 .dialog {
   position: fixed;
   background-color: white;
-  max-width: 780px;
   top: 40px;
   bottom: 40px;
   width: 100%;

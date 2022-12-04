@@ -1,3 +1,9 @@
+<script lang="ts" setup>
+import { useDialog } from "@/stores/dialog";
+
+const { openDialog } = useDialog();
+</script>
+
 <template>
   <div class="right-side">
     <div class="sticky">
@@ -10,7 +16,12 @@
           <div class="row items-center gap-4 subtitle mb-24">
             <img src="/icons/star.svg" />
             <div>4,71 ·</div>
-            <div class="bold underline text-dark-grey">43 commentaires</div>
+            <bnb-link
+              class="bold text-dark-grey"
+              label="43 commentaires"
+              @click="openDialog('review-dialog', 1080)"
+              outlined
+            />
           </div>
 
           <div class="tab caption mb-16">

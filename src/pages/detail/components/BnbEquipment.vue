@@ -79,7 +79,7 @@ const { openDialog } = useDialog();
       class="mt-10 equipment-btn"
       label="Afficher les 37 équipement"
       border="dark"
-      @click="openDialog('bnb-equipment-dialog')"
+      @click="openDialog('bnb-equipment-dialog', 780)"
     />
   </div>
 </template>

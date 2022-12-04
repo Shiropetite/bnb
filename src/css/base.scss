@@ -22,5 +22,13 @@ a {
   cursor: pointer;
 }
 
+input {
+  border: 0;
+  background-color: transparent;
+  width: 100%;
 
+  &:focus-visible {
+    outline: none;
+  }
+}
 
