@@ -4,7 +4,7 @@ import { RouterView } from "vue-router";
 
 <template>
   <div>
-    <bnb-dialog />
+    <bnb-popup />
     <RouterView />
   </div>
 </template>

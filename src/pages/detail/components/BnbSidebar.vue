@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import { useDialog } from "@/stores/dialog";
+import { usePopup } from "@/stores/popup";
 
-const { openDialog } = useDialog();
+const { openPopup } = usePopup();
 </script>
 
 <template>
@@ -19,7 +19,7 @@ const { openDialog } = useDialog();
             <bnb-link
               class="bold text-dark-grey"
               label="43 commentaires"
-              @click="openDialog('comment-popup')"
+              @click="openPopup('comment-popup')"
               outlined
             />
           </div>
