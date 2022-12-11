@@ -30,3 +30,40 @@ $breakpoint-lg-min: map-get($sizes, "lg") !default;
 $breakpoint-lg-max: (map-get($sizes, "xl") - 0.02) !default;
 
 $breakpoint-xl-min: map-get($sizes, "xl") !default;
+
+@media (max-width: $breakpoint-xxs-max) {
+  .xxs-hide, .gt-xxs, .xs, .gt-xs, .sm, .gt-sm, .md, .gt-md, .lg, .gt-lg, .xl {
+    display: none !important
+  }
+  
+}
+
+@media (min-width: $breakpoint-xs-min) and (max-width: $breakpoint-xs-max) {
+  .xs-hide, .lt-xs .gt-xs, .sm, .gt-sm, .md, .gt-md, .lg, .gt-lg, .xl {
+    display: none !important
+  }
+}
+ 
+@media (min-width: $breakpoint-sm-min) and (max-width: $breakpoint-sm-max) {
+  .sm-hide, .xs, .lt-sm, .gt-sm, .md, .gt-md, .lg, .gt-lg, .xl {
+    display: none !important
+  }
+}
+      
+@media (min-width: $breakpoint-md-min) and (max-width: $breakpoint-md-max) {
+  .md-hide, .xs, .lt-sm, .sm, .lt-md, .gt-md, .lg, .gt-lg, .xl {
+    display: none !important
+  }
+}
+  
+@media (min-width: $breakpoint-lg-min) and (max-width: $breakpoint-lg-max) {
+  .lg-hide, .xs, .lt-sm, .sm, .lt-md, .md, .lt-lg, .gt-lg, .xl {
+    display: none !important
+  }
+}
+ 
+@media (min-width: $breakpoint-xl-min) {
+  .xl-hide, .xs, .lt-sm, .sm, .lt-md, .md, .lt-lg, .lg, .lt-xl {
+    display: none !important
+  }
+}

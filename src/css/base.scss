@@ -32,3 +32,27 @@ input {
   }
 }
 
+.profile-picture {
+  width: 56px;
+  height: 56px;
+  border-radius: 30px;
+
+  @media (max-width: $breakpoint-sm-max) {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.separator {
+  width: 100%;
+  background-color: #ddd;
+  height: 1px;
+}
+
+.bg-almost-white {
+  background-color: $almost-white;
+}
+
+.rounded {
+  border-radius: 8px;
+}
