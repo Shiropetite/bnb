@@ -1,10 +1,10 @@
 <script lang="ts" setup>
-import { useDialog } from "@/stores/dialog";
+import { usePopup } from "@/stores/popup";
 
 import CommentGrades from "./CommentGrades.vue";
 import LaptopComment from "./LaptopComment.vue";
 
-const store = useDialog();
+const store = usePopup();
 
 // TODO: Update when mock of entire property
 const mockReviews = [
@@ -75,7 +75,7 @@ const mockReviews = [
         round
       />
     </div>
-    <div class="dialog-body row justify-between">
+    <div class="popup-body row justify-between">
       <div class="grade-section">
         <h2 class="mb-4">
           <img class="mr-8" src="/icons/star.svg" width="24" />
@@ -138,7 +138,7 @@ h2 {
   padding: 90px 24px 24px 24px;
 }
 
-.dialog-body {
+.popup-body {
   overflow-y: hidden;
 }
 

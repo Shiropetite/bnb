@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 import { onMounted, ref } from "vue";
-import { useDialog } from "@/stores/dialog";
+import { usePopup } from "@/stores/popup";
 
-const { openDialog } = useDialog();
+const { openPopup } = usePopup();
 
 const isVisible = ref(false);
 const isPrice = ref(false);
@@ -43,7 +43,7 @@ onMounted(() => {
             <bnb-link
               class="bold text-dark-grey"
               label="43 commentaires"
-              @click="openDialog('comment-popup')"
+              @click="openPopup('comment-popup')"
               outlined
             />
           </div>

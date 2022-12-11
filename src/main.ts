@@ -12,10 +12,10 @@ import BnbDropdownButton from "./components/BnbDropdownButton.vue";
 import BnbAccountMenu from "./components/BnbAccountMenu.vue";
 import BnbCalendar from "./components/BnbCalendar.vue";
 import BnbHeader from "./components/BnbHeader.vue";
-import BnbDialog from "./components/BnbDialog.vue";
+import BnbPopup from "./components/BnbPopup.vue";
 import BnbLink from "./components/BnbLink.vue";
 
-import BnbEquipmentDialog from "./pages/detail/components/BnbEquipmentDialog.vue";
+import BnbEquipmentPopup from "./pages/detail/components/BnbEquipmentPopup.vue";
 import CommentPopup from "./pages/detail/components/reviews/CommentPopup.vue";
 
 const app = createApp(App);
@@ -27,12 +27,12 @@ app.component("BnbHeader", BnbHeader);
 app.component("BnbButton", BnbButton);
 app.component("BnbLink", BnbLink);
 app.component("BnbCalendar", BnbCalendar);
-app.component("BnbDialog", BnbDialog);
+app.component("BnbPopup", BnbPopup);
 app.component("BnbDropdownButton", BnbDropdownButton);
 app.component("BnbAccountMenu", BnbAccountMenu);
 
 // Popups
-app.component("BnbEquipmentDialog", BnbEquipmentDialog);
+app.component("BnbEquipmentPopup", BnbEquipmentPopup);
 app.component("CommentPopup", CommentPopup);
 
 app.mount("#app");

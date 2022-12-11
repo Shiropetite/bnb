@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import { useDialog } from "@/stores/dialog";
+import { usePopup } from "@/stores/popup";
 
-const { openDialog } = useDialog();
+const { openPopup } = usePopup();
 </script>
 
 <template>
@@ -79,7 +79,7 @@ const { openDialog } = useDialog();
       class="mt-10 equipment-btn"
       label="Afficher les 37 équipement"
       border="dark"
-      @click="openDialog('bnb-equipment-dialog')"
+      @click="openPopup('bnb-equipment-popup')"
     />
   </div>
 </template>

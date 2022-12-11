@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 import { ref, watch } from "vue";
-import { useDialog } from "@/stores/dialog";
+import { usePopup } from "@/stores/popup";
 
-const store = useDialog();
+const store = usePopup();
 
 const show = ref(false);
 const hide = ref(true);
@@ -32,18 +32,18 @@ watch(
 
 const componentsMaxWidth: { [key: string]: number } = {
   "comment-popup": 1080,
-  "bnb-equipment-dialog": 780,
+  "bnb-equipment-popup": 780,
 };
 </script>
 
 <template>
   <div
     v-if="store.component"
-    class="dialog-container"
+    class="popup-container"
     :class="{ show, hide, appear, disapear }"
   >
     <div
-      class="dialog"
+      class="popup"
       :style="`max-width: ${componentsMaxWidth[store.component]}px`"
     >
       <component :is="store.component" />
@@ -52,7 +52,7 @@ const componentsMaxWidth: { [key: string]: number } = {
 </template>
 
 <style lang="scss" scoped>
-.dialog-container {
+.popup-container {
   position: fixed;
   top: 0;
   left: 0;
@@ -65,7 +65,7 @@ const componentsMaxWidth: { [key: string]: number } = {
   align-items: center;
 }
 
-.dialog {
+.popup {
   position: fixed;
   background-color: white;
   top: 40px;
@@ -126,7 +126,7 @@ const componentsMaxWidth: { [key: string]: number } = {
   animation-name: fade-in;
   animation-duration: 0.5s;
 
-  .dialog {
+  .popup {
     animation-name: slide-in;
     animation-duration: 0.5s;
   }
@@ -136,7 +136,7 @@ const componentsMaxWidth: { [key: string]: number } = {
   animation-name: fade-out;
   animation-duration: 0.5s;
 
-  .dialog {
+  .popup {
     animation-name: slide-out;
     animation-duration: 0.5s;
   }

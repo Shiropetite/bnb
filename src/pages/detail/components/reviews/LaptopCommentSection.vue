@@ -1,10 +1,10 @@
 <script lang="ts" setup>
-import { useDialog } from "@/stores/dialog";
+import { usePopup } from "@/stores/popup";
 
 import CommentGrades from "./CommentGrades.vue";
 import LaptopComment from "./LaptopComment.vue";
 
-const { openDialog } = useDialog();
+const { openPopup } = usePopup();
 
 // TODO: Update when mock of entire property
 const mockReviews = [
@@ -86,7 +86,7 @@ const mockReviews = [
       class="review-btn"
       label="Afficher les 43 commentaires"
       border="dark"
-      @click="openDialog('comment-popup')"
+      @click="openPopup('comment-popup')"
     />
   </div>
 </template>

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { useDialog } from "@/stores/dialog";
+import { usePopup } from "@/stores/popup";
 
 type Review = {
   profilePicture: string;
@@ -13,7 +13,7 @@ defineProps<{
   wholeReview?: boolean;
 }>();
 
-const { openDialog } = useDialog();
+const { openPopup } = usePopup();
 </script>
 
 <template>
@@ -34,7 +34,7 @@ const { openDialog } = useDialog();
       v-if="review.comment.length > 200 && !wholeReview"
       class="bold"
       label="En savoir plus"
-      @click="openDialog('comment-popup')"
+      @click="openPopup('comment-popup')"
       outlined
       arrow
     />

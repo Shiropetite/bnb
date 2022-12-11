@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import { useDialog } from "@/stores/dialog";
+import { usePopup } from "@/stores/popup";
 
-const store = useDialog();
+const store = usePopup();
 </script>
 
 <template>
@@ -20,7 +20,7 @@ const store = useDialog();
         round
       />
     </div>
-    <div class="dialog-body">
+    <div class="popup-body">
       <div class="ma-24">
         <h2 class="mb-32">Ce que propose le logement</h2>
         <div class="mb-60">
@@ -193,7 +193,7 @@ const store = useDialog();
 </template>
 
 <style lang="scss">
-.dialog-body {
+.popup-body {
   overflow-y: scroll;
   max-height: calc(100vh - 134px);
 }

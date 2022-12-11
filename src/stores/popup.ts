@@ -1,13 +1,13 @@
 import { defineStore } from "pinia";
 
-export const useDialog = defineStore("dialog", {
+export const usePopup = defineStore("popup", {
   state: () => ({
     isOpen: false,
     component: undefined as string | undefined,
   }),
 
   actions: {
-    openDialog(newComponent: string) {
+    openPopup(newComponent: string) {
       this.component = newComponent;
 
       if (!this.isOpen) {
