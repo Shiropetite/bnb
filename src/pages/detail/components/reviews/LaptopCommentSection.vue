@@ -71,7 +71,7 @@ const mockReviews = [
       <img src="/icons/info.svg" />
     </div>
 
-    <comment-grades inline />
+    <comment-grades />
 
     <div class="row items-center justify-between wrap">
       <laptop-comment

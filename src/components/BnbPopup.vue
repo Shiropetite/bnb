@@ -72,6 +72,7 @@ const componentsMaxWidth: { [key: string]: number } = {
   bottom: 40px;
   width: 100%;
   border-radius: 12px;
+  z-index: 20;
 
   @media (max-width: $breakpoint-sm-max) {
     top: 0;

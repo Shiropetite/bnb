@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { usePopup } from "@/stores/popup";
+
 import MobileComment from "./MobileComment.vue";
 
 const mockReviews = [
@@ -27,6 +29,8 @@ const mockReviews = [
       "Nice location, but not a great experience as the value for money is not there. Dated accommodation with not pleasant smell, not worth 150£ per night.",
   },
 ];
+
+const { openPopup } = usePopup();
 </script>
 
 <template>
@@ -57,6 +61,7 @@ const mockReviews = [
       style="width: 100%"
       label="Afficher les 43 commentaires"
       border="dark"
+      @click="openPopup('comment-popup')"
     />
   </div>
 </template>

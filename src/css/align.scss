@@ -38,6 +38,13 @@
   width: 50%;
 }
 
+.col-lg-12 {
+  @media (min-width: $breakpoint-lg-min) {
+    width: 100% !important;
+  }
+}
+
+
 .col-xl-12 {
   @media (min-width: $breakpoint-xl-min) {
     width: 100% !important;
