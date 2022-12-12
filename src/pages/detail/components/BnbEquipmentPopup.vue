@@ -196,6 +196,10 @@ const store = usePopup();
 .popup-body {
   overflow-y: scroll;
   max-height: calc(100vh - 134px);
+
+  @media (max-width: $breakpoint-sm-max) {
+    max-height: 100vh;
+  }
 }
 
 .not-included {

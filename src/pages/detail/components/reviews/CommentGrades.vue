@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 defineProps<{
-  inline?: boolean;
+  popup?: boolean;
 }>();
 
 // TODO: Update when mock of entire property
@@ -27,14 +27,17 @@ const labels = {
 <template>
   <div class="row justify-between wrap mb-32">
     <div
-      class="row justify-between mb-16"
-      :class="inline ? 'col-6' : 'col'"
+      class="grades row justify-between col col-md-6"
+      :class="popup ? 'col-lg-12' : ''"
       v-for="(value, key) in mockReviewGrades"
       :key="key"
     >
       <div>{{ labels[key] }}</div>
-      <div class="row items-center">
-        <span class="grade" :style="`width: ${(value * 102) / 5}px;`" />
+      <div class="grade row items-center">
+        <span
+          class="grade-gradient"
+          :style="`width: ${(value * 102) / 5}px;`"
+        />
         <span class="back" />
         <div class="caption bold">{{ value.toFixed(1) }}</div>
       </div>
@@ -43,11 +46,24 @@ const labels = {
 </template>
 
 <style lang="scss" scoped>
+.grades {
+  margin-bottom: 16px;
+  font-size: 14px;
+
+  @media (max-width: $breakpoint-sm-min) {
+    margin-bottom: 12px;
+  }
+}
+
+.grade {
+  position: relative;
+}
+
 .col-6 {
   width: 45%;
 }
 
-.grade {
+.grade-gradient {
   background-color: $dark;
   height: 4px;
   position: absolute;
