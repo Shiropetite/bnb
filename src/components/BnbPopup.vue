@@ -34,13 +34,22 @@ const componentsMaxWidth: { [key: string]: number } = {
   "comment-popup": 1080,
   "bnb-equipment-popup": 780,
 };
+
+const closePopup = (e: Event) => {
+  const element = e.target as HTMLElement;
+  if (element.id === "popup-container") {
+    store.toggle();
+  }
+};
 </script>
 
 <template>
   <div
     v-if="store.component"
+    id="popup-container"
     class="popup-container"
     :class="{ show, hide, appear, disapear }"
+    @click="closePopup"
   >
     <div
       class="popup"
