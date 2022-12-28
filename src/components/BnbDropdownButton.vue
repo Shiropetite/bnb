@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, watch } from "vue";
 
 type Size = "sm" | "lg";
 type BgColor = "dark" | "primary" | "gradient";
@@ -21,10 +21,26 @@ defineProps<{
 }>();
 
 const showDropdown = ref(false);
+
+const closeWhenClickOustide = (e: Event) => {
+  const parent = document.getElementById("dropdown-button");
+
+  if (!parent?.contains(e.target as HTMLElement)) {
+    showDropdown.value = false;
+  }
+};
+
+watch(showDropdown, () => {
+  if (showDropdown.value === true) {
+    document.addEventListener("click", closeWhenClickOustide);
+  } else {
+    document.removeEventListener("click", closeWhenClickOustide);
+  }
+});
 </script>
 
 <template>
-  <div class="bnb-dropdown-button">
+  <div id="dropdown-button" class="bnb-dropdown-button">
     <bnb-button
       :label="label"
       :to="to"
