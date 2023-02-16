@@ -94,35 +94,3 @@ jobs:
           branch: gh-pages
           folder: ./dist
           
-  docker:
-    if: ${{github.event_name == 'push'}}
-    needs: [build]
-    runs-on: ubuntu-22.04
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2.5.0
-
-      - name: Download a single artifact
-        uses: actions/download-artifact@v3
-        with:
-          name: dist-file
-          path: ./dist
-          
-      - name: Extract metadata (tags, labels) for Docker
-        id: meta
-        uses: docker/metadata-action@v4.1.1
-        with:
-          images: titeshi/bnb-front:1.0.0
-          
-      - name: Build Docker image
-        run: docker build -t bnb .
-        
-      - name: Deploy Docker to AWS (EC2)
-        # You may pin to the exact commit or the version.
-        # uses: bitovi/github-actions-deploy-docker-to-ec2@872d733d9981dbb58302746dd53d000efad616bd
-        uses: bitovi/github-actions-deploy-docker-to-ec2@v0.4.6
-        with:
-          aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws_default_region: eu-west-1
