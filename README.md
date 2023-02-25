@@ -1,6 +1,8 @@
 # bnb front
 
-## Setip
+Preview du site : http://bnbfront-env-1.eba-4vandzsn.eu-west-1.elasticbeanstalk.com/
+
+## Setup
 
 ```sh
 npm install
