@@ -15,8 +15,9 @@
         -webkit-box-orient: vertical;
       "
     >
-    Le Crystal Temple est un endroit sacré où les gemmes de cristal vivent. C'est leur base depuis laquel elle protège l'humanité. 
-    Dans le temple, il y a plusieurs caverne qui sont connecté par le coeur de cristal.
+      Le Crystal Temple est un endroit sacré où les gemmes de cristal vivent.
+      C'est leur base depuis laquel elle protège l'humanité. Dans le temple, il
+      y a plusieurs caverne qui sont connecté par le coeur de cristal.
     </div>
 
     <div class="row items-center">

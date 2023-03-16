@@ -27,7 +27,8 @@ setProps(props.home);
       />
       <div class="bold">·</div>
       <div class="subtitle underline">
-        {{ home.location.city }}, {{ home.location.region }}, {{ home.location.country }}
+        {{ home.location.city }}, {{ home.location.region }},
+        {{ home.location.country }}
       </div>
     </div>
 

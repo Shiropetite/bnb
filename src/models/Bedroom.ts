@@ -1,7 +1,7 @@
 export type Bedroom = {
   imageUrl: string;
   beds: Bed[];
-}
+};
 
 export enum Bed {
   KING_BED = "lit king size",

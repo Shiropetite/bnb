@@ -2,7 +2,6 @@
   "extends": "./tsconfig.app.json",
   "include": [
     "env.d.ts",
-    "src/**/*",
     "src/**/*.vue",
     "cypress/support/component.*",
     "cypress/support/commands.ts"
