@@ -2,9 +2,9 @@
   <div>
     <h2 class="mb-24">Où se situe le logement</h2>
 
-    <div class="mb-24 map row items-center justify-center rounded">Map</div>
+    <div id="map" class="map mb-24" />
 
-    <div class="bold mb-16">Badachro, Écosse, Royaume-Uni</div>
+    <div class="bold mb-16">Cristal temple, Beach city, Terre</div>
     <div
       class="mb-16"
       style="
@@ -15,12 +15,8 @@
         -webkit-box-orient: vertical;
       "
     >
-      L'île Dry est située dans les eaux tranquilles de Gair Loch (littéralement
-      le «loch court»), où les Mackenzies vivent, pêchent et cultivent depuis le
-      15e siècle. Le propriétaire actuel de Dry Island, Ian McWhinney, est un
-      descendant des Mackenzy et il pêche encore des mollusques et des crustacés
-      de l'île. Il est très heureux d'emmener les visiteurs récolter les
-      langoustines, les crabes et les homards squats de ses fouines.
+    Le Crystal Temple est un endroit sacré où les gemmes de cristal vivent. C'est leur base depuis laquel elle protège l'humanité. 
+    Dans le temple, il y a plusieurs caverne qui sont connecté par le coeur de cristal.
     </div>
 
     <div class="row items-center">
@@ -31,9 +27,10 @@
 </template>
 <style lang="scss" scoped>
 .map {
-  background-color: $light-grey;
   width: 100%;
-  height: 218px;
+  height: 380px;
+  background-color: rgb(129, 129, 129);
+  border-radius: 8px;
 
   @media (min-width: $breakpoint-md-min) {
     height: 480px;

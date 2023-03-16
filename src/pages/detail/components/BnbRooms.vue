@@ -1,16 +1,47 @@
+<script lang="ts" setup>
+import type { Bed } from "@/models/BedRoom";
+import type { Home } from "@/models/Home";
+
+defineProps<{ home: Home }>();
+
+const formatedBeds = (beds: Bed[]): { nb: number; type: string }[] => {
+  const formatedBeds: { nb: number; type: string }[] = [];
+  beds.forEach((bed) => {
+    const currentBed = formatedBeds.find((b) => b.type === bed);
+    if (currentBed) {
+      formatedBeds[formatedBeds.indexOf(currentBed)].nb++;
+    } else {
+      formatedBeds.push({ nb: 1, type: bed });
+    }
+  });
+  return formatedBeds;
+};
+</script>
+
 <template>
   <div>
     <h2 class="mb-24">Où vous dormirez</h2>
 
-    <img
-      class="bed-picture rounded mb-16"
-      src="https://a0.muscache.com/im/pictures/fab1b622-41b2-4a69-bf73-0a8204ac06d4.jpg?im_w=720"
-    />
+    <div v-for="(bedroom, index) in home.bedrooms" :key="index">
+      <img
+        v-if="bedroom.imageUrl"
+        class="bed-picture rounded mb-16"
+        :src="bedroom.imageUrl"
+      />
 
-    <div class="bold mb-4">Chambre</div>
-    <div class="subtitle">1 lit double</div>
+      <div class="bold mb-4">Chambre {{ index + 1 }}</div>
+      <div class="subtitle">
+        <span
+          v-for="(bed, bedIndex) in formatedBeds(bedroom.beds)"
+          :key="bedIndex"
+        >
+          {{ bed.nb }} {{ bed.type }}
+        </span>
+      </div>
+    </div>
   </div>
 </template>
+
 <style lang="scss" scoped>
 .bed-picture {
   width: 180px;

@@ -1,7 +1,11 @@
 <script lang="ts" setup>
+import { type Home, getTotalScore } from "@/models/Home";
 import { usePopup } from "@/stores/popup";
 
-const { openPopup } = usePopup();
+const props = defineProps<{ home: Home }>();
+
+const { openPopup, setProps } = usePopup();
+setProps(props.home);
 </script>
 
 <template>
@@ -10,15 +14,15 @@ const { openPopup } = usePopup();
       <div class="container">
         <div class="sidebar">
           <div class="row items-center gap-8 mb-2">
-            <h2>172 €</h2>
+            <h2>{{ home.price }} €</h2>
             <div>par nuit</div>
           </div>
           <div class="row items-center gap-4 subtitle mb-24">
             <img src="/icons/star.svg" />
-            <div>4,71 ·</div>
+            <div>{{ getTotalScore(home.reviews).toFixed(1) }} ·</div>
             <bnb-link
               class="bold text-dark-grey"
-              label="43 commentaires"
+              :label="`${home.reviews.length} commentaires`"
               @click="openPopup('comment-popup')"
               outlined
             />
@@ -48,7 +52,7 @@ const { openPopup } = usePopup();
           </div>
 
           <div class="row items-center justify-between mb-16">
-            <div class="underline">172 x 6 nuits</div>
+            <div class="underline">{{ home.price }} x 6 nuits</div>
             <div>1 032 €</div>
           </div>
 

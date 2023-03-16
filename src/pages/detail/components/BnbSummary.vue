@@ -1,8 +1,12 @@
 <script lang="ts" setup>
 import { onMounted, ref } from "vue";
 import { usePopup } from "@/stores/popup";
+import { type Home, getTotalScore } from "@/models/Home";
 
-const { openPopup } = usePopup();
+const props = defineProps<{ home: Home }>();
+
+const { openPopup, setProps } = usePopup();
+setProps(props.home);
 
 const isVisible = ref(false);
 const isPrice = ref(false);
@@ -22,6 +26,7 @@ onMounted(() => {
   });
 });
 </script>
+
 <template>
   <div class="bnb-summary row justify-center items-center" v-if="isVisible">
     <div class="col box row justify-between">
@@ -31,18 +36,22 @@ onMounted(() => {
         <div>Commentaires</div>
         <div>Emplacement</div>
       </div>
+
       <div v-if="isPrice" class="price row items-center">
         <div class="mr-16">
           <div class="row items-center gap-8 mb-2">
-            <div class="title">172 €</div>
+            <div class="title">{{ home.price }} €</div>
             <div class="subtitle">par nuit</div>
           </div>
+
           <div class="row items-center gap-4 caption">
             <img src="/icons/star.svg" />
-            <div class="bold">4,71 ·</div>
+            <div class="bold">
+              {{ getTotalScore(home.reviews).toFixed(1) }} ·
+            </div>
             <bnb-link
               class="bold text-dark-grey"
-              label="43 commentaires"
+              :label="`${home.reviews.length} commentaires`"
               @click="openPopup('comment-popup')"
               outlined
             />
@@ -63,7 +72,7 @@ onMounted(() => {
   background-color: white;
   height: 80px;
   padding: 0 40px;
-  z-index: 2;
+  z-index: 3;
 
   @media (min-width: $breakpoint-lg-min) {
     padding: 0 80px;

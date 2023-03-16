@@ -1,28 +1,34 @@
 <script lang="ts" setup>
+import { type Home, getTotalScore } from "@/models/Home";
 import { usePopup } from "@/stores/popup";
 
-const { openPopup } = usePopup();
+const props = defineProps<{ home: Home }>();
+
+const { openPopup, setProps } = usePopup();
+setProps(props.home);
 </script>
 
 <template>
   <h1 class="mb-8">
-    <img class="mr-12" src="/icons/translate.svg" />
-    <span>Observatoire de la nature sur une île isolée</span>
+    <!-- <img class="mr-12" src="/icons/translate.svg" /> -->
+    <span>{{ home.title }}</span>
   </h1>
 
   <div class="row justify-between items-center">
     <div class="row items-center gap-4 wrap">
       <img src="/icons/star.svg" />
-      <div class="subtitle">4,71</div>
+      <div class="subtitle">{{ getTotalScore(home.reviews).toFixed(1) }}</div>
       <div class="bold">·</div>
       <bnb-link
         class="subtitle"
-        label="43 commentaires"
+        :label="`${home.reviews.length} commentaires`"
         @click="openPopup('comment-popup')"
         outlined
       />
       <div class="bold">·</div>
-      <div class="subtitle underline">Badachro, Écosse, Royaume-Uni</div>
+      <div class="subtitle underline">
+        {{ home.location.city }}, {{ home.location.region }}, {{ home.location.country }}
+      </div>
     </div>
 
     <div class="row items-center gt-sm">

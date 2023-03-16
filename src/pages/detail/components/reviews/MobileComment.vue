@@ -1,10 +1,5 @@
 <script lang="ts" setup>
-type Review = {
-  profilePicture: string;
-  name: string;
-  date: string;
-  comment: string;
-};
+import type { Review } from "@/models/Review";
 
 defineProps<{
   review: Review;
@@ -14,17 +9,17 @@ defineProps<{
 <template>
   <div class="comment-list">
     <div class="row items-center mb-12">
-      <img class="mr-12 profile-picture" :src="review.profilePicture" />
+      <img class="mr-12 profile-picture" :src="review.author.profilePicture" />
       <div>
-        <div class="bold">{{ review.name }}</div>
-        <div class="subtitle text-dark+grey">{{ review.date }}</div>
+        <div class="bold">{{ review.author.firstName }}</div>
+        <div class="subtitle text-dark+grey">{{ review.createdAt }}</div>
       </div>
     </div>
 
-    <div class="mb-8 text">{{ review.comment }}</div>
+    <div class="mb-8 text">{{ review.message }}</div>
 
     <bnb-link
-      v-if="review.comment.length > 200"
+      v-if="review.message.length > 200"
       class="bold"
       label="En savoir plus"
       outlined

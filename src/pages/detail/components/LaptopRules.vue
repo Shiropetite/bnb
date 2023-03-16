@@ -18,7 +18,7 @@
 
         <div class="row items-center mb-8">
           <img class="mr-12" src="/icons/no-baby.svg" />
-          <div>Ne convient pas aux bébés (moins de 2 ans)</div>
+          <div>Ne convient pas aux bébés (moins de 2 ans sauf gemmes)</div>
         </div>
 
         <div class="row items-center mb-8">
@@ -46,20 +46,18 @@
         <div class="bold mb-12">Santé et sécurité</div>
 
         <div class="row items-center mb-8">
-          <img class="mr-12" src="/icons/clock.svg" />
-          <div>
-            Les partiques de sécurité d’Airbnb liées au Covid-19 s’appliquent.
-          </div>
-        </div>
-
-        <div class="row items-center mb-8">
           <img class="mr-12" src="/icons/carbon-detector.svg" />
           <div>Détecteur de monoxyde de carbone</div>
         </div>
 
-        <div class="row items-center mb-24">
+        <div class="row items-center mb-8">
           <img class="mr-12" src="/icons/smoking-detector.svg" />
           <div>Détecteur de fumée</div>
+        </div>
+
+        <div class="row items-center mb-24">
+          <img class="mr-12" src="/icons/smoking-detector.svg" />
+          <div>Lion garde du corps</div>
         </div>
 
         <div class="row items-center">
@@ -74,9 +72,7 @@
         <div class="mb-8">Annulation gratuite pendant 48 heures</div>
 
         <div class="mb-24">
-          Consultez les conditions d'annulation complètes de l'hôte, qui
-          s'appliquent même si vous annulez pour cause de maladie ou de
-          perturbations causées par le Covid-19.
+          Consultez les conditions d'annulation complètes de l'hôte.
         </div>
 
         <div class="row items-center">

@@ -1,28 +1,31 @@
+<script lang="ts" setup>
+import type { Home } from "@/models/Home";
+
+defineProps<{ home: Home }>();
+</script>
+
 <template>
   <div>
     <div class="lt-md row items-center justify-between mb-24">
       <div>
-        <h2 class="mb-8">Proposé par Ian</h2>
-        <div class="subtitle text-dark-grey">Membre depuis mai 2015</div>
-        <div class="subtitle text-dark-grey">Professionnel</div>
+        <h2 class="mb-8">Proposé par {{ home.owner.firstName }}</h2>
+        <div class="subtitle text-dark-grey">
+          Membre depuis mars {{ home.owner.createdAt.getFullYear() }}
+        </div>
+        <div class="subtitle text-dark-grey">Particulier</div>
       </div>
 
-      <img
-        class="profile-picture"
-        src="https://a0.muscache.com/im/users/33563060/profile_pic/1438769657/original.jpg?im_w=240"
-      />
+      <img class="profile-picture" :src="home.owner.profilePicture" />
     </div>
 
     <div class="gt-sm row items-center mb-24">
-      <img
-        class="profile-picture mr-16"
-        src="https://a0.muscache.com/im/users/33563060/profile_pic/1438769657/original.jpg?im_w=240"
-      />
+      <img class="profile-picture mr-16" :src="home.owner.profilePicture" />
 
       <div>
-        <h2 class="mb-2">Proposé par Ian</h2>
+        <h2 class="mb-2">Proposé par {{ home.owner.firstName }}</h2>
         <div class="subtitle text-dark-grey">
-          Membre depuis mai 2015 · Professionnel
+          Membre depuis mars {{ home.owner.createdAt.getFullYear() }} ·
+          {{ home.owner.isProfessional ? "Professionel" : "Particulier" }}
         </div>
       </div>
     </div>
@@ -33,10 +36,10 @@
           <div class="mr-8 row items-center">
             <img src="/icons/star.svg" style="width: 16px; height: 16px" />
           </div>
-          <div>376 commentaires</div>
+          <div>{{ home.owner.reviews.length }} commentaires</div>
         </div>
 
-        <div class="row items-center mb-24">
+        <div v-if="home.owner.identityVerified" class="row items-center mb-24">
           <div class="mr-8 row items-center">
             <img
               src="/icons/identity-verified.svg"
@@ -47,31 +50,29 @@
         </div>
 
         <div class="mb-24">
-          pêcheur de Gairloch , local à Badachro.<br />
-          La famille vit sur Dry Island depuis des centaines d'années.
-          <br />
-          <br />
-          Je suis joyeux, compétent et j'ai un bon sens de l'humour
+          {{ home.owner.description }}
         </div>
 
         <div>
           <div class="bold mb-8">Pendant votre séjour</div>
 
           <div class="mb-24">
-            Vous vous sentirez à l'aise à l'extrémité nord de l'île, à l'abri de
-            toute perturbation de notre part ou de la part des voyageurs
-            séjournant dans l'autre propriété. Avec un arrang…
-            <div class="bold underline">lire la suite</div>
+            {{ home.ownerDescription }}
+            <!-- <div class="bold underline">lire la suite</div> -->
           </div>
         </div>
       </div>
 
       <div class="col col-md-6">
-        <div class="mb-8">Langue : English</div>
+        <div class="mb-8">Langue : {{ home.owner.languages.join(", ") }}</div>
 
-        <div class="mb-8">Taux de réponse : 64%</div>
+        <div class="mb-8">
+          Taux de réponse : {{ home.owner.responseRate * 100 }}%
+        </div>
 
-        <div class="mb-24">Délai de réponse : Dans la journée</div>
+        <div class="mb-24">
+          Délai de réponse : Dans la {{ home.owner.responseTime }}
+        </div>
 
         <bnb-button
           class="mb-24 contact-btn"

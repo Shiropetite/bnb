@@ -1,6 +1,12 @@
+<script lang="ts" setup>
+import type { Home } from "@/models/Home";
+
+defineProps<{ home: Home }>();
+</script>
+
 <template>
   <div>
-    <div class="row mb-32">
+    <!-- <div class="row mb-32">
       <div class="mr-12">
         <img src="/icons/translate.svg" style="height: 16px; width: 16px" />
       </div>
@@ -10,7 +16,7 @@
         >
         <span class="bold"> Afficher la version originale </span>
       </div>
-    </div>
+    </div> -->
 
     <div
       class="mb-16"
@@ -22,14 +28,7 @@
         -webkit-box-orient: vertical;
       "
     >
-      Chalet indépendant quantitatif niché en douceur dans l'île familiale
-      historique de Dry Island. "Otter Cabin" est aménagé à un haut niveau avec
-      une chambre double, salle de douche, cuisine ouverte et salon et son
-      propre bain à remous et terrasse. Il s'agit d'une unité de restauration
-      traditionnelle. Les éléments de base de la cuisine et le linge de maison
-      sont fournis. Une connexion Wi-Fi haut débit est disponible.
-      Malheureusement, la cabine est inaccessible aux personnes à mobilité
-      réduite.
+      {{ home.description }}
     </div>
 
     <div class="row items-center">

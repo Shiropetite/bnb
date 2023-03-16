@@ -1,29 +1,23 @@
+<script lang="ts" setup>
+import type { Home } from "@/models/Home";
+
+defineProps<{ home: Home }>();
+</script>
+
 <template>
   <div class="laptop-photos">
     <div class="container">
       <div class="box row items-center">
-        <img
-          class="image-1"
-          src="https://a0.muscache.com/im/pictures/4d268e76-949f-4de7-a10b-b4b48ea3355d.jpg?im_w=1200"
-        />
+        <img class="image-1" :src="home.photos[0].url" />
         <div class="small-image">
-          <img
-            class="image"
-            src="https://a0.muscache.com/im/pictures/4f4e82b1-3270-4c5a-9628-83ab64ae8f58.jpg?im_w=720"
-          />
-          <img
-            class="image image-bottom"
-            src="https://a0.muscache.com/im/pictures/fe2a079c-e2b3-4832-b814-5295abf411ea.jpg?im_w=720"
-          />
+          <img class="image" :src="home.photos[1].url" />
+          <img class="image image-bottom" :src="home.photos[2].url" />
         </div>
         <div class="small-image">
-          <img
-            class="image image-top-left"
-            src="https://a0.muscache.com/im/pictures/ca4e39b3-ab0f-4a0e-b10f-7297bd4db5da.jpg?im_w=720"
-          />
+          <img class="image image-top-left" :src="home.photos[3].url" />
           <img
             class="image image-bottom image-bottom-left"
-            src="https://a0.muscache.com/im/pictures/75607a14-a5ce-474a-a316-15ecaed1fbe9.jpg?im_w=720"
+            :src="home.photos[4].url"
           />
         </div>
       </div>

@@ -1,12 +1,6 @@
 <script lang="ts" setup>
+import type { Review } from "@/models/Review";
 import { usePopup } from "@/stores/popup";
-
-type Review = {
-  profilePicture: string;
-  name: string;
-  date: string;
-  comment: string;
-};
 
 defineProps<{
   review: Review;
@@ -19,19 +13,19 @@ const { openPopup } = usePopup();
 <template>
   <div class="col">
     <div class="row items-center mb-12">
-      <img class="mr-12 profile-picture" :src="review.profilePicture" />
+      <img class="mr-12 profile-picture" :src="review.author.profilePicture" />
       <div>
-        <div class="bold">{{ review.name }}</div>
-        <div class="subtitle text-dark+grey">{{ review.date }}</div>
+        <div class="bold">{{ review.author.firstName }}</div>
+        <div class="subtitle text-dark+grey">{{ review.createdAt }}</div>
       </div>
     </div>
 
     <div class="mb-8" :class="{ review: wholeReview !== true }">
-      {{ review.comment }}
+      {{ review.message }}
     </div>
 
     <bnb-link
-      v-if="review.comment.length > 200 && !wholeReview"
+      v-if="review.message.length > 200 && !wholeReview"
       class="bold"
       label="En savoir plus"
       @click="openPopup('comment-popup')"

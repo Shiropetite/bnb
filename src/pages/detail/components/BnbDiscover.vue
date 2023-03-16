@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2 class="mb-32">
-      Découvrez d'autres possibilités d'hébergement · Badachro et ses environs
+      Découvrez d'autres possibilités d'hébergement · Beach City et ses environs
     </h2>
     <div class="row subtitle text-dark-grey wrap gap-16 mb-32">
       <div class="col-6 col-xl-3">Scottish-Highlands</div>

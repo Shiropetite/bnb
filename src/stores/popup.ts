@@ -1,9 +1,11 @@
 import { defineStore } from "pinia";
+import type { Home } from "@/models/Home";
 
 export const usePopup = defineStore("popup", {
   state: () => ({
     isOpen: false,
     component: undefined as string | undefined,
+    props: null as null | Home,
   }),
 
   actions: {
@@ -13,6 +15,9 @@ export const usePopup = defineStore("popup", {
       if (!this.isOpen) {
         this.toggle();
       }
+    },
+    setProps(props: Home) {
+      this.props = props;
     },
     toggle() {
       this.isOpen = !this.isOpen;

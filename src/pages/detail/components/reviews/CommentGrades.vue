@@ -1,24 +1,17 @@
 <script lang="ts" setup>
+import { getKeySore, type Home } from "@/models/Home";
+
 defineProps<{
+  home: Home;
   popup?: boolean;
 }>();
-
-// TODO: Update when mock of entire property
-const mockReviewGrades = {
-  cleanliness: 4.6,
-  communication: 4.7,
-  checkIn: 4.7,
-  accury: 4.8,
-  location: 5,
-  value: 4.5,
-};
 
 // TODO: Remove when translation is added
 const labels = {
   cleanliness: "Propreté",
   communication: "Communication",
   checkIn: "Arrivée",
-  accury: "Précision",
+  accuracy: "Précision",
   location: "Emplacement",
   value: "Qualité-prix",
 };
@@ -29,17 +22,19 @@ const labels = {
     <div
       class="grades row justify-between col col-md-6"
       :class="popup ? 'col-lg-12' : ''"
-      v-for="(value, key) in mockReviewGrades"
+      v-for="(_, key) in labels"
       :key="key"
     >
       <div>{{ labels[key] }}</div>
       <div class="grade row items-center">
         <span
           class="grade-gradient"
-          :style="`width: ${(value * 102) / 5}px;`"
+          :style="`width: ${(getKeySore(key, home.reviews) * 102) / 5}px;`"
         />
         <span class="back" />
-        <div class="caption bold">{{ value.toFixed(1) }}</div>
+        <div class="caption bold">
+          {{ getKeySore(key, home.reviews).toFixed(1) }}
+        </div>
       </div>
     </div>
   </div>

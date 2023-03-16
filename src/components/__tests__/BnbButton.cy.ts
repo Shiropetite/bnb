@@ -12,15 +12,15 @@ describe("BnbButton", () => {
     const icon = "/logo.svg";
     cy.mount(BnbButton, { props: { icon } });
 
-    cy.get(".bnb-button").get("img").should("have.attr", "src", `/bnb${icon}`);
+    cy.get(".bnb-button").get("img").should("have.attr", "src", `${icon}`);
   });
 
   it("should contain two icons", () => {
     const icon = "/logo.svg";
     cy.mount(BnbButton, { props: { iconLeft: icon, iconRight: icon } });
 
-    cy.get("img").should("have.attr", "src", `/bnb${icon}`);
-    cy.get(".icon-right").should("have.attr", "src", `/bnb${icon}`);
+    cy.get("img").should("have.attr", "src", `${icon}`);
+    cy.get(".icon-right").should("have.attr", "src", `${icon}`);
   });
 
   it("should contain text and left icon", () => {
@@ -28,7 +28,7 @@ describe("BnbButton", () => {
     const label = "Hello";
     cy.mount(BnbButton, { props: { iconLeft: icon, label } });
 
-    cy.get(".icon-left").should("have.attr", "src", `/bnb${icon}`);
+    cy.get(".icon-left").should("have.attr", "src", `${icon}`);
     cy.get(".bnb-button").should("contain", label);
   });
 
@@ -37,7 +37,7 @@ describe("BnbButton", () => {
     const label = "Hello";
     cy.mount(BnbButton, { props: { iconRight: icon, label } });
 
-    cy.get(".icon-right").should("have.attr", "src", `/bnb${icon}`);
+    cy.get(".icon-right").should("have.attr", "src", `${icon}`);
     cy.get(".bnb-button").should("contain", label);
   });
 

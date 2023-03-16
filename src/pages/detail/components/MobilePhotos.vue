@@ -1,3 +1,9 @@
+<script lang="ts" setup>
+import type { Home } from "@/models/Home";
+
+defineProps<{ home: Home }>();
+</script>
+
 <template>
   <div>
     <div class="top-link">
@@ -9,15 +15,12 @@
     </div>
 
     <div style="position: relative">
-      <img
-        class="cover-image"
-        src="https://a0.muscache.com/im/pictures/4d268e76-949f-4de7-a10b-b4b48ea3355d.jpg?im_w=1200"
-      />
-
-      <div class="counter-image caption bold">1 / 19</div>
+      <img class="cover-image" :src="home.photos[0].url" />
+      <div class="counter-image caption bold">1 / {{ home.photos.length }}</div>
     </div>
   </div>
 </template>
+
 <style lang="scss" scoped>
 .cover-image {
   position: static;
