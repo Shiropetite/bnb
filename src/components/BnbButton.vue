@@ -46,7 +46,7 @@ const onHover = (event: any): void => {
     }"
     v-on:mousemove="onHover"
   >
-    <img v-if="icon" :src="`${icon}`" />
+    <img v-if="icon" :src="icon" />
     <img
       v-if="iconLeft"
       :class="{ 'icon-left': !iconRight }"
@@ -56,7 +56,7 @@ const onHover = (event: any): void => {
     <img
       v-if="iconRight"
       :class="{ 'icon-right': !iconLeft || !label }"
-      :src="`${iconRight}`"
+      :src="iconRight"
     />
   </button>
 </template>
