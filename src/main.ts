@@ -14,6 +14,7 @@ import BnbCalendar from "./components/BnbCalendar.vue";
 import BnbHeader from "./components/BnbHeader.vue";
 import BnbPopup from "./components/BnbPopup.vue";
 import BnbLink from "./components/BnbLink.vue";
+import BnbRefImage from "./components/BnbRefImage.vue";
 
 import BnbEquipmentPopup from "./pages/detail/components/BnbEquipmentPopup.vue";
 import CommentPopup from "./pages/detail/components/reviews/CommentPopup.vue";
@@ -30,6 +31,7 @@ app.component("BnbCalendar", BnbCalendar);
 app.component("BnbPopup", BnbPopup);
 app.component("BnbDropdownButton", BnbDropdownButton);
 app.component("BnbAccountMenu", BnbAccountMenu);
+app.component("BnbRefImage", BnbRefImage);
 
 // Popups
 app.component("BnbEquipmentPopup", BnbEquipmentPopup);

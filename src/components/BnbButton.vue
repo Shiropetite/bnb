@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { ref } from "vue";
-
 type Size = "sm" | "lg";
 type BorderColor = "dark" | "light";
 type BgColor = "dark" | "primary" | "gradient";
@@ -48,10 +46,14 @@ const onHover = (event: any): void => {
     }"
     v-on:mousemove="onHover"
   >
-    <img v-if="icon" :src="icon" />
-    <img v-if="iconLeft" :class="{ 'icon-left': !iconRight }" :src="iconLeft" />
+    <bnb-ref-image v-if="icon" :src="icon" />
+    <bnb-ref-image
+      v-if="iconLeft"
+      :class="{ 'icon-left': !iconRight }"
+      :src="iconLeft"
+    />
     <span v-if="label">{{ label }}</span>
-    <img
+    <bnb-ref-image
       v-if="iconRight"
       :class="{ 'icon-right': !iconLeft || !label }"
       :src="iconRight"

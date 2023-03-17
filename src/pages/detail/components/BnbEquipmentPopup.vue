@@ -50,7 +50,10 @@ const getCategories = (amenities: Amenity[]): string[] => {
             <div v-if="index > 0" class="separator"></div>
             <div class="mb-24 mt-24">
               <div class="col row items-center">
-                <img class="mr-18" :src="`/icons/${amenity.icons}.svg`" />
+                <bnb-ref-image
+                  class="mr-18"
+                  :src="`/icons/${amenity.icons}.svg`"
+                />
                 <div>{{ amenity.name }}</div>
               </div>
             </div>
@@ -68,7 +71,10 @@ const getCategories = (amenities: Amenity[]): string[] => {
             <div v-if="index > 0" class="separator"></div>
             <div class="mb-24 mt-24 not-included">
               <div class="col row items-center">
-                <img class="mr-18" :src="`/icons/no-${amenity.icons}.svg`" />
+                <bnb-ref-image
+                  class="mr-18"
+                  :src="`/icons/no-${amenity.icons}.svg`"
+                />
                 <div>{{ amenity.name }}</div>
               </div>
             </div>

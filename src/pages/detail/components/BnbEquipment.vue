@@ -20,10 +20,16 @@ setProps(props.home);
           .filter((_, i) => i < 5)"
         :key="amenity.name"
       >
-        <img class="gt-sm mr-18" :src="`/icons/${amenity.icons}.svg`" />
+        <bnb-ref-image
+          class="gt-sm mr-18"
+          :src="`/icons/${amenity.icons}.svg`"
+        />
         <div class="col row justify-between items-center">
           <div>{{ amenity.name }}</div>
-          <img class="lt-md mr-18" :src="`/icons/${amenity.icons}.svg`" />
+          <bnb-ref-image
+            class="lt-md mr-18"
+            :src="`/icons/${amenity.icons}.svg`"
+          />
         </div>
       </div>
     </div>
