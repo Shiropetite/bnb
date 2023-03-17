@@ -1,4 +1,5 @@
-<script setup lang="ts">import { ref } from 'vue';
+<script setup lang="ts">
+import { ref } from "vue";
 
 type Size = "sm" | "lg";
 type BorderColor = "dark" | "light";
@@ -28,10 +29,6 @@ const onHover = (event: any): void => {
     button.style.setProperty("--mouse-y", y.toString());
   }
 };
-
-const icon = ref(props.icon?.slice(1));
-const iconLeft = ref(props.iconLeft?.slice(1));
-const iconRight = ref(props.iconRight?.slice(1));
 </script>
 
 <template>
@@ -51,17 +48,13 @@ const iconRight = ref(props.iconRight?.slice(1));
     }"
     v-on:mousemove="onHover"
   >
-    <img v-if="icon" :src="`/${icon}`" />
-    <img
-      v-if="iconLeft"
-      :class="{ 'icon-left': !iconRight }"
-      :src="`/${iconLeft}`"
-    />
+    <img v-if="icon" :src="icon" />
+    <img v-if="iconLeft" :class="{ 'icon-left': !iconRight }" :src="iconLeft" />
     <span v-if="label">{{ label }}</span>
     <img
       v-if="iconRight"
       :class="{ 'icon-right': !iconLeft || !label }"
-      :src="`/${iconRight}`"
+      :src="iconRight"
     />
   </button>
 </template>
