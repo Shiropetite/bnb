@@ -1,4 +1,5 @@
-<script setup lang="ts">
+<script setup lang="ts">import { ref } from 'vue';
+
 type Size = "sm" | "lg";
 type BorderColor = "dark" | "light";
 type BgColor = "dark" | "primary" | "gradient";
@@ -27,6 +28,10 @@ const onHover = (event: any): void => {
     button.style.setProperty("--mouse-y", y.toString());
   }
 };
+
+const icon = ref(props.icon?.slice(1));
+const iconLeft = ref(props.iconLeft?.slice(1));
+const iconRight = ref(props.iconRight?.slice(1));
 </script>
 
 <template>
