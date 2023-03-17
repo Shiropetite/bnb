@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { Bed } from "@/models/BedRoom";
+import type { Bed } from "@/models/Bedroom";
 import type { Home } from "@/models/Home";
 
 defineProps<{ home: Home }>();

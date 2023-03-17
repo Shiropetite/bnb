@@ -1,4 +1,4 @@
-import type { Bedroom } from "./BedRoom";
+import type { Bedroom } from "./Bedroom";
 import type { HomeCategory } from "./HomeCategory";
 import type { Location } from "./Location";
 import type { Photo } from "./Photos";

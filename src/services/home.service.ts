@@ -1,5 +1,5 @@
 import { AmenityCategory } from "@/models/Amenity";
-import { Bed } from "@/models/BedRoom";
+import { Bed } from "@/models/Bedroom";
 import type { Home } from "@/models/Home";
 import { HomeCategory } from "@/models/HomeCategory";
 
